@@ -114,13 +114,38 @@
     .trust-number{ font-size:32px; font-weight:800; color: var(--primary-color); line-height:1; margin-bottom:6px; }
     .trust-label{ font-size:14px; color: var(--text-secondary); font-weight:600; }
 
-    /* WhatsApp screenshots rail (side-scroll) */
+    /* WhatsApp screenshots rail (side-scroll, cropped like mock) */
     .wa-rail-real{ background:#fff; padding:60px 12px; }
-    .wa-rail-real .rail{ display:flex; gap:18px; overflow-x:auto; overflow-y:hidden; padding:16px 2px 8px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
+    .wa-rail-real .rail{
+      display:flex; gap:18px; overflow-x:auto; overflow-y:hidden;
+      padding:16px 2px 8px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+    }
     .wa-rail-real .rail::-webkit-scrollbar{ display:none; }
-    .wa-shot{ min-width:300px; max-width:360px; background:#eafff3; border:1px solid #c7f0db; border-radius:18px; padding:12px; scroll-snap-align:start; box-shadow:0 10px 28px rgba(0,0,0,.08); flex-shrink:0; }
-    .wa-shot img{ width:100%; height:auto; border-radius:12px; display:block; }
-    .wa-cap{ font-size:13px; color:#256b3e; margin-top:8px; font-weight:600; }
+    .wa-shot{
+      width:clamp(260px, 70vw, 360px);
+      background:#eafff3; border:1px solid #c7f0db; border-radius:18px;
+      padding:12px; scroll-snap-align:start; box-shadow:0 10px 28px rgba(0,0,0,.08);
+      flex-shrink:0;
+    }
+    .wa-img{
+      aspect-ratio: 4 / 3;
+      width:100%;
+      border-radius:12px;
+      overflow:hidden;
+      background:#f6f6f6;
+    }
+    .wa-img img{
+      width:100%; height:100%;
+      object-fit:cover;
+      object-position: top center;
+      display:block;
+    }
+    .wa-cap{
+      margin-top:10px;
+      font-size:13px; font-weight:600; color:#256b3e;
+      background:#f1fff6; border:1px solid #c7f0db;
+      padding:10px 12px; border-radius:10px;
+    }
 
     /* Founder slab (dark two-column) */
     .founder-slab{ background:#0b0b0b; color:#fff; padding:60px 12px; }
@@ -131,7 +156,7 @@
     .founder-quote-xl{ background:#1c1c1c; border-left:4px solid #bcd7ff; padding:18px; border-radius:14px; color:#dbeafe; font-style:italic; margin:14px 0 16px; }
     .founder-meta{ color:#cbd5e1; line-height:1.65; }
 
-    /* Success cards (unchanged) */
+    /* Success cards */
     .success-section{ padding:50px 12px; background: var(--bg-primary); }
     .section-title{ font-size:28px; font-weight:700; text-align:center; margin-bottom:20px; color: var(--text-primary); }
     .section-subtitle{ text-align:center; font-size:16px; color: var(--text-muted); margin-bottom:30px; line-height:1.5; }
@@ -151,7 +176,7 @@
     .improvement-number{ font-size:16px; font-weight:700; color: var(--primary-color); }
     .improvement-label{ font-size:11px; color: var(--text-muted); text-transform:uppercase; letter-spacing:.3px; }
 
-    /* === The “differences” (comparison) section — EXACT as before === */
+    /* Differences (comparison) */
     .comparison-section { padding: 50px 12px; background: var(--bg-secondary); }
     .comparison-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 40px; }
     .table-wrapper { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px var(--shadow-medium); border: 1px solid var(--shadow-light); }
@@ -220,7 +245,7 @@
     .g-left:hover svg, .g-foot .g-share:hover svg{ stroke:#202124; }
     .g-link{ display:none !important; }
 
-    /* Guarantees, Video, CTA, Footer (unchanged but compacted) */
+    /* Guarantees, Video, CTA, Footer */
     .guarantees-section{ background:#fff; padding:50px 12px; }
     .guarantees-grid{ display:grid; grid-template-columns:1fr; gap:24px; max-width:600px; margin:0 auto; }
     .guarantee-card{ background:#fff; border:2px solid var(--primary-color); border-radius:16px; padding:24px; text-align:center; position:relative; }
@@ -412,22 +437,28 @@
     </div>
   </section>
 
-  <!-- WhatsApp screenshots (side scroll) -->
+  <!-- WhatsApp screenshots (side scroll, cropped) -->
   <section class="wa-rail-real" id="lead-proof">
     <div class="container">
       <h2 class="section-title">What Parents Text Us</h2>
       <p class="section-subtitle">Real WhatsApp messages from parents (shared with permission).</p>
       <div class="rail">
         <div class="wa-shot">
-          <img src="assets/wa-1.jpg" alt="WhatsApp chat showing Physics improvement" loading="lazy" width="720" height="1280">
+          <div class="wa-img">
+            <img src="assets/wa-1.jpg" alt="WhatsApp chat showing Physics improvement" loading="lazy" width="720" height="1280">
+          </div>
           <div class="wa-cap">Physics 48% → 90% in 8 weeks</div>
         </div>
         <div class="wa-shot">
-          <img src="assets/wa-2.jpg" alt="Parent confirming weekly review schedule" loading="lazy" width="720" height="1280">
+          <div class="wa-img">
+            <img src="assets/wa-2.jpg" alt="Parent confirming weekly review schedule" loading="lazy" width="720" height="1280">
+          </div>
           <div class="wa-cap">Weekly parent review calls</div>
         </div>
         <div class="wa-shot">
-          <img src="assets/wa-3.jpg" alt="Timed drills and roadmap update" loading="lazy" width="720" height="1280">
+          <div class="wa-img">
+            <img src="assets/wa-3.jpg" alt="Timed drills and roadmap update" loading="lazy" width="720" height="1280">
+          </div>
           <div class="wa-cap">Timed drills & roadmap tweaks</div>
         </div>
       </div>
@@ -481,7 +512,7 @@
           <div class="success-rank">AIR 45</div>
           <div class="student-profile"><div class="student-avatar">A</div><div class="student-info"><h3>Arjun Sharma</h3><p class="student-college">IIT Delhi EE • Delhi Public School</p></div></div>
           <blockquote class="success-quote">Mathematics was my weakest subject with only 52% in mock tests. Through personalized problem-solving sessions and targeted practice, improved to 94% and secured AIR 45.</blockquote>
-          <div class="improvement-stats"><div class="improvement-stat"><div class="improvement-number">+70%</div><div class="improvement-label">Maths Jump</div></div><div class="improvement-stat"><div class="improvement-number">6 Months</div><div class="improvement-label">Timeline</div></div><div class="improvement-stat"><div class="improvement-number">AIR 45</div><div class="improvement-label">Final Rank</div></div></div>
+          <div class="improvement-stats"><div class="improvement-stat"><div class="improvement-number">+70%</div><div class="improvement-label">Maths Jump</div></div><div class="improvement-stats"><div class="improvement-stat"></div></div><div class="improvement-stat"><div class="improvement-number">6 Months</div><div class="improvement-label">Timeline</div></div><div class="improvement-stat"><div class="improvement-number">AIR 45</div><div class="improvement-label">Final Rank</div></div></div>
         </div>
 
         <div class="success-card">
@@ -501,14 +532,13 @@
     </div>
   </section>
 
-  <!-- === “Differences” comparison (exact) === -->
+  <!-- Differences comparison -->
   <section class="comparison-section" id="why-section">
     <div class="container">
       <h2 class="section-title">The Hidden Truth About JEE Preparation</h2>
       <p class="section-subtitle">Most coaching focuses on content delivery. We focus on rank improvement through personalized execution.</p>
 
       <div class="comparison-container">
-        <!-- Traditional Coaching Problems -->
         <div class="table-wrapper">
           <div class="table-header traditional-header">
             Traditional Coaching Problems
@@ -537,7 +567,6 @@
           </table>
         </div>
 
-        <!-- IITuitions Solutions -->
         <div class="table-wrapper">
           <div class="table-header iituitions-header">
             IITuitions Solutions
