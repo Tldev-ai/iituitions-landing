@@ -1555,7 +1555,32 @@
   .lm-form input{padding:12px 14px;border-radius:12px;border:1px solid #ddd;font-size:14px}
   .lm-legal{font-size:12px;color:#666;margin-top:4px}
   .lm-close{background:transparent;border:none;font-size:22px;position:absolute;right:12px;top:6px;cursor:pointer}
+  /* --- Share Modal --- */
+.share-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;z-index:200}
+.share-backdrop.active{display:block}
+.share-modal{
+  position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:min(560px,92vw);background:#fff;border-radius:12px;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);padding:22px 22px 8px;z-index:201
+}
+.share-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.share-title{font-size:28px;font-weight:800}
+.share-close{background:none;border:0;font-size:26px;cursor:pointer;line-height:1}
+.share-list{margin:6px 0 14px;display:grid;gap:16px}
+.share-item{display:flex;align-items:center;gap:16px;cursor:pointer}
+.share-item img{width:34px;height:34px;border-radius:4px;display:block}
+.share-item span{font-size:20px;color:#202124}
+.share-copylabel{font-size:16px;color:#6b7280;margin-top:8px}
+.share-link{
+  margin-top:4px;padding:10px;border:none;border-bottom:1px solid #e5e7eb;
+  width:100%;font-size:20px;color:#111;outline:none
+}
+.share-toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);
+  background:#111;color:#fff;padding:10px 14px;border-radius:8px;display:none}
+.share-toast.show{display:block}
+
 </style>
+
 <!-- Meta Pixel & GTM placeholders (replace IDs) -->
 <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -1588,6 +1613,77 @@
     .lm-legal{font-size:12px;color:#666;margin-top:4px}
     .lm-close{background:transparent;border:none;font-size:22px;position:absolute;right:12px;top:6px;cursor:pointer}
   </style>
+  <style>
+    /* === Founder two-column (dark slab) === */
+    .founder-slab{background:#0b0b0b;color:#fff;padding:60px 12px}
+    .founder-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+    .founder-photo{position:relative;width:min(520px,92vw);border-radius:24px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.45);justify-self:center}
+    .founder-photo img{width:100%;height:auto;display:block}
+    .founder-copy h2{font-size:32px;font-weight:800;margin-bottom:12px}
+    .founder-quote-xl{background:#1c1c1c;border-left:4px solid #bcd7ff;padding:18px;border-radius:14px;color:#dbeafe;font-style:italic;margin:14px 0 16px}
+    .founder-meta{color:#cbd5e1;line-height:1.65}
+    @media(min-width:900px){.founder-wrap{grid-template-columns:480px 1fr;gap:42px}.founder-copy h2{font-size:40px}}
+  
+    /* === WhatsApp screenshots rail (real images) === */
+    .wa-rail-real{background:#fff;padding:60px 12px}
+    .wa-rail-real .rail{display:flex;gap:18px;overflow-x:auto;padding:16px 2px 8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+    .wa-shot{min-width:300px;max-width:360px;background:#eafff3;border:1px solid #c7f0db;border-radius:18px;padding:12px;scroll-snap-align:start;box-shadow:0 10px 28px rgba(0,0,0,.08)}
+    .wa-shot img{width:100%;height:auto;border-radius:12px;display:block}
+    .wa-cap{font-size:13px;color:#256b3e;margin-top:8px;font-weight:600}
+  
+    /* === Google reviews look === */
+    .g-reviews{background:#fff;padding:60px 12px}
+    .g-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:18px}
+    .g-card{background:#fff;border-radius:16px;border:1px solid #eaeaea;box-shadow:0 10px 25px rgba(0,0,0,.06);padding:18px}
+    .g-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+    .g-ava{width:44px;height:44px;border-radius:50%;background:#f3f4f6;overflow:hidden;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .g-name{font-weight:700}
+    .g-sub{font-size:12px;color:#666}
+    .g-stars{color:#f59e0b;margin:6px 0;font-size:16px;letter-spacing:1px}
+    .g-badge{background:#0b57d0;color:#fff;font-size:10px;padding:2px 6px;border-radius:10px;margin-left:6px}
+    .g-body{color:#222;line-height:1.7}
+    /* --- Google review footer (icons + label like image-1) --- */
+.g-foot{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid #eee;
+}
+
+.g-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#5f6368;           /* Google grey */
+  font-size:18px;
+  font-weight:500;
+}
+
+.g-foot .g-ico{line-height:0;display:inline-flex}
+.g-foot svg{width:22px;height:22px;stroke:#5f6368;fill:none;stroke-width:2}
+
+.g-foot .g-share{
+  margin-left:28px;        /* space after "Hover to react" */
+  background:none;
+  border:none;
+  padding:0;
+  cursor:pointer;
+  line-height:0;
+}
+
+.g-left:hover svg,
+.g-foot .g-share:hover svg{
+  stroke:#202124;          /* darker on hover */
+}
+
+/* hide old text link */
+.g-link{display:none !important;}
+
+    @media(min-width:900px){.g-grid{grid-template-columns:1fr 1fr}}
+  </style>
+  
   
 
 </head>
@@ -1678,32 +1774,51 @@
       </div>
     </div>
   </section>
-  <section class="wa-rail" id="lead-proof">
+  <section class="wa-rail-real" id="lead-proof">
     <div class="container">
       <h2 class="section-title">What Parents Text Us</h2>
-      <p class="section-subtitle">Real WhatsApp-style messages. Screenshots available on request.</p>
+      <p class="section-subtitle">Real WhatsApp messages from parents (shared with permission).</p>
+  
       <div class="rail">
-        <div class="wa-chat">
-          <div class="wa-header"><div class="wa-dp">SR</div><div><b>Seema (Hyderabad)</b><br><small>Mother of Arjun • Grade 12</small></div></div>
-          <div class="wa-msg">Sir, Arjun physics low confidence. Mock tests at 48%.</div>
-          <div class="wa-reply">We'll do a diagnostic today and set an 8-week roadmap. Please share last 3 mock scores.</div>
-          <div class="wa-msg">Shared. Thank you. He’s motivated to try this.</div>
-          <div class="wa-reply">Great! Recording every session. Weekly review with you every Sunday 7pm.</div>
+        <div class="wa-shot">
+          <img src="assets/wa-1.jpg" alt="WhatsApp chat showing Physics improvement" loading="lazy" width="720" height="1280">
+          <div class="wa-cap">Physics 48% → 90% in 8 weeks</div>
         </div>
-        <div class="wa-chat">
-          <div class="wa-header"><div class="wa-dp">RK</div><div><b>Ravi (KPHB)</b><br><small>Father of Keerthi • Grade 11</small></div></div>
-          <div class="wa-msg">Maths solved slowly, accuracy low.</div>
-          <div class="wa-reply">Switching to timed drills for P&C + Vectors this week. Expect 25% faster attempts.</div>
-          <div class="wa-msg">👍🏼</div>
+  
+        <div class="wa-shot">
+          <img src="assets/wa-2.jpg" alt="Parent confirming weekly review schedule" loading="lazy" width="720" height="1280">
+          <div class="wa-cap">Weekly parent review calls</div>
         </div>
-        <div class="wa-chat">
-          <div class="wa-header"><div class="wa-dp">PR</div><div><b>Pramila (Miyapur)</b><br><small>Mother of Rahul • Dropper</small></div></div>
-          <div class="wa-msg">Can we focus on Organic basics? He forgets reactions.</div>
-          <div class="wa-reply">Yes. 3× spaced revision deck + past 10-yr PYQs, tracked every 48h.</div>
+  
+        <div class="wa-shot">
+          <img src="assets/wa-3.jpg" alt="Timed drills and roadmap update" loading="lazy" width="720" height="1280">
+          <div class="wa-cap">Timed drills & roadmap tweaks</div>
         </div>
       </div>
     </div>
   </section>
+  
+  <section class="founder-slab" id="founder">
+    <div class="founder-wrap">
+      <div class="founder-photo">
+        <picture>
+          <source srcset="assets/founder.webp" type="image/webp">
+          <img src="assets/founder.jpg" alt="Prudhvi Sir — Founder of IITuitions" loading="lazy" width="900" height="900">
+        </picture>
+      </div>
+      <div class="founder-copy">
+        <h2>Founded by Prudhvi Sir</h2>
+        <div class="founder-quote-xl">
+          “Just as Arjuna achieved greatness through focused concentration and dedication, our students must align their mind, intellect, and actions toward their IIT dreams.”
+        </div>
+        <p class="founder-meta">
+          Prudhvi Sir, NIT Warangal graduate, started IITuitions in 2017 with a promise of
+          <b>individual attention</b>, recorded sessions, and <b>weekly parent reviews</b>.
+        </p>
+      </div>
+    </div>
+  </section>
+  
   
 
   <!-- Mobile Success Stories -->
@@ -2302,51 +2417,104 @@
   </section>
   
   <!-- Parent Reviews Section -->
-  <section class="reviews-section" id="reviews">
+  <section class="g-reviews" id="reviews">
     <div class="container">
-      <h2 class="section-title">We Succeed Through Working With Parents</h2>
-      <p class="section-subtitle">Our success comes from working closely with parents who believe in their children's abilities and hard work.</p>
-      
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="reviewer-profile">
-            <div class="reviewer-avatar">MK</div>
-            <h3 class="reviewer-name">Mrs. Kapoor</h3>
-            <p class="reviewer-relation">Mother of Rohit (AIR 23)</p>
+      <h2 class="section-title">Parent Reviews on Google</h2>
+      <p class="section-subtitle">Screenshots and links available on request.</p>
+  
+      <div class="g-grid">
+        <!-- Review 1 -->
+        <article class="g-card">
+          <header class="g-head">
+            <div class="g-ava"><img src="assets/rev-1.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+            <div>
+              <div class="g-name">Mokshith Sai <span class="g-badge">NEW</span></div>
+              <div class="g-sub">1 review • a week ago</div>
+            </div>
+          </header>
+          <div class="g-stars">★★★★★</div>
+          <div class="g-body">
+            Taking classes at IITuitions has been very helpful for me. I have improved a lot in the subject I take classes on.
+            The faculty is extremely kind and skillful. I would love to continue with them.
           </div>
-          <div class="review-stars">
-            <span class="star">⭐</span>
-            <span class="star">⭐</span>
-            <span class="star">⭐</span>
-            <span class="star">⭐</span>
-            <span class="star">⭐</span>
+         
+          <footer class="g-foot">
+            <div class="g-left">
+              <span class="g-ico g-ico-heart" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 22l7.8-8.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+                </svg>
+              </span>
+              <span class="g-label">Hover to react</span>
+            </div>
+          
+            <button class="g-share" type="button"
+                    data-share-title="IITuitions review"
+                    data-share-text="Check this IITuitions parent review"
+                    data-share-url="https://iituitions.com/#reviews"
+                    aria-label="Share review">
+              <span class="g-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <path d="M8.6 13.5 15.4 16.5M15.4 7.5 8.6 10.5"></path>
+                </svg>
+              </span>
+            </button>
+          </footer>
+          
+          
+          
+          
+        </article>
+  
+        <!-- Review 2 -->
+        <article class="g-card">
+          <header class="g-head">
+            <div class="g-ava"><img src="assets/rev-2.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+            <div>
+              <div class="g-name">Mrs. Kapoor</div>
+              <div class="g-sub">Parent • 2 weeks ago</div>
+            </div>
+          </header>
+          <div class="g-stars">★★★★★</div>
+          <div class="g-body">
+            My son struggled with Physics despite his dedication. With IITuitions and Prudhvi Sir's team, his approach transformed completely — he went on to secure AIR 23.
           </div>
-          <blockquote class="review-quote">
-            My son struggled with Physics despite his dedication. Through IITuitions and Prudhvi sir's team, his approach to Physics transformed completely, ultimately achieving AIR 23 in JEE Advanced.
-          </blockquote>
-        </div>
-
-        <div class="review-card">
-          <div class="reviewer-profile">
-            <div class="reviewer-avatar">SR</div>
-            <h3 class="reviewer-name">Mr. Rao</h3>
-            <p class="reviewer-relation">Father of Ananya (AIR 55)</p>
-          </div>
-          <div class="review-stars">
-            <span class="star">⭐</span>
-            <span class="star">⭐</span>
-            <span class="star">⭐</span>
-            <span class="star">⭐</span>
-            <span class="star">⭐</span>
-          </div>
-          <blockquote class="review-quote">
-            My daughter faced challenges in Mathematics. IITuitions' systematic JEE-specific methodologies significantly enhanced her problem-solving approach, contributing to her AIR 55 achievement.
-          </blockquote>
-        </div>
+          <footer class="g-foot">
+            <div class="g-left">
+              <span class="g-ico g-ico-heart" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 22l7.8-8.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+                </svg>
+              </span>
+              <span class="g-label">Hover to react</span>
+            </div>
+          
+            <button class="g-share" type="button"
+                    data-share-title="IITuitions review"
+                    data-share-text="Check this IITuitions parent review"
+                    data-share-url="https://iituitions.com/#reviews"
+                    aria-label="Share review">
+              <span class="g-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <path d="M8.6 13.5 15.4 16.5M15.4 7.5 8.6 10.5"></path>
+                </svg>
+              </span>
+            </button>
+          </footer>
+          
+          
+          
+        </article>
       </div>
     </div>
   </section>
-
+  
   <!-- Guarantees Section -->
   <section class="guarantees-section">
     <div class="container">
@@ -2423,15 +2591,9 @@
         </div>
         <p class="brand-copy">Helping students crack IIT JEE examinations and secure admissions into premier IITs and NITs since 2017.</p>
       </div>
-     <div class="founder-section">
-  <h3 class="founder-title">Founded by Prudhvi Sir</h3>
-  <blockquote class="founder-quote">
-    "Just as Arjuna achieved greatness through focused concentration and dedication, our students must align their mind, intellect, and actions toward their IIT dreams."
-  </blockquote>
-  <p class="founder-text">
-    Prudhvi Sir, our founder and NIT Warangal graduate, started IITuitions in 2017 with a clear vision of individual attention and personal guidance.
-  </p>
-</div>
+   
+ 
+   
 
       <div class="col">
         <h4 class="foot-title">Quick Links</h4>
