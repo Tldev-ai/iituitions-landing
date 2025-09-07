@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Transform Your Child's IIT Dreams into Reality - IITuitions</title>
-  <meta name="description" content="Personal mentorship from IIT toppers. 500+ students in IITs. Only 50 students selected annually. Book free assessment now.">
+  <meta name="description" content="Personal mentorship from IIT/NIT alumni. 500+ students in IITs & NITs. Only 50 students selected annually for true individual attention. Book a free assessment now.">
 
   <style>
     /* Mobile-First CSS Variables */
@@ -387,11 +387,14 @@
       <a href="#" class="logo">📘 IITuitions</a>
 
       <div style="position: relative;">
-        <button class="hamburger-menu" id="hamburgerBtn">
+        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
+        <!-- Keep menu, but avoid homepage leak to improve conversion -->
         <nav class="mobile-menu" id="mobileMenu">
-          <a href="/">🎓 IIT</a>
+          <a href="#success-stories">🏆 Results</a>
+          <a href="#why-section">💡 Why Us</a>
+          <a href="#faculty">👩‍🏫 Faculty</a>
           <a href="tel:+919010031000" onclick="closeMenuAndOpenContact()">📞 Contact</a>
         </nav>
       </div>
@@ -401,7 +404,7 @@
         <a class="btn btn-outline" href="#why-section">Why Us</a>
         <a class="btn btn-outline" href="#faculty">Faculty</a>
         <a class="btn btn-outline" href="#reviews">Reviews</a>
-        <button class="btn" onclick="document.getElementById('bookCTA').click()">Contact Us</button>
+        <button class="btn" onclick="document.getElementById('bookCTA').click()">Book Free Assessment</button>
       </nav>
     </div>
   </header>
@@ -416,12 +419,12 @@
         <div class="stat-badge">⚡ We select only 50 per year for maximum individual attention</div>
       </div>
       <h1 class="hero-title">Transform Your Child's IIT Dreams into Reality</h1>
-      <p class="hero-subtitle">Personal mentorship from IIT toppers. Precision assessments and proven results that convert effort into ranks.</p>
+      <p class="hero-subtitle">Personal mentorship by IIT/NIT alumni. Precision assessments and recorded sessions that convert effort into ranks.</p>
       <div class="hero-ctas">
         <a href="#" class="btn btn-hero-primary" onclick="document.getElementById('bookCTA').click()">📋 Book Free Assessment</a>
         <a href="tel:+919010031000" class="btn btn-hero-secondary">📞 Call Now: +91 9010031000</a>
       </div>
-      <div class="hero-guarantee">🛡️ 30-Day Money-Back + JEE Advanced Progress Guarantee</div>
+      <div class="hero-guarantee">🛡️ 30-Day Money-Back + Measurable Progress Guarantee</div>
     </div>
   </section>
 
@@ -429,9 +432,9 @@
   <section class="trust-section">
     <div class="container">
       <div class="trust-stats">
-        <div class="trust-stat"><div class="trust-number">93%</div><div class="trust-label">Success rates</div></div>
+        <div class="trust-stat"><div class="trust-number">93%</div><div class="trust-label">Success rate</div></div>
         <div class="trust-stat"><div class="trust-number">30+</div><div class="trust-label">AIR Under 500</div></div>
-        <div class="trust-stat"><div class="trust-number">100%</div><div class="trust-label">IIT and NIT Alumni</div></div>
+        <div class="trust-stat"><div class="trust-number">100%</div><div class="trust-label">IIT & NIT Alumni</div></div>
         <div class="trust-stat"><div class="trust-number">9+</div><div class="trust-label">Years of Excellence</div></div>
       </div>
     </div>
@@ -497,36 +500,57 @@
         <div class="success-card">
           <div class="success-rank">AIR 23</div>
           <div class="student-profile"><div class="student-avatar">R</div><div class="student-info"><h3>Sri Charan Reddy</h3><p class="student-college">IIT Bombay CSE • DPS RK Puram</p></div></div>
-          <blockquote class="success-quote">Struggled with Physics scoring 45%. After personalized mentoring, achieved 96% in JEE Mains Physics and AIR 23.</blockquote>
-          <div class="improvement-stats"><div class="improvement-stat"><div class="improvement-number">+62%</div><div class="improvement-label">Physics Jump</div></div><div class="improvement-stat"><div class="improvement-number">8 Months</div><div class="improvement-label">Timeline</div></div><div class="improvement-stat"><div class="improvement-number">AIR 23</div><div class="improvement-label">Final Rank</div></div></div>
+          <blockquote class="success-quote">Physics 45% → 96% with targeted mentoring; secured AIR 23.</blockquote>
+          <div class="improvement-stats">
+            <div class="improvement-stat"><div class="improvement-number">+62%</div><div class="improvement-label">Physics Jump</div></div>
+            <div class="improvement-stat"><div class="improvement-number">8 Months</div><div class="improvement-label">Timeline</div></div>
+            <div class="improvement-stat"><div class="improvement-number">AIR 23</div><div class="improvement-label">Final Rank</div></div>
+          </div>
         </div>
 
         <div class="success-card">
           <div class="success-rank">AIR 55</div>
           <div class="student-profile"><div class="student-avatar">A</div><div class="student-info"><h3>Yashwitha</h3><p class="student-college">NIT Warangal</p></div></div>
-          <blockquote class="success-quote">AIR 55 and IIT Delhi admission. The daily review calls kept her razor sharp throughout preparation.</blockquote>
-          <div class="improvement-stats"><div class="improvement-stat"><div class="improvement-number">+62%</div><div class="improvement-label">Maths Jump</div></div><div class="improvement-stat"><div class="improvement-number">7 Months</div><div class="improvement-label">Timeline</div></div><div class="improvement-stat"><div class="improvement-number">AIR 55</div><div class="improvement-label">Final Rank</div></div></div>
+          <blockquote class="success-quote">Daily review calls kept focus razor-sharp; IIT Delhi admit.</blockquote>
+          <div class="improvement-stats">
+            <div class="improvement-stat"><div class="improvement-number">+62%</div><div class="improvement-label">Maths Jump</div></div>
+            <div class="improvement-stat"><div class="improvement-number">7 Months</div><div class="improvement-label">Timeline</div></div>
+            <div class="improvement-stat"><div class="improvement-number">AIR 55</div><div class="improvement-label">Final Rank</div></div>
+          </div>
         </div>
 
         <div class="success-card">
           <div class="success-rank">AIR 45</div>
           <div class="student-profile"><div class="student-avatar">A</div><div class="student-info"><h3>Arjun Sharma</h3><p class="student-college">IIT Delhi EE • Delhi Public School</p></div></div>
-          <blockquote class="success-quote">Mathematics was my weakest subject with only 52% in mock tests. Through personalized problem-solving sessions and targeted practice, improved to 94% and secured AIR 45.</blockquote>
-          <div class="improvement-stats"><div class="improvement-stat"><div class="improvement-number">+70%</div><div class="improvement-label">Maths Jump</div></div><div class="improvement-stats"><div class="improvement-stat"></div></div><div class="improvement-stat"><div class="improvement-number">6 Months</div><div class="improvement-label">Timeline</div></div><div class="improvement-stat"><div class="improvement-number">AIR 45</div><div class="improvement-label">Final Rank</div></div></div>
+          <blockquote class="success-quote">Maths 52% → 94% via problem-solving sprints and feedback.</blockquote>
+          <!-- Fixed malformed markup in original card -->
+          <div class="improvement-stats">
+            <div class="improvement-stat"><div class="improvement-number">+70%</div><div class="improvement-label">Maths Jump</div></div>
+            <div class="improvement-stat"><div class="improvement-number">6 Months</div><div class="improvement-label">Timeline</div></div>
+            <div class="improvement-stat"><div class="improvement-number">AIR 45</div><div class="improvement-label">Final Rank</div></div>
+          </div>
         </div>
 
         <div class="success-card">
           <div class="success-rank">AIR 120</div>
           <div class="student-profile"><div class="student-avatar">R</div><div class="student-info"><h3>Sahid Chowdary</h3><p class="student-college">IIT Madras ME • Local Hyderabad</p></div></div>
-          <blockquote class="success-quote">From 60% in Class 11 to AIR 120. Personalized roadmap and milestone targets made the difference.</blockquote>
-          <div class="improvement-stats"><div class="improvement-stat"><div class="improvement-number">+62%</div><div class="improvement-label">Physics Jump</div></div><div class="improvement-stat"><div class="improvement-number">9 months</div><div class="improvement-label">Timeline</div></div><div class="improvement-stat"><div class="improvement-number">AIR 120</div><div class="improvement-label">Final Rank</div></div></div>
+          <blockquote class="success-quote">From 60% in Class 11 to AIR 120 with milestone-based plan.</blockquote>
+          <div class="improvement-stats">
+            <div class="improvement-stat"><div class="improvement-number">+62%</div><div class="improvement-label">Physics Jump</div></div>
+            <div class="improvement-stat"><div class="improvement-number">9 Months</div><div class="improvement-label">Timeline</div></div>
+            <div class="improvement-stat"><div class="improvement-number">AIR 120</div><div class="improvement-label">Final Rank</div></div>
+          </div>
         </div>
 
         <div class="success-card">
           <div class="success-rank">AIR 67</div>
           <div class="student-profile"><div class="student-avatar">P</div><div class="student-info"><h3>Sri Harsha</h3><p class="student-college">IIT Kharagpur CSE • Narayana</p></div></div>
-          <blockquote class="success-quote">Personalized diagnostic assessments identified critical gaps in organic chemistry concepts. Through targeted mentoring and systematic revision plans, improved from 40% to 94% in just 3 months.</blockquote>
-          <div class="improvement-stats"><div class="improvement-stat"><div class="improvement-number">+54%</div><div class="improvement-label">Chemistry</div></div><div class="improvement-stat"><div class="improvement-number">3 Months</div><div class="improvement-label">Timeline</div></div><div class="improvement-stat"><div class="improvement-number">AIR 67</div><div class="improvement-label">Final Rank</div></div></div>
+          <blockquote class="success-quote">Organic 40% → 94% in 3 months with targeted revision.</blockquote>
+          <div class="improvement-stats">
+            <div class="improvement-stat"><div class="improvement-number">+54%</div><div class="improvement-label">Chemistry</div></div>
+            <div class="improvement-stat"><div class="improvement-number">3 Months</div><div class="improvement-label">Timeline</div></div>
+            <div class="improvement-stat"><div class="improvement-number">AIR 67</div><div class="improvement-label">Final Rank</div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -743,11 +767,11 @@
   <!-- CTA -->
   <section class="cta-section">
     <div class="cta-content">
-      <div class="urgency-text">⏰ Warning: Only 12 seats remaining for January 2025</div>
+      <div class="urgency-text" id="urgencyText">⏰ Limited seats available this month</div>
       <h2 class="cta-title">Your Child's IIT Dream Starts Now</h2>
       <p class="cta-subtitle">Join the exclusive cohort of 50 students who get personal mentorship from IIT toppers.</p>
       <div class="hero-ctas">
-        <a href="#" class="btn btn-hero-primary" onclick="document.getElementById('bookCTA').click()">🚀 Reserve Your Seat - Only 12 Left</a>
+        <a href="#" class="btn btn-hero-primary" onclick="document.getElementById('bookCTA').click()">🚀 Reserve Your Seat</a>
         <a href="tel:+919010031000" class="btn btn-hero-secondary">📞 Call for Immediate Admission</a>
       </div>
     </div>
@@ -767,16 +791,16 @@
           <li><a href="#why-section">Why Us</a></li>
           <li><a href="#faculty">Faculty</a></li>
           <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Register</a></li>
+          <li><a href="#contact" onclick="document.getElementById('bookCTA').click();return false;">Register</a></li>
         </ul>
       </div>
       <div class="col">
         <h4 class="foot-title">Programs</h4>
         <ul class="foot-links">
-          <li><a href="#iit">IIT JEE Program</a></li>
-          <li><a href="#sat">SAT Elite Program</a></li>
-          <li><a href="#mentorship">Mentorship Sessions</a></li>
-          <li><a href="#assessment">Free Assessment</a></li>
+          <li><a href="#success-stories">IIT JEE Program</a></li>
+          <li><a href="#success-stories">SAT Elite Program</a></li>
+          <li><a href="#why-section">Mentorship Sessions</a></li>
+          <li><a href="#success-stories">Free Assessment</a></li>
         </ul>
       </div>
       <div class="col">
@@ -835,6 +859,14 @@
         if(window.innerWidth<768 && menu && btn && !menu.contains(e.target) && !btn.contains(e.target) && menu.classList.contains('active')){ closeMenu(); }
       });
       document.getElementById('yr').textContent=new Date().getFullYear();
+
+      // Evergreen urgency text (kept CTA block, just auto month to avoid staleness)
+      const u = document.getElementById('urgencyText');
+      try{
+        const now = new Date();
+        const month = now.toLocaleString('en', { month: 'long' });
+        if(u) u.textContent = `⏰ Limited seats for ${month} cohort`;
+      }catch(e){}
     });
     window.addEventListener('resize', function(){
       const menu=document.getElementById('mobileMenu'); const btn=document.getElementById('hamburgerBtn');
