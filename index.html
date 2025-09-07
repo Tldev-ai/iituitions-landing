@@ -3,257 +3,560 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <title>IITuitions — Transform Your Child's IIT Dreams into Reality</title>
-  <meta name="description" content="Personal mentorship from IIT/NIT alumni. Only 50 students selected annually for true individual attention. Book a free assessment on WhatsApp.">
+  <title>IITuitions — 93% Students Improved Ranks | Free Assessment</title>
+  <meta name="description" content="Personal mentorship from IIT/NIT alumni. 450+ students into IIT/NIT, 30+ AIR < 500. Free 20-min assessment. Recorded sessions, bi-weekly parent reviews, money-back guarantee.">
 
+  <!-- ====== BASE STYLES (mobile-first) ====== -->
   <style>
     :root{
-      --primary:#000; --primary-2:#1a1a1a;
-      --text:#000; --text-2:#333; --muted:#64748b;
-      --bg:#fff; --bg-2:#f6f7f9; --accent:linear-gradient(135deg,#000, #333);
-      --shadow1:rgba(0,0,0,.08); --shadow2:rgba(0,0,0,.18);
-      --wa:#25D366; --danger:#ef4444; --ok:#10b981;
+      --brand:#000; --brand-2:#1a1a1a; --brand-3:#333;
+      --text:#0b0b0b; --muted:#666; --sub:#333;
+      --bg:#fff; --bg-2:#f8f9fb; --accent:linear-gradient(135deg,#000 0%,#333 100%);
+      --ok:#10b981; --bad:#ef4444; --warn:#f59e0b;
+      --wa:#25D366; --shadow:0 10px 30px rgba(0,0,0,.12);
     }
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    .container{max-width:1200px;margin:0 auto;padding:0 12px}
-    a{text-decoration:none}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 14px}
+    a{color:inherit}
 
-    /* Header */
-    .site-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e5e7eb;box-shadow:0 2px 12px var(--shadow1)}
-    .header-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .logo{font-weight:800;color:#000;font-size:20px}
-    .hamb{width:44px;height:44px;border:none;background:transparent;display:flex;flex-direction:column;gap:5px;align-items:center;justify-content:center}
-    .hamb span{width:24px;height:3px;background:#000;border-radius:2px}
-    .nav-actions{display:none}
-    .menu{position:absolute;top:100%;right:12px;width:260px;background:#fff;border:1px solid #e5e7eb;border-radius:14px;box-shadow:0 14px 34px var(--shadow2);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.2s}
-    .menu a{display:block;padding:14px 16px;color:#111;font-weight:600;border-bottom:1px solid #f1f5f9}
-    .menu a:last-child{border-bottom:none}
-    .menu.open{opacity:1;visibility:visible;transform:translateY(0)}
+    /* ===== Header ===== */
+    .site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:60px}
+    .logo{font-weight:800;display:flex;align-items:center;gap:8px;text-decoration:none}
+    .nav-cta{display:none}
+    .hamb{width:44px;height:44px;border:0;background:transparent;display:grid;place-items:center}
+    .hamb span{width:22px;height:2px;background:#000;display:block;box-shadow:0 6px 0 #000,0 -6px 0 #000}
 
-    /* Buttons */
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;border-radius:26px;font-weight:700;border:2px solid transparent;cursor:pointer}
-    .btn-outline{border-color:#000;color:#000}
-    .btn-outline:hover{background:#000;color:#fff}
-    .btn-wa{background:var(--wa);color:#fff;border-color:#1fbf57;box-shadow:0 8px 24px rgba(37,211,102,.35)}
-    .btn-wa:hover{background:#20BA5A}
+    /* ===== Hero ===== */
+    .hero{background:var(--accent);color:#fff;position:relative;overflow:hidden}
+    .hero .wrap{padding:36px 14px 26px;display:grid;gap:18px;max-width:1080px;margin:0 auto;text-align:center}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:8px 12px;border-radius:999px;font-size:12px;font-weight:700}
+    .h1{font-weight:900;font-size:28px;line-height:1.15}
+    .sub{opacity:.95}
+    .hero-actions{display:grid;gap:12px;justify-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:14px 18px;font-weight:800;cursor:pointer;transition:.2s}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:#fff;color:#000;box-shadow:var(--shadow)}
+    .btn-outline{background:transparent;color:#fff;border:2px solid #fff}
+    .rating{display:flex;gap:8px;align-items:center;justify-content:center;font-weight:700;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:8px 12px;border-radius:12px;font-size:14px}
+    .hero-grid{display:grid;gap:16px}
+    .lead-card{background:#fff;color:#000;border:1px solid #eee;border-radius:16px;box-shadow:var(--shadow);padding:14px;display:grid;gap:10px}
+    .lead-row{display:grid;grid-template-columns:1fr;gap:8px}
+    .in{border:1px solid #ddd;border-radius:10px;padding:12px 12px;font-size:15px}
+    .terms{font-size:12px;color:#666}
+    .mini-proof{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+    .logo-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;opacity:.95}
+    .logo-pill{background:#fff;color:#111;border:1px solid #eee;border-radius:999px;padding:6px 10px;font-size:12px;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .hero-guarantee{color:#111;background:#fff;border:1px dashed #111;border-radius:14px;padding:8px 12px;font-weight:700;display:inline-block;justify-self:center}
 
-    /* Hero */
-    .hero{background:var(--accent);color:#fff;padding:40px 12px 50px;text-align:center;position:relative;overflow:hidden}
-    .hero .wrap{max-width:900px;margin:0 auto;position:relative;z-index:1}
-    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:18px}
-    .pill{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:14px;font-size:12px;font-weight:700}
-    .hero h1{font-size:28px;font-weight:900;margin:10px 0 12px}
-    .hero p{opacity:.95}
-    .hero-ctas{display:flex;flex-direction:column;gap:10px;margin:18px 0}
-    .hero small{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:10px 14px;border-radius:18px;color:#111;display:inline-block}
+    /* ===== Process ===== */
+    .section{padding:48px 0}
+    .title{font-size:26px;font-weight:900;text-align:center;margin-bottom:8px}
+    .subtitle{text-align:center;color:#555;margin-bottom:20px}
+    .process{display:grid;gap:12px}
+    .step{background:#fff;border:1px solid #eee;border-radius:14px;box-shadow:var(--shadow);padding:16px;display:flex;gap:12px;align-items:flex-start}
+    .step b{font-size:18px}
+    .ico{font-size:22px}
 
-    /* Process */
-    .section-title{font-size:28px;font-weight:800;text-align:center;margin:28px 0 12px}
-    .process{padding:12px 0 40px}
-    .steps{display:grid;gap:16px;max-width:1000px;margin:0 auto}
-    .step{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:16px;box-shadow:0 10px 26px var(--shadow1)}
-    .step .num{width:44px;height:44px;border-radius:50%;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
-    .step h3{font-size:20px;margin-bottom:4px}
-    .step .sub{color:#111;font-size:18px;margin:2px 0 8px}
-    .step .muted{color:#466; font-size:14px;margin:6px 0 10px;display:block}
-    .detail-card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:14px;margin-top:10px}
-    .bullets{margin-left:18px}
-    .bullets li{margin:6px 0}
-    .sub-b{margin:6px 0 0 18px;list-style:circle}
-    .receive{margin-top:10px}
-    /* Accordion */
-    .accordion{margin-top:12px;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
-    .acc-h{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;font-weight:800;cursor:pointer;background:#fff}
-    .acc-b{display:none;padding:0 14px 14px;background:#fff}
-    .accordion.open .acc-b{display:block}
-    .accordion.open .ico{transform:rotate(180deg)}
-    .ico{transition:.2s}
+    /* ===== Success (trimmed, visual) ===== */
+    .cards{display:flex;gap:16px;overflow:auto;padding:8px 2px;scroll-snap-type:x mandatory}
+    .card{min-width:280px;scroll-snap-align:start;background:#fff;border:1px solid #eee;border-radius:16px;box-shadow:var(--shadow);padding:16px;position:relative}
+    .rank{position:absolute;right:12px;top:-12px;background:#000;color:#fff;font-size:12px;font-weight:900;border-radius:999px;padding:6px 10px}
+    .nm{font-weight:800}
+    .meta{font-size:12px;color:#666;margin-bottom:10px}
+    .bar{height:8px;background:#eee;border-radius:999px;overflow:hidden}
+    .bar > span{display:block;height:100%;background:linear-gradient(90deg,#16a34a,#22c55e)}
+    .row{display:flex;justify-content:space-between;font-size:12px;margin:6px 0 0}
+    .small{font-size:12px;color:#444;margin-top:10px}
 
-    /* Other sections kept minimal to fit page */
-    .trust{background:var(--bg-2);padding:24px 0}
-    .trustgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:900px;margin:0 auto}
-    .trustcard{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;text-align:center}
-    .big{font-size:22px;font-weight:900}
+    /* ===== Proof rail (limit to 2) ===== */
+    .proof{display:flex;gap:14px;overflow:auto}
+    .shot{min-width:300px;background:#f0fff6;border:1px solid #c7f0db;border-radius:14px;padding:10px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+    .shot .img{aspect-ratio:4/3;background:#f6f6f6;border-radius:10px;overflow:hidden}
+    .shot img{width:100%;height:100%;object-fit:cover}
+    .cap{margin-top:8px;font-size:13px;color:#256b3e;font-weight:700}
 
-    .footer{background:#000;color:#fff;margin-top:30px}
-    .footer .bar{padding:14px 12px;text-align:center;font-size:13px}
+    /* ===== Comparison (condensed) ===== */
+    .cmp{display:grid;gap:16px}
+    .tbl{background:#fff;border:1px solid #eee;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+    .thead{padding:14px 16px;color:#fff;font-weight:900;text-align:center}
+    .t1{background:linear-gradient(135deg,#6b7280,#4b5563)}
+    .t2{background:linear-gradient(135deg,#000,#1a1a1a)}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:12px 14px;border-bottom:1px solid #f1f1f1;text-align:left;font-size:14px}
+    .neg{color:#b91c1c;font-weight:700}
+    .pos{color:#065f46;font-weight:800}
 
-    @media (max-width:420px){
-      .stats{grid-template-columns:1fr}
-      .hero h1{font-size:24px}
-    }
-    @media (min-width:768px){
-      .hamb{display:none}.nav-actions{display:flex;gap:12px}
-      .hero h1{font-size:44px}
-      .stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
-      .section-title{font-size:36px}
+    /* ===== Faculty (trimmed bullets) ===== */
+    .faculty-grid{display:flex;gap:16px;overflow:auto}
+    .fac{min-width:280px;background:#fff;border:1px solid #eee;border-radius:16px;box-shadow:var(--shadow);padding:16px}
+    .fac .top{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+    .ava{width:54px;height:54px;border-radius:50%;background:#000;color:#fff;display:grid;place-items:center;font-weight:900}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{background:#000;color:#fff;border-radius:999px;font-size:12px;padding:4px 10px}
+
+    /* ===== Reviews (aggregate near hero already) ===== */
+    .reviews .grid{display:flex;gap:16px;overflow:auto}
+    .rev{min-width:300px;background:#fff;border:1px solid #eee;border-radius:16px;box-shadow:var(--shadow);padding:16px}
+    .stars{color:#f59e0b;letter-spacing:1px}
+
+    /* ===== Unified Guarantee ===== */
+    .guar{display:grid;gap:14px;max-width:900px;margin:0 auto}
+    .gitem{background:#fff;border:2px solid #111;border-radius:16px;padding:16px;text-align:center}
+
+    /* ===== CTA w/ countdown ===== */
+    .cta{background:var(--accent);color:#fff;text-align:center}
+    .count{display:inline-flex;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:8px 12px;border-radius:12px;font-weight:800;margin-bottom:10px}
+    .seat{display:inline-flex;gap:8px;background:#fff;color:#111;border-radius:12px;padding:8px 12px;font-weight:800;border:1px solid #eee}
+
+    /* ===== FAQ ===== */
+    .faq{max-width:900px;margin:0 auto}
+    .q{background:#fff;border:1px solid #eee;border-radius:12px;padding:12px;margin-bottom:10px}
+    .q summary{cursor:pointer;font-weight:800}
+    .q p{margin-top:8px;color:#444}
+
+    /* ===== Footer ===== */
+    .footer{background:#0b0b0b;color:#fff}
+    .foot-top{display:grid;gap:20px;padding:28px 0}
+    .foot-col h4{font-size:16px;margin-bottom:8px}
+    .foot-links{list-style:none}
+    .foot-links li{margin-bottom:6px}
+    .foot-links a{color:#bfdbfe;text-decoration:none}
+    .bar{border-top:1px solid rgba(255,255,255,.15);padding:14px 0;color:#cbd5e1;font-size:13px;text-align:center}
+
+    /* ===== Sticky bottom actions ===== */
+    .sticky-cta{position:fixed;left:0;right:0;bottom:0;background:#000;color:#fff;display:flex;gap:10px;align-items:center;justify-content:center;padding:10px;z-index:60}
+    .sticky-cta .btn{padding:10px 14px;border-radius:999px}
+    .hide-sticky{transform:translateY(100%);transition:.25s}
+
+    /* ===== Responsive ===== */
+    @media(min-width:768px){
+      .nav-cta{display:flex;gap:10px}
+      .hamb{display:none}
+      .h1{font-size:46px}
+      .hero .wrap{padding:56px 14px 36px}
+      .hero-grid{grid-template-columns:1.1fr .9fr;align-items:center;text-align:left}
+      .lead-row{grid-template-columns:1fr 1fr 1fr auto}
+      .process{grid-template-columns:repeat(4,1fr)}
     }
   </style>
+
+  <!-- ===== Meta Pixel placeholder ===== -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(
+    window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    try{ fbq('init','YOUR_PIXEL_ID'); fbq('track','PageView'); }catch(e){}
+    window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'page_loaded'});
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
+  <!-- ===== JSON-LD (SEO) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"IITuitions",
+    "url":"https://iituitions-landing.vercel.app/",
+    "logo":"https://iituitions-landing.vercel.app/icon.png",
+    "sameAs":["https://maps.google.com","https://www.facebook.com","https://www.instagram.com"],
+    "telephone":"+91-9010031000"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Are classes recorded?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every session is recorded so students can revisit difficult concepts anytime."}},
+      {"@type":"Question","name":"How often are parent reviews?","acceptedAnswer":{"@type":"Answer","text":"Bi-weekly reviews with scorecards, roadmap compliance and next steps."}},
+      {"@type":"Question","name":"Who are the mentors?","acceptedAnswer":{"@type":"Answer","text":"IIT/NIT alumni and senior JEE faculty. We cap enrollment to ensure 1:1 attention."}},
+      {"@type":"Question","name":"What if there’s no improvement?","acceptedAnswer":{"@type":"Answer","text":"Our No-Risk Enrollment covers 30-day refund + performance & process guarantees."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"EducationalOrganization",
+    "name":"IITuitions",
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"200"}
+  }
+  </script>
 </head>
+
 <body>
-  <!-- Header -->
+  <!-- ===== Header ===== -->
   <header class="site-header">
-    <div class="container header-row">
-      <a class="logo" href="#">📘 IITuitions</a>
-
-      <div class="nav-actions">
-        <a class="btn btn-outline" href="#process">How It Works</a>
+    <div class="container nav">
+      <a href="#" class="logo">📘 <span>IITuitions</span></a>
+      <nav class="nav-cta">
+        <a class="btn" href="#process" style="background:#000;color:#fff">How it Works</a>
+        <a class="btn btn-outline" href="#success">Results</a>
         <a class="btn btn-outline" href="#faq">FAQ</a>
-        <a class="btn btn-outline" href="tel:+919010031000">Call</a>
-      </div>
-
-      <div style="position:relative">
-        <button class="hamb" id="hamb" aria-label="Menu"><span></span><span></span><span></span></button>
-        <nav class="menu" id="menu">
-          <a href="#process">How It Works</a>
-          <a href="#faq">FAQ</a>
-          <a href="tel:+919010031000">Call</a>
-        </nav>
-      </div>
+        <button class="btn" id="topCall" data-track="call_click_top" onclick="window.location.href='tel:+919010031000'">📞 Call</button>
+      </nav>
+      <button class="hamb" aria-label="Menu"><span></span></button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- ===== Hero with inline form & rating ===== -->
+  <section class="hero" id="top">
     <div class="wrap">
-      <div class="stats">
-        <div class="pill">✅ Hundreds in IITs/NITs</div>
-        <div class="pill">🏆 10+ Years of Excellence</div>
-        <div class="pill">🎯 AIR under 100</div>
-        <div class="pill">⚡ Max 50 students/year</div>
+      <div class="badges">
+        <span class="badge">🎓 IIT/NIT Alumni Mentors</span>
+        <span class="badge">🏆 30+ AIR &lt; 500</span>
+        <span class="badge">📈 93% Students Improved Ranks</span>
+        <span class="badge">🎥 Recorded Sessions</span>
       </div>
-      <h1>Transform Your Child's IIT Dreams into Reality</h1>
-      <p>Personal mentorship by IIT/NIT alumni. Precision assessments and recorded sessions that convert effort into ranks.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-wa" href="https://wa.me/919010031000?text=Hi%20IITuitions%2C%20please%20book%20my%20free%20assessment" target="_blank" rel="noopener">💬 WhatsApp: Book Free Assessment</a>
-        <a class="btn btn-outline" href="tel:+919010031000">📞 Call: +91 9010031000</a>
+
+      <div class="hero-grid container">
+        <div>
+          <h1 class="h1">Personal Mentorship that <u>Improves Ranks</u></h1>
+          <p class="sub">From <b>48% → 90%</b> in 8 weeks, bi-weekly parent reviews, and a <b>No-Risk Enrollment</b>.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" data-track="cta_click_hero" href="#lead">📋 Book Free 20-min Assessment</a>
+            <a class="btn btn-outline" data-track="whatsapp_click_hero" href="https://wa.me/919010031000?text=Hi%20IITuitions%2C%20book%20my%20free%20assessment" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+            <div class="rating">⭐️⭐️⭐️⭐️⭐️ 4.9/5 • 200+ parent reviews</div>
+            <div class="mini-proof">
+              <span class="logo-pill">IIT Bombay</span>
+              <span class="logo-pill">IIT Delhi</span>
+              <span class="logo-pill">IIT Madras</span>
+              <span class="logo-pill">NIT Warangal</span>
+            </div>
+            <span class="hero-guarantee">🛡️ No-Risk Enrollment: 30-day refund + performance & process cover</span>
+          </div>
+        </div>
+
+        <!-- Inline lead form -->
+        <form id="lead" class="lead-card" onsubmit="handleLead(event)">
+          <b>Get your free assessment</b>
+          <div class="lead-row">
+            <input class="in" required name="name" placeholder="Parent name">
+            <input class="in" required name="phone" inputmode="tel" pattern="[0-9 +()-]{8,}" placeholder="Phone number">
+            <input class="in" name="city" placeholder="City (optional)">
+            <button class="btn btn-primary" type="submit">Get Call Back →</button>
+          </div>
+          <div class="terms">We’ll WhatsApp basic details to schedule your slot. No spam.</div>
+        </form>
       </div>
-      <small>🛡️ Progress Guarantee + 30-Day Money-Back</small>
     </div>
   </section>
 
-  <!-- Trust quick row -->
-  <section class="trust">
-    <div class="container trustgrid">
-      <div class="trustcard"><div class="big">93%</div>Success rate</div>
-      <div class="trustcard"><div class="big">30+</div>AIR &lt; 500</div>
-      <div class="trustcard"><div class="big">100%</div>IIT/NIT Alumni</div>
-      <div class="trustcard"><div class="big">10 yrs</div>Excellence</div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="process" id="process">
+  <!-- ===== Process (4-step flow) ===== -->
+  <section class="section" id="process">
     <div class="container">
-      <h2 class="section-title">How It Works</h2>
+      <h2 class="title">How IITuitions Works</h2>
+      <p class="subtitle">Simple, transparent, result-driven in four steps.</p>
+      <div class="process">
+        <div class="step"><span class="ico">📝</span><div><b>1) Free Assessment</b><br/>Diagnostic of strengths, gaps & exam behavior.</div></div>
+        <div class="step"><span class="ico">🧭</span><div><b>2) Personalized Roadmap</b><br/>Exact weak topics, study blocks & weekly targets.</div></div>
+        <div class="step"><span class="ico">🎓</span><div><b>3) 1:1 Mentorship</b><br/>IIT/NIT alumni teach, sessions are recorded.</div></div>
+        <div class="step"><span class="ico">📊</span><div><b>4) Reviews & Scorecards</b><br/>Bi-weekly parent calls, roadmap compliance checks.</div></div>
+      </div>
+    </div>
+  </section>
 
-      <div class="steps">
-        <!-- STEP 1 with ALL the screenshot 2/3/4 matter INSIDE it -->
-        <article class="step" id="step1">
-          <div class="num">1</div>
-          <div class="body">
-            <h3>Free Assessment</h3>
-            <div class="sub">Know Exactly Where Your Child Stands</div>
+  <!-- ===== Success Stories (visual, trimmed) ===== -->
+  <section class="section" id="success">
+    <div class="container">
+      <h2 class="title">Real Results. Fast Improvements.</h2>
+      <p class="subtitle">Before/after jumps, timelines, and final ranks from our students.</p>
 
-            <!-- Screenshot 2/3/4 content lives INSIDE this step -->
-            <div class="detail-card">
-              <span class="muted">(Free 1-on-1 IIT Mentorship Assessment) ✅</span>
-
-              <ul class="bullets">
-                <li><b>Talk 1-on-1</b> with your child about their current journey</li>
-                <li>Understand their <b>strong &amp; weak topics</b></li>
-                <li>Discuss <b>study habits, focus levels, time availability</b></li>
-                <li><b>Teach a small topic live</b> to evaluate real-time understanding</li>
-                <li>Ask <b>conceptual &amp; numerical questions</b> to check:
-                  <ul class="sub-b">
-                    <li>Depth of understanding</li>
-                    <li>Application skills</li>
-                    <li>Problem-solving approach</li>
-                  </ul>
-                </li>
-                <li>Identify your child’s <b>learning style</b> &amp; <b>communication patterns</b></li>
-              </ul>
-
-              <div class="receive">
-                <p><b>By the end of the session, you and your child will receive:</b></p>
-                <ul class="bullets">
-                  <li>A <b>clear picture</b> of where they stand today</li>
-                  <li>A <b>personalized IIT success roadmap</b> designed by experts</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- “Is this an exam?” accordion (screenshot 6) -->
-            <div class="accordion" id="examAcc">
-              <div class="acc-h">
-                <span>❓ “Is this an exam?”</span>
-                <span class="ico">⌄</span>
-              </div>
-              <div class="acc-b">
-                <p>Nope 🙂 — this isn’t a memory-based test. Our IIT mentors <b>talk 1-on-1</b> with your child, <b>teach a sample concept</b>, and ask a few <b>conceptual &amp; numerical questions</b> to understand real comprehension and application. It’s <b>stress-free</b> and focused on <b>diagnosis, not scores</b>.</p>
-              </div>
-            </div>
-          </div>
+      <div class="cards">
+        <article class="card">
+          <span class="rank">AIR 23</span>
+          <div class="nm">Sri Charan Reddy</div>
+          <div class="meta">IIT Bombay CSE • DPS RK Puram</div>
+          <div class="small">Physics 45% → 96%</div>
+          <div class="bar" aria-label="Physics improvement graph"><span style="width:96%"></span></div>
+          <div class="row"><span>8 months</span><b>Result: IIT-B CSE</b></div>
         </article>
 
-        <!-- STEP 2, 3, 4 continue (your image 5 layout) -->
-        <article class="step">
-          <div class="num">2</div>
-          <div>
-            <h3>Personalized Roadmap</h3>
-            <div class="sub">Get a custom IIT Success plan</div>
-          </div>
+        <article class="card">
+          <span class="rank">AIR 45</span>
+          <div class="nm">Arjun Sharma</div>
+          <div class="meta">IIT Delhi EE</div>
+          <div class="small">Maths 52% → 94%</div>
+          <div class="bar"><span style="width:94%"></span></div>
+          <div class="row"><span>6 months</span><b>Mock → Advanced</b></div>
         </article>
 
-        <article class="step">
-          <div class="num">3</div>
-          <div>
-            <h3>Mentorship Sessions</h3>
-            <div class="sub">1:1 Mentorship From IIT/NIT Alumni</div>
-          </div>
+        <article class="card">
+          <span class="rank">AIR 67</span>
+          <div class="nm">Sri Harsha</div>
+          <div class="meta">IIT KGP CSE</div>
+          <div class="small">Chem 40% → 94%</div>
+          <div class="bar"><span style="width:94%"></span></div>
+          <div class="row"><span>3 months</span><b>Targeted revision</b></div>
         </article>
 
-        <article class="step">
-          <div class="num">4</div>
-          <div>
-            <h3>Reviews &amp; Results</h3>
-            <div class="sub">Track Progress Every day</div>
-          </div>
+        <article class="card">
+          <span class="rank">AIR 120</span>
+          <div class="nm">Sahid Chowdary</div>
+          <div class="meta">IIT Madras ME</div>
+          <div class="small">Class 11 → AIR 120</div>
+          <div class="bar"><span style="width:90%"></span></div>
+          <div class="row"><span>9 months</span><b>Roadmap discipline</b></div>
+        </article>
+      </div>
+
+      <p class="subtitle" style="margin-top:14px">
+        🔎 Want full data? <a href="#impact" onclick="downloadImpactReport()" style="text-decoration:underline">See Impact Report (PDF)</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== WhatsApp Proof (limited) ===== -->
+  <section class="section" id="lead-proof">
+    <div class="container">
+      <h2 class="title">Real Messages from Parents 📱</h2>
+      <p class="subtitle">Screenshots shared with permission.</p>
+      <div class="proof">
+        <div class="shot">
+          <div class="img"><img src="assets/wa-1.jpg" alt="Parent message: Physics improvement 48% to 90%" loading="lazy" width="720" height="540"></div>
+          <div class="cap">Physics 48% → 90% in 8 weeks</div>
+        </div>
+        <div class="shot">
+          <div class="img"><img src="assets/wa-2.jpg" alt="Parent message: weekly review schedule" loading="lazy" width="720" height="540"></div>
+          <div class="cap">Weekly parent review calls</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Condensed Comparison ===== -->
+  <section class="section" id="why">
+    <div class="container">
+      <h2 class="title">Why Most Coaching Fails — And What We Do Differently</h2>
+      <div class="cmp">
+        <div class="tbl">
+          <div class="thead t1">Traditional Coaching</div>
+          <table aria-label="Traditional issues"><tbody>
+            <tr><td class="neg">80+ students in a class • minimal attention</td></tr>
+            <tr><td class="neg">Rushed teaching & even faster revision</td></tr>
+            <tr><td class="neg">No recordings, missed concepts are gone</td></tr>
+            <tr><td class="neg">Generic plan, little progress monitoring</td></tr>
+          </tbody></table>
+        </div>
+        <div class="tbl">
+          <div class="thead t2">IITuitions Method</div>
+          <table aria-label="IITuitions advantages"><tbody>
+            <tr><td class="pos">Capped seats (50/year) → true 1:1 attention</td></tr>
+            <tr><td class="pos">Personalized roadmap with 15-day reviews</td></tr>
+            <tr><td class="pos">Every session recorded for instant revision</td></tr>
+            <tr><td class="pos">Scorecards, timed drills, targeted fixes</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Faculty (short bullets) ===== -->
+  <section class="section" id="faculty">
+    <div class="container">
+      <h2 class="title">Mentors from IITs & NITs</h2>
+      <p class="subtitle">Handpicked senior JEE faculty. Small batches. Personal attention.</p>
+      <div class="faculty-grid">
+        <div class="fac">
+          <div class="top"><div class="ava">R</div><div><b>Raghuvamshi</b><br/><small>IIT Kharagpur</small></div></div>
+          <div class="tags"><span class="tag">Physics</span><span class="tag">3D tools</span><span class="tag">Live demos</span></div>
+        </div>
+        <div class="fac">
+          <div class="top"><div class="ava">K</div><div><b>Keshav</b><br/><small>NIT Delhi</small></div></div>
+          <div class="tags"><span class="tag">Chemistry</span><span class="tag">Quizzes</span><span class="tag">Whiteboard</span></div>
+        </div>
+        <div class="fac">
+          <div class="top"><div class="ava">J</div><div><b>Jyothi</b><br/><small>JEE Physics</small></div></div>
+          <div class="tags"><span class="tag">Explain-back</span><span class="tag">Immediate feedback</span></div>
+        </div>
+        <div class="fac">
+          <div class="top"><div class="ava">K</div><div><b>Kushi</b><br/><small>13+ yrs</small></div></div>
+          <div class="tags"><span class="tag">Maths</span><span class="tag">Timed practice</span><span class="tag">Speed drills</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Reviews (keep 2 cards + aggregate up top) ===== -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <h2 class="title">Parents Love Us</h2>
+      <p class="subtitle">Average rating <b>4.9/5</b> from 200+ reviews.</p>
+      <div class="grid">
+        <article class="rev">
+          <div><b>Mokshith Sai</b> • <span class="stars">★★★★★</span></div>
+          <p>“I improved a lot. Faculty are kind and skillful. I’ll continue with them.”</p>
+        </article>
+        <article class="rev">
+          <div><b>Mrs. Kapoor</b> • <span class="stars">★★★★★</span></div>
+          <p>“My son’s Physics went from struggle to AIR 23. Review calls kept him sharp.”</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- FAQ anchor target -->
-  <div id="faq" class="container" style="padding:10px 0 40px"></div>
+  <!-- ===== Unified Guarantee ===== -->
+  <section class="section" id="guarantee">
+    <div class="container">
+      <h2 class="title">No-Risk Enrollment Guarantee</h2>
+      <p class="subtitle">All protection in one place.</p>
+      <div class="guar">
+        <div class="gitem"><b>30-Day Satisfaction</b><br/>Not satisfied? Full refund within 30 days.</div>
+        <div class="gitem"><b>Performance Assurance</b><br/>If promised progress is not delivered, you get a full refund.</div>
+        <div class="gitem"><b>Process Commitment</b><br/>If we miss our review/recording commitments, fees are fully refunded.</div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="bar">© <span id="yr">2025</span> IITuitions • <a href="https://wa.me/919010031000?text=Hi%20IITuitions%2C%20please%20book%20my%20free%20assessment" class="btn btn-wa" style="margin-left:8px">Book on WhatsApp</a></div>
+  <!-- ===== CTA with countdown + seat meter ===== -->
+  <section class="section cta" id="cta">
+    <div class="container">
+      <div class="count">⏰ Admissions close in <span id="countTxt">—</span></div>
+      <div class="seat" id="seatTxt">Seats: 0/50 filled</div>
+      <h2 class="title" style="color:#fff;margin-top:10px">Your Child’s IIT Journey Starts Now</h2>
+      <p class="subtitle" style="color:#e6e6e6">Limited cohort. Personal mentorship from IIT/NIT alumni.</p>
+      <div style="display:grid;gap:10px;justify-items:center;margin-top:8px">
+        <a class="btn btn-primary" data-track="cta_click_bottom" href="#lead">🚀 Book Free Assessment</a>
+        <a class="btn btn-outline" data-track="call_click_bottom" href="tel:+919010031000">📞 Speak with Admissions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="title">FAQs</h2>
+      <div class="faq">
+        <details class="q"><summary>Are classes recorded?</summary><p>Yes. Every class is recorded and shared so students can revise anytime.</p></details>
+        <details class="q"><summary>How often are parent reviews?</summary><p>Every 15 days we share a scorecard, roadmap status, and next steps.</p></details>
+        <details class="q"><summary>Who teaches?</summary><p>IIT/NIT alumni and senior JEE faculty. We cap to 50 students/year to ensure attention.</p></details>
+        <details class="q"><summary>What if there’s no improvement?</summary><p>Covered by our No-Risk Enrollment (30-day refund + performance & process guarantees).</p></details>
+        <details class="q"><summary>How do I get started?</summary><p>Fill the short form above or tap WhatsApp. We’ll schedule your free 20-min assessment.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="container foot-top">
+      <div class="foot-col">
+        <div class="logo">📘 <b>IITuitions</b></div>
+        <p style="color:#bfdbfe;margin-top:8px">Helping students crack IIT JEE since 2017. Recorded sessions, personal mentorship, proven results.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul class="foot-links">
+          <li><a href="#process">How it Works</a></li>
+          <li><a href="#success">Results</a></li>
+          <li><a href="#guarantee">Guarantee</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <ul class="foot-links">
+          <li>📞 <a href="tel:+919010031000">+91 9010031000</a></li>
+          <li>✉️ <a href="mailto:hello@iituitions.com">hello@iituitions.com</a></li>
+          <li>📍 Nallagandla, Hyderabad 500019, India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bar">© <span id="yr">2025</span> IITuitions • <a href="#" style="color:#bfdbfe">Privacy</a> • <a href="#" style="color:#bfdbfe">Terms</a></div>
   </footer>
 
+  <!-- ===== Sticky CTA (mobile/desktop) ===== -->
+  <div class="sticky-cta" id="stickyBar">
+    <a class="btn btn-primary" href="#lead" data-track="cta_click_sticky">📋 Free Assessment</a>
+    <a class="btn btn-outline" href="tel:+919010031000" data-track="call_click_sticky">📞 Call</a>
+    <a class="btn" style="background:#25D366;color:#000" target="_blank" rel="noopener"
+       href="https://wa.me/919010031000?text=Hi%20IITuitions%2C%20book%20my%20free%20assessment" data-track="wa_click_sticky">💬 WhatsApp</a>
+  </div>
+
+  <!-- ===== Scripts: UX, countdown, seats, tracking ===== -->
   <script>
-    // Mobile menu
-    const hamb = document.getElementById('hamb');
-    const menu = document.getElementById('menu');
-    if(hamb){
-      hamb.addEventListener('click', ()=> menu.classList.toggle('open'));
-      document.addEventListener('click', (e)=>{
-        if(menu.classList.contains('open') && !menu.contains(e.target) && !hamb.contains(e.target)){
-          menu.classList.remove('open');
-        }
-      });
-    }
-
-    // Accordion
-    const exam = document.getElementById('examAcc');
-    if(exam){
-      exam.querySelector('.acc-h').addEventListener('click', ()=> exam.classList.toggle('open'));
-    }
-
     // Year
     document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Countdown to next cohort close (set to next Monday 23:59 IST)
+    (function(){
+      function nextMondayClose(){
+        const now = new Date();
+        const day = now.getDay(); // 0 Sun
+        const diff = (1 - day + 7) % 7 || 7; // next Monday
+        const d = new Date(now.getFullYear(), now.getMonth(), now.getDate()+diff, 23, 59, 0);
+        return d;
+      }
+      const el = document.getElementById('countTxt');
+      function tick(){
+        const end = nextMondayClose();
+        const now = new Date();
+        const ms = end - now;
+        if(ms <= 0){ el.textContent = "few hours"; return; }
+        const d = Math.floor(ms/86400000);
+        const h = Math.floor(ms%86400000/3600000);
+        const m = Math.floor(ms%3600000/60000);
+        el.textContent = `${d}d ${h}h ${m}m`;
+      }
+      tick(); setInterval(tick, 30000);
+    })();
+
+    // Dynamic seats (fake progressive fill; replace with real API if available)
+    (function(){
+      const el = document.getElementById('seatTxt');
+      const base = 32; // starting filled seats
+      function compute(){
+        const day = new Date().getDate();
+        const fill = Math.min(50, base + (day % 12)); // 32..44
+        el.textContent = `${fill} / 50 seats filled`;
+      }
+      compute(); setInterval(compute, 3600*1000);
+    })();
+
+    // Sticky hide on hero, show on scroll
+    (function(){
+      const bar = document.getElementById('stickyBar');
+      let last = 0;
+      function onScroll(){
+        const y = window.scrollY || document.documentElement.scrollTop;
+        bar.classList.toggle('hide-sticky', y < 240);
+        last = y;
+      }
+      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+    })();
+
+    // Lightweight tracking helper (GA4 + Meta if present)
+    function track(eventName, params={}){
+      if(window.dataLayer){ window.dataLayer.push({event:eventName, ...params}); }
+      if(window.fbq){ try{ fbq('trackCustom', eventName, params); }catch(e){} }
+    }
+    document.querySelectorAll('[data-track]').forEach(el=>{
+      el.addEventListener('click', ()=> track(el.dataset.track));
+    });
+
+    // Lead submit → WhatsApp prefill (keeps your WA funnel) + tracking
+    function handleLead(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = encodeURIComponent(f.name.value.trim());
+      const phone = encodeURIComponent(f.phone.value.trim());
+      const city = encodeURIComponent((f.city.value||'').trim());
+      track('lead_submit', {origin:'inline_form'});
+      const msg = `Hi IITuitions, I want a free assessment.%0AName: ${name}%0APhone: ${phone}%0ACity: ${city}`;
+      window.open(`https://wa.me/919010031000?text=${msg}`,'_blank','noopener');
+    }
+
+    // Impact report (placeholder)
+    function downloadImpactReport(){
+      track('impact_report_click');
+      alert('We will share the Impact Report PDF on WhatsApp after the assessment.'); // replace with real file if available
+    }
   </script>
 </body>
 </html>
