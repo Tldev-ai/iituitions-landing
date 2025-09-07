@@ -3,644 +3,452 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <title>Transform Your Child's IIT Dreams into Reality - IITuitions</title>
-  <meta name="description" content="Personal mentorship from IIT/NIT alumni. 500+ students in IITs & NITs. Only 50 students selected annually for true individual attention. Book a free assessment now.">
+  <title>IITuitions — Transform Your Child's IIT Dreams into Reality</title>
+  <meta name="description" content="Personal mentorship from IIT/NIT alumni. Only 50 students chosen yearly for true individual attention. Book a free assessment on WhatsApp.">
 
   <style>
-    /* Mobile-First CSS Variables */
-    :root {
-      --primary-color: #000000;
-      --primary-dark: #1a1a1a;
-      --primary-light: #333333;
-      --text-primary: #000000;
-      --text-secondary: #333333;
-      --text-muted: #666666;
-      --bg-primary: #ffffff;
-      --bg-secondary: #f9f9f9;
-      --bg-accent: linear-gradient(135deg, #000000 0%, #333333 100%);
-      --shadow-light: rgba(0, 0, 0, 0.1);
-      --shadow-medium: rgba(0, 0, 0, 0.15);
-      --success-color: #000000;
-      --warning-color: #000000;
-      --whatsapp-color: #25D366; /* NEW */
-      --negative-color: #ef4444;
-      --positive-color: #10b981;
-      --gold: #f59e0b;
+    :root{
+      --primary:#000; --primary-2:#1a1a1a;
+      --text:#0b1220; --text-2:#374151; --muted:#64748b;
+      --bg:#fff; --bg-2:#f6f7f9; --accent:linear-gradient(135deg,#000,#333);
+      --ring:#e5e7eb; --shadow1:rgba(0,0,0,.08); --shadow2:rgba(0,0,0,.18);
+      --wa:#25D366; --ok:#10b981; --danger:#ef4444;
     }
-
-    /* Reset and base styles - Mobile First */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      line-height: 1.6; color: var(--text-primary); background: var(--bg-primary);
-      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
-      overflow-x: hidden;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 12px; width: 100%; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    .container{max-width:1200px;margin:0 auto;padding:0 12px}
+    a{text-decoration:none}
 
     /* Header */
-    .site-header {
-      background: var(--bg-primary); box-shadow: 0 2px 10px var(--shadow-light);
-      position: sticky; top: 0; z-index: 100; padding: 12px 0; width: 100%;
-      border-bottom: 2px solid var(--shadow-light);
-    }
-    .header-row { display: flex; align-items: center; justify-content: space-between; min-height: 44px; position: relative; }
-    .logo { font-size: 20px; font-weight: 700; color: var(--primary-color); text-decoration: none; display: flex; align-items: center; gap: 8px; }
-
-    /* Hamburger */
-    .hamburger-menu{
-      background: none; border: none; width: 44px; height: 44px; cursor: pointer; display: flex; flex-direction: column;
-      justify-content: center; align-items: center; gap: 4px; padding: 8px; border-radius: 8px; transition: background-color .3s ease;
-      -webkit-tap-highlight-color: rgba(0,0,0,.1); position: relative; z-index: 101;
-    }
-    .hamburger-menu:active{ background-color: rgba(0,0,0,.1); }
-    .hamburger-menu span{ width: 24px; height: 3px; background: var(--text-primary); border-radius: 2px; transition: all .3s cubic-bezier(.68,-.55,.265,1.55); transform-origin: center; display: block;}
-    .hamburger-menu.active span:nth-child(1){ transform: rotate(45deg) translate(6px,6px); background: var(--primary-color); }
-    .hamburger-menu.active span:nth-child(2){ opacity: 0; transform: scale(0); }
-    .hamburger-menu.active span:nth-child(3){ transform: rotate(-45deg) translate(6px,-6px); background: var(--primary-color); }
-
-    /* Mobile menu */
-    .mobile-menu{
-      position: absolute; top: 100%; right: 0; width: 280px; background: var(--bg-primary);
-      border: 1px solid var(--shadow-light); border-radius: 16px; box-shadow: 0 10px 40px var(--shadow-medium);
-      opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all .3s cubic-bezier(.68,-.55,.265,1.55);
-      z-index: 200; margin-top: 8px; overflow: hidden; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-    }
-    .mobile-menu.active{ opacity:1; visibility:visible; transform:translateY(0); }
-    .mobile-menu a{
-      color: var(--text-secondary); text-decoration: none; font-size: 16px; font-weight: 600; padding: 16px 20px;
-      border-bottom: 1px solid var(--shadow-light); transition: all .3s ease; display:flex; align-items:center; gap:12px; min-height:56px;
-    }
-    .mobile-menu a:last-child{ border-bottom: none; }
-    .mobile-menu a:hover,.mobile-menu a:active{ background: rgba(0,0,0,.05); color: var(--primary-color); transform: translateX(4px); }
-
-    .nav-actions{ display:none; }
+    .site-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--ring);box-shadow:0 2px 12px var(--shadow1)}
+    .header-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{font-weight:900;color:#000;font-size:20px}
+    .hamb{width:44px;height:44px;border:none;background:transparent;display:flex;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+    .hamb span{width:24px;height:3px;background:#000;border-radius:2px}
+    .nav-actions{display:none}
+    .menu{position:absolute;top:100%;right:12px;width:260px;background:#fff;border:1px solid var(--ring);border-radius:14px;box-shadow:0 14px 34px var(--shadow2);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.2s}
+    .menu a{display:block;padding:14px 16px;color:#111;font-weight:600;border-bottom:1px solid #f1f5f9}
+    .menu a:last-child{border-bottom:none}
+    .menu.open{opacity:1;visibility:visible;transform:translateY(0)}
 
     /* Buttons */
-    .btn{
-      background: var(--primary-color); color: #fff; border: none; padding: 14px 20px; border-radius: 25px; font-weight: 600;
-      cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; transition: all .3s cubic-bezier(.68,-.55,.265,1.55);
-      font-size:15px; text-align:center; min-height:48px; -webkit-tap-highlight-color: var(--shadow-medium); touch-action: manipulation; user-select: none;
-    }
-    .btn:hover,.btn:focus{ background: var(--primary-dark); transform: translateY(-1px); box-shadow:0 4px 15px var(--shadow-medium); }
-    .btn:active{ transform: translateY(0); transition: transform .1s ease; }
-    .btn-outline{ background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); }
-    .btn-outline:hover,.btn-outline:focus{ background: var(--primary-color); color:#fff; }
-    .btn-light{ background:#fff; color: var(--primary-color); border:2px solid #fff; }
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;border-radius:26px;font-weight:800;border:2px solid transparent;cursor:pointer}
+    .btn-outline{border-color:#000;color:#000}
+    .btn-outline:hover{background:#000;color:#fff}
+    .btn-wa{background:var(--wa);color:#fff;border-color:#1fbf57;box-shadow:0 8px 24px rgba(37,211,102,.35)}
+    .btn-wa:hover{background:#20BA5A}
 
     /* Hero */
-    .hero-section{ background: var(--bg-accent); color:#fff; padding:40px 12px 50px; text-align:center; position:relative; overflow:hidden; }
-    .hero-section::before{
-      content:''; position:absolute; inset:0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)" /></svg>') repeat;
-      opacity:.3;
-    }
-    .hero-content{ position:relative; z-index:2; max-width:900px; margin:0 auto; }
-    .hero-stats{ display:grid; grid-template-columns: repeat(2,1fr); gap:8px; margin-bottom:24px; }
-    .stat-badge{ background: rgba(255,255,255,.15); backdrop-filter: blur(10px); padding:8px 12px; border-radius:16px; font-size:12px; font-weight:600; border:1px solid rgba(255,255,255,.2); text-align:center; }
-    .hero-title{ font-size:26px; font-weight:800; line-height:1.2; margin-bottom:16px; text-shadow:1px 1px 3px rgba(0,0,0,.2); }
-    .hero-subtitle{ font-size:16px; opacity:.95; margin-bottom:24px; line-height:1.4; }
-    .hero-ctas{ display:flex; flex-direction:column; gap:12px; margin-bottom:24px; }
-
-    /* WhatsApp-green Primary CTA (changed) */
-    .btn-hero-primary{
-      background: var(--whatsapp-color);
-      color: #fff;
-      font-weight: 800;
-      padding: 16px 24px; font-size:16px;
-      box-shadow:0 6px 22px rgba(37,211,102,.35);
-      width:100%; max-width:350px; margin:0 auto;
-      border:2px solid #1FBF57;
-    }
-    .btn-hero-primary:hover,.btn-hero-primary:focus{
-      background:#20BA5A; transform: translateY(-1px);
-      box-shadow:0 10px 28px rgba(37,211,102,.45);
-    }
-
-    .btn-hero-secondary{ background: transparent; color:#fff; border:2px solid #fff; font-weight:600; padding:14px 24px; font-size:15px; width:100%; max-width:300px; margin:0 auto; }
-    .hero-guarantee{ background: rgba(0,0,0,.1); color:#333; padding:12px 16px; border-radius:20px; display:inline-block; font-size:13px; font-weight:600; border:1px solid rgba(0,0,0,.2); max-width:90%; line-height:1.3; }
+    .hero{background:var(--accent);color:#fff;padding:40px 12px 50px;text-align:center;position:relative}
+    .hero .wrap{max-width:900px;margin:0 auto}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:18px}
+    .pill{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:14px;font-size:12px;font-weight:800}
+    .hero h1{font-size:28px;font-weight:900;margin:10px 0 12px}
+    .hero p{opacity:.95}
+    .hero-ctas{display:flex;flex-direction:column;gap:10px;margin:18px 0}
+    .hero small{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:10px 14px;border-radius:18px;color:#111;display:inline-block}
 
     /* Trust */
-    .trust-section{ background: var(--bg-secondary); padding:30px 12px; text-align:center; }
-    .trust-stats{ display:grid; grid-template-columns: repeat(4,1fr); gap:8px; max-width:900px; margin:0 auto; }
-    .trust-stat{ background:#fff; padding:16px 12px; border-radius:16px; box-shadow:0 4px 20px var(--shadow-light); border:1px solid var(--shadow-light); }
-    .trust-number{ font-size:22px; font-weight:800; color: var(--primary-color); line-height:1; margin-bottom:4px; }
-    .trust-label{ font-size:12px; color: var(--text-secondary); font-weight:600; }
+    .trust{background:#f8fafc;padding:24px 0}
+    .trustgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:900px;margin:0 auto}
+    .trustcard{background:#fff;border:1px solid var(--ring);border-radius:14px;padding:16px;text-align:center}
+    .big{font-size:22px;font-weight:900}
 
     /* Process */
-    .process{ padding:40px 12px; background:#fff; }
-    .process-wrap{ max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:16px; }
-    .step{ display:flex; gap:14px; align-items:flex-start; background:#fff; border:1px solid var(--shadow-light); border-radius:14px; padding:14px; box-shadow:0 6px 20px var(--shadow-light); }
-    .step-num{ width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--primary-color); color:#fff; font-weight:800; flex-shrink:0; }
-    .step h3{ font-size:16px; margin-bottom:4px; }
-    .section-title{ font-size:28px; font-weight:700; text-align:center; margin-bottom:14px; color: var(--text-primary); }
+    .section-title{font-size:28px;font-weight:900;text-align:center;margin:28px 0 12px}
+    .process{padding:12px 0 20px}
+    .steps{display:grid;gap:16px;max-width:1000px;margin:0 auto}
+    .step{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--ring);border-radius:16px;padding:16px;box-shadow:0 10px 26px var(--shadow1)}
+    .step .num{width:44px;height:44px;border-radius:50%;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
+    .step h3{font-size:20px;margin-bottom:4px}
+    .step .sub{color:#111;font-size:18px;margin:2px 0 0}
 
-    /* === NEW: Free Assessment detailed block (Image 1/2/3 matter) === */
-    .how-details{ max-width:1000px; margin:16px auto 0; display:grid; gap:16px; }
-    /* Image-1 style card */
-    .how-card{
-      background:#fff; border:1px solid var(--shadow-light); border-radius:18px; padding:18px; display:flex; gap:14px; align-items:flex-start;
-      box-shadow:0 8px 22px var(--shadow-light);
-    }
-    .how-card .num{
-      width:44px; height:44px; border-radius:50%; background:#0f172a; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:18px; flex:0 0 44px;
-    }
-    .how-card h4{ font-size:18px; margin-bottom:6px; }
-    .how-card p{ color:#374151; }
+    /* HOW details (Image 1 + 2 + 3 content UNDER step 1) */
+    .how{max-width:1000px;margin:16px auto 0;display:grid;gap:16px}
+    .how-card{background:#fff;border:1px solid var(--ring);border-radius:18px;padding:18px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 8px 22px var(--shadow1)}
+    .how-card .dot{width:44px;height:44px;border-radius:50%;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
+    .how-card h4{font-size:18px;margin-bottom:6px}
+    .how-panel{background:#fff;border:1px solid var(--ring);border-radius:18px;padding:18px;box-shadow:0 8px 22px var(--shadow1)}
+    .how-panel h5{font-size:20px;font-weight:900;margin-bottom:6px}
+    .muted{color:#475569;font-size:14px;margin-bottom:8px}
+    .bullets{margin-left:18px}
+    .bullets li{margin:6px 0;color:#111827}
+    .subb{margin:6px 0 0 20px;list-style:circle}
+    .receive{margin-top:10px}
+    .receive li{margin:6px 0}
+    .roadmap{margin-top:10px;background:#fafafa;border:1px dashed #cbd5e1;border-radius:14px;padding:14px}
+    .roadmap h6{font-size:16px;font-weight:900;margin-bottom:6px}
+    .roadmap p{color:#334155}
+    .roadmap ul{margin:8px 0 0 18px}
+    .badge{display:inline-block;background:#eef2ff;color:#1e1b4b;font-weight:800;border:1px solid #c7d2fe;padding:4px 10px;border-radius:999px;font-size:12px;margin-right:6px}
 
-    /* Image-2/3 matter panel */
-    .how-panel{
-      background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:18px; box-shadow:0 8px 22px var(--shadow-light);
-    }
-    .how-panel h5{ font-size:18px; font-weight:800; margin-bottom:8px; }
-    .muted{ color:#475569; font-size:14px; margin-bottom:8px; }
-    .bullets{ margin-left:18px; }
-    .bullets li{ margin:6px 0; color:#111827; }
-    .sub-bullets{ margin:6px 0 0 20px; list-style: circle; }
-    .end-receive{ margin-top:10px; }
-    .end-receive li{ margin:6px 0; }
+    /* Accordion */
+    .accordion{border:1px solid var(--ring);border-radius:14px;overflow:hidden}
+    .acc-h{background:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:900}
+    .acc-b{display:none;background:#fff;padding:0 16px 16px}
+    .accordion.open .acc-b{display:block}
+    .accordion.open .toggle{transform:rotate(180deg)}
+    .toggle{transition:.2s}
 
-    /* Accordion (Image-6: “Is this an exam?”) */
-    .accordion{ border:1px solid #e5e7eb; border-radius:14px; overflow:hidden; }
-    .acc-head{
-      background:#fff; padding:14px 16px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; user-select:none;
-      font-weight:800;
-    }
-    .acc-head .qmark{ font-size:18px; margin-right:8px; }
-    .acc-body{ display:none; padding:0 16px 16px; background:#fff; color:#111827; }
-    .acc-body p{ margin-top:10px; }
-    .acc-open .acc-body{ display:block; }
-    .acc-open .acc-toggle{ transform: rotate(180deg); }
-
-    /* WhatsApp rail (trimmed to 2 items) */
-    .wa-rail-real{ background:#fff; padding:50px 12px; }
-    .wa-rail-real .rail{ display:flex; gap:18px; overflow-x:auto; overflow-y:hidden; padding:16px 2px 8px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
-    .wa-rail-real .rail::-webkit-scrollbar{ display:none; }
-    .wa-shot{ width:clamp(260px, 70vw, 360px); background:#eafff3; border:1px solid #c7f0db; border-radius:18px; padding:12px; scroll-snap-align:start; box-shadow:0 10px 28px rgba(0,0,0,.08); flex-shrink:0; }
-    .wa-img{ aspect-ratio: 4 / 3; width:100%; border-radius:12px; overflow:hidden; background:#f6f6f6; }
-    .wa-img img{ width:100%; height:100%; object-fit:cover; object-position: top center; display:block; }
-    .wa-cap{ margin-top:10px; font-size:13px; font-weight:600; color:#256b3e; background:#f1fff6; border:1px solid #c7f0db; padding:10px 12px; border-radius:10px; }
+    /* WhatsApp rail (2 examples) */
+    .wa-rail{background:#fff;padding:28px 0}
+    .rail{display:flex;gap:18px;overflow-x:auto;padding:8px 2px 12px;scroll-snap-type:x mandatory}
+    .rail::-webkit-scrollbar{display:none}
+    .shot{width:clamp(260px,70vw,360px);background:#eafff3;border:1px solid #c7f0db;border-radius:18px;padding:12px;scroll-snap-align:start;box-shadow:0 10px 28px rgba(0,0,0,.08)}
+    .shot .img{aspect-ratio:4/3;background:#f3f4f6;border-radius:12px}
 
     /* Founder slab */
-    .founder-slab{ background:#0b0b0b; color:#fff; padding:60px 12px; }
-    .founder-wrap{ max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:28px; align-items:center; }
-    .founder-photo{ position:relative; width:min(520px,92vw); border-radius:24px; overflow:hidden; box-shadow:0 18px 60px rgba(0,0,0,.45); justify-self:center; }
-    .founder-photo img{ width:100%; height:auto; display:block; }
-    .founder-copy h2{ font-size:32px; font-weight:800; margin-bottom:12px; }
+    .founder{background:#0b0b0b;color:#fff;padding:48px 0}
+    .founder-grid{max-width:1100px;margin:0 auto;display:grid;gap:28px}
+    .f-photo{border-radius:22px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.45);justify-self:center;width:min(520px,92vw);height:auto;background:#111}
+    .f-copy h2{font-size:30px;font-weight:900;margin-bottom:10px}
+    .f-quote{background:#111827;border-left:4px solid #93c5fd;padding:16px;border-radius:14px;color:#dbeafe;font-style:italic;margin:12px 0 14px}
+    .f-meta{color:#cbd5e1}
 
-    /* Success cards (quotes shortened) */
-    .success-section{ padding:50px 12px; background: var(--bg-primary); }
-    .section-subtitle{ text-align:center; font-size:16px; color: var(--text-muted); margin-bottom:24px; line-height:1.5; }
-    .success-grid{ display:flex; gap:20px; overflow-x:auto; overflow-y:hidden; padding:12px 0 20px 0; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; -ms-overflow-style:none; margin-bottom:4px; }
-    .success-grid::-webkit-scrollbar{ display:none; }
-    .success-card{ background:#fff; border-radius:16px; padding:16px; box-shadow:0 6px 25px var(--shadow-light); border:1px solid var(--shadow-light); position:relative; transition: all .3s ease; min-width:260px; max-width:300px; scroll-snap-align:start; flex-shrink:0; }
-    .success-rank{ position:absolute; top:-12px; right:16px; background: var(--primary-color); color:#fff; padding:6px 16px; border-radius:16px; font-size:12px; font-weight:700; }
+    /* Success strip (short) */
+    .success{padding:28px 0}
+    .s-grid{display:flex;gap:16px;overflow-x:auto;padding:8px 0 14px}
+    .s-card{min-width:260px;max-width:300px;background:#fff;border:1px solid var(--ring);border-radius:16px;padding:14px;box-shadow:0 6px 18px var(--shadow1);position:relative}
+    .s-rank{position:absolute;top:-10px;right:14px;background:#000;color:#fff;padding:6px 12px;border-radius:12px;font-size:12px;font-weight:800}
 
-    /* Comparison (trimmed rows) */
-    .comparison-section { padding: 50px 12px; background: var(--bg-secondary); }
-    .comparison-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 20px; }
-    .table-wrapper { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px var(--shadow-medium); border: 1px solid var(--shadow-light); }
-    .table-header { padding: 16px 20px; text-align: center; color: white; font-size: 18px; font-weight: 700; position: relative; }
-    .traditional-header { background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%); }
-    .iituitions-header { background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); }
-    .urgency-badge { position: absolute; top: -8px; right: 20px; background: var(--negative-color); color: white; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 700; animation: pulse 2s infinite; }
-    .success-badge { position: absolute; top: -8px; right: 20px; background: var(--positive-color); color: white; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 700; }
-    .comparison-table { width: 100%; border-collapse: collapse; }
-    .comparison-table th { background: #f8f9fa; padding: 12px 16px; text-align: left; font-size: 14px; font-weight: 700; color: var(--text-primary); border-bottom: 2px solid var(--shadow-light); }
-    .comparison-table td { padding: 12px 16px; border-bottom: 1px solid var(--shadow-light); vertical-align: top; font-size:14px; }
-    .comparison-table tr:last-child td { border-bottom: none; }
-    .feature-content { display: flex; align-items: flex-start; gap: 10px; }
-    .feature-icon { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; flex-shrink: 0; margin-top: 1px; }
-    .negative-icon { background: var(--negative-color); color: white; }
-    .positive-icon { background: var(--positive-color); color: white; }
-    @keyframes pulse { 0%{box-shadow:0 4px 16px rgba(239,68,68,.4);} 50%{box-shadow:0 6px 20px rgba(239,68,68,.7);} 100%{box-shadow:0 4px 16px rgba(239,68,68,.4);} }
+    /* Comparison (kept compact) */
+    .compare{background:#f8fafc;padding:32px 0}
+    .c-wrap{max-width:1000px;margin:0 auto;display:grid;gap:18px}
+    .tbl{background:#fff;border:1px solid var(--ring);border-radius:14px;overflow:hidden;box-shadow:0 8px 24px var(--shadow1)}
+    .th{padding:14px 16px;color:#fff;font-weight:900}
+    .th-a{background:linear-gradient(135deg,#6b7280,#4b5563)}
+    .th-b{background:linear-gradient(135deg,#000,#1a1a1a)}
+    table{width:100%;border-collapse:collapse}
+    th{background:#f8fafc;text-align:left;padding:10px 14px}
+    td{padding:10px 14px;border-bottom:1px solid #eef2f7}
 
-    /* Proof / badges / video / footer keep existing styles (omitted for brevity below) */
-    .proof{ background:#f8fafc; padding:24px 12px; }
-    .proof-wrap{ max-width:1000px; margin:0 auto; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:center; }
-    .logo-pill{ padding:8px 12px; border:1px solid #e5e7eb; border-radius:999px; font-size:12px; background:#fff; color:#111; }
-    .footer-pro{ background: var(--text-primary); color:#fff; }
-    .footer-top{ padding:30px 12px; display:grid; grid-template-columns:1fr; gap:24px; }
-    .brand-head{ display:flex; align-items:center; gap:8px; margin-bottom:12px; }
-    .brand-name{ font-size:20px; font-weight:700; color:#fff; }
-    .brand-copy{ color:#bfdbfe; margin-bottom:16px; line-height:1.5; font-size:14px; }
-    .foot-title{ font-size:16px; font-weight:600; margin-bottom:12px; color:#dbeafe; }
-    .foot-links{ list-style:none; }
-    .foot-links li{ margin-bottom:8px; }
-    .foot-links a, .foot-contacts a{ color:#bfdbfe; text-decoration:none; transition: color .3s ease; font-size:14px; }
-    .foot-links a:hover, .foot-contacts a:hover{ color:#fff; }
-    .foot-contacts{ list-style:none; }
-    .foot-contacts li{ display:flex; align-items:flex-start; gap:8px; margin-bottom:10px; }
-    .ico{ font-size:14px; min-width:18px; }
-    .footer-bar{ background: rgba(0,0,0,.2); padding:16px 12px; text-align:center; border-top:1px solid rgba(255,255,255,.1); }
-    .bar-grid{ display:flex; flex-direction:column; gap:12px; align-items:center; font-size:13px; }
-    .bar-links{ display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
-    .bar-links a{ color:#bfdbfe; text-decoration:none; font-size:12px; }
+    /* Footer */
+    .footer{background:#000;color:#fff;margin-top:30px}
+    .foot-top{padding:28px 0}
+    .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:20px}
+    .foot-title{font-weight:800;margin-bottom:8px}
+    .foot-links{list-style:none}
+    .foot-links li{margin:6px 0}
+    .foot-links a{color:#c7d2fe}
+    .foot-links a:hover{color:#fff}
+    .addr{line-height:1.7;color:#cbd5e1}
+    .bar{border-top:1px solid rgba(255,255,255,.15);text-align:center;padding:12px 0;font-size:13px}
 
-    /* Floating actions */
-    .wa-float{
-      position:fixed; bottom:16px; left:12px; width:52px; height:52px; background: var(--whatsapp-color); color:#fff; border-radius:50%;
-      display:flex; align-items:center; justify-content:center; font-size:20px; text-decoration:none; box-shadow:0 4px 16px rgba(37,211,102,.4); z-index:50; transition: all .3s ease;
-    }
-    .wa-float:hover{ transform: scale(1.05); box-shadow:0 6px 20px rgba(37,211,102,.6); background:#20BA5A; }
-    .cta-float-right{
-      position:fixed; bottom:16px; right:12px; background: var(--primary-color); color:#fff; padding:10px 14px; border-radius:24px; text-decoration:none; font-weight:600; font-size:11px;
-      box-shadow:0 4px 16px var(--shadow-medium); z-index:50; transition: all .3s ease; max-width:160px; text-align:center; line-height:1.2; min-height:44px; display:flex; align-items:center; justify-content:center;
-    }
-    .cta-float-right:hover{ background: var(--primary-dark); transform: translateY(-1px); box-shadow:0 6px 20px var(--shadow-medium); }
-
-    /* Responsive tweaks */
-    @media (max-width:400px){
-      .container{ padding:0 8px; }
-      .hero-section{ padding:30px 8px 40px; }
-      .hero-title{ font-size:22px; }
-      .hero-stats{ grid-template-columns:1fr; gap:6px; }
-      .section-title{ font-size:24px; }
+    /* Responsive */
+    @media (max-width:420px){
+      .stats{grid-template-columns:1fr}
+      .hero h1{font-size:24px}
+      .foot-grid{grid-template-columns:1fr;gap:16px}
     }
     @media (min-width:768px){
-      .container{ padding:0 24px; }
-      .hamburger-menu{ display:none !important; }
-      .nav-actions{ display:flex; align-items:center; gap:16px; }
-      .mobile-menu{ display:none; }
-      .hero-title{ font-size:48px; }
-      .hero-subtitle{ font-size:20px; }
-      .hero-stats{ display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
-      .stat-badge{ font-size:14px; padding:8px 16px; }
-      .section-title{ font-size:40px; }
-      .trust-stats{ grid-template-columns: repeat(4,1fr); }
-      .footer-top{ grid-template-columns: 2fr 1fr 1fr 1fr; gap:40px; }
-      .bar-grid{ flex-direction:row; justify-content:space-between; }
-      .hero-ctas{ flex-direction:row; justify-content:center; }
-      .comparison-container{ grid-template-columns:1fr 1fr; gap:20px; }
-      .founder-wrap{ grid-template-columns:480px 1fr; gap:42px; }
-    }
-    @media (prefers-reduced-motion: reduce){
-      *,*::before,*::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+      .hamb{display:none}.nav-actions{display:flex;gap:12px}
+      .hero h1{font-size:44px}
+      .stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+      .section-title{font-size:36px}
+      .founder-grid{grid-template-columns:480px 1fr;gap:40px}
     }
   </style>
-
-  <!-- Meta Pixel placeholder (single copy) -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(
-    window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    try{ fbq('init','YOUR_PIXEL_ID'); fbq('track','PageView'); }catch(e){}
-    window.dataLayer = window.dataLayer || []; window.dataLayer.push({event:'page_loaded'});
-  </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
 </head>
-
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-row">
-      <a href="#" class="logo">📘 IITuitions</a>
+      <a class="logo" href="#">📘 IITuitions</a>
 
-      <div style="position: relative;">
-        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="mobile-menu" id="mobileMenu">
-          <a href="#success-stories">🏆 Results</a>
-          <a href="#why-section">💡 Why Us</a>
-          <a href="#faculty">👩‍🏫 Faculty</a>
-          <a href="tel:+919010031000" onclick="closeMenuAndOpenContact()">📞 Contact</a>
-        </nav>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="#process">How It Works</a>
+        <a class="btn btn-outline" href="#founder">Founder</a>
+        <a class="btn btn-outline" href="#contact">Contact</a>
       </div>
 
-      <nav class="nav-actions desktop-only">
-        <a class="btn btn-outline" href="#success-stories">Success Stories</a>
-        <a class="btn btn-outline" href="#why-section">Why Us</a>
-        <a class="btn btn-outline" href="#faculty">Faculty</a>
-        <a class="btn btn-outline" href="#reviews">Reviews</a>
-        <button class="btn" onclick="document.getElementById('bookCTA').click()">Book Free Assessment</button>
-      </nav>
+      <div style="position:relative">
+        <button class="hamb" id="hamb" aria-label="Menu"><span></span><span></span><span></span></button>
+        <nav class="menu" id="menu">
+          <a href="#process">How It Works</a>
+          <a href="#founder">Founder</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero-section">
-    <div class="hero-content">
-      <div class="hero-stats">
-        <div class="stat-badge">✅ 100's of Students in IITs and NITs</div>
-        <div class="stat-badge">🏆 10+ Years of Excellence</div>
-        <div class="stat-badge">🎯 AIR Under 100 </div>
-        <div class="stat-badge">⚡ Only 50 students per year because best faculty are always limited</div>
+  <section class="hero">
+    <div class="wrap">
+      <div class="stats">
+        <div class="pill">✅ Hundreds in IITs/NITs</div>
+        <div class="pill">🏆 10+ Years Excellence</div>
+        <div class="pill">🎯 AIR under 100</div>
+        <div class="pill">⚡ Max 50 students/year</div>
       </div>
-      <h1 class="hero-title">Transform Your Child's IIT Dreams into Reality</h1>
-      <p class="hero-subtitle">Personal mentorship by IIT/NIT alumni. Precision assessments and recorded sessions that convert effort into ranks.</p>
+      <h1>Transform Your Child's IIT Dreams into Reality</h1>
+      <p>Personal mentorship by IIT/NIT alumni. Precision assessments and recorded sessions that convert effort into ranks.</p>
       <div class="hero-ctas">
-        <!-- CHANGED to WhatsApp green + link -->
-        <a href="https://wa.me/919010031000?text=Hi%20IITuitions%2C%20please%20book%20my%20free%20assessment" class="btn btn-hero-primary" target="_blank" rel="noopener">💬 WhatsApp: Book Free Assessment</a>
-        <a href="tel:+919010031000" class="btn btn-hero-secondary">📞 Call Now: +91 9010031000</a>
+        <a class="btn btn-wa" href="https://wa.me/919010031000?text=Hi%20IITuitions%2C%20please%20book%20my%20free%20assessment" target="_blank" rel="noopener">💬 WhatsApp: Book Free Assessment</a>
+        <a class="btn btn-outline" href="tel:+919010031000">📞 Call: +91 9010031000</a>
       </div>
-      <div class="hero-guarantee">🛡️ Progress Guarantee + 30-Day Money-Back</div>
+      <small>🛡️ Progress Guarantee + 30-Day Money-Back</small>
     </div>
   </section>
 
   <!-- Trust -->
-  <section class="trust-section">
-    <div class="container">
-      <div class="trust-stats">
-        <div class="trust-stat"><div class="trust-number">93%</div><div class="trust-label">Success rate</div></div>
-        <div class="trust-stat"><div class="trust-number">30+</div><div class="trust-label">AIR Under 500</div></div>
-        <div class="trust-stat"><div class="trust-number">100%</div><div class="trust-label">IIT & NIT Alumni</div></div>
-        <div class="trust-stat"><div class="trust-number">10 yrs</div><div class="trust-label">Excellence</div></div>
-      </div>
+  <section class="trust">
+    <div class="container trustgrid">
+      <div class="trustcard"><div class="big">93%</div>Success rate</div>
+      <div class="trustcard"><div class="big">30+</div>AIR &lt; 500</div>
+      <div class="trustcard"><div class="big">100%</div>IIT/NIT Alumni</div>
+      <div class="trustcard"><div class="big">10 yrs</div>Excellence</div>
     </div>
   </section>
 
-  <!-- Process Overview -->
+  <!-- PROCESS -->
   <section class="process" id="process">
     <div class="container">
       <h2 class="section-title">How It Works</h2>
 
-      <div class="process-wrap">
-        <div class="step"><div class="step-num">1</div><div><h3>Free Assessment</h3><div>Know Exactly Where Your Child Stands</div></div></div>
-        <div class="step"><div class="step-num">2</div><div><h3>Personalized Roadmap</h3><div>Get a custom IIT Success plan</div></div></div>
-        <div class="step"><div class="step-num">3</div><div><h3>Mentorship Sessions</h3><div>1:1 Mentorship From IIT/NIT Alumni</div></div></div>
-        <div class="step"><div class="step-num">4</div><div><h3>Reviews & Results</h3><div>Track Progress Every day</div></div></div>
-      </div>
-
-      <!-- === NEW: Image-1,2,3 matter inside same container === -->
-      <!-- Image-1 style card -->
-      <div class="how-details">
-        <div class="how-card">
+      <div class="steps">
+        <!-- Step 1 header -->
+        <article class="step">
           <div class="num">1</div>
           <div>
-            <h4>Free Assessment</h4>
-            <p>Skill mapping + diagnostic across <b>Physics</b>, <b>Chemistry</b>, <b>Mathematics</b>.</p>
+            <h3>Free Assessment</h3>
+            <div class="sub">Know Exactly Where Your Child Stands</div>
           </div>
-        </div>
+        </article>
 
-        <!-- Image-2/3 long matter -->
-        <div class="how-panel">
-          <h5>Know Exactly Where Your Child Stands</h5>
-          <div class="muted">(Free 1-on-1 IIT Mentorship Assessment) ✅</div>
-          <ul class="bullets">
-            <li><b>Talk 1-on-1</b> with your child about their current journey</li>
-            <li>Understand their <b>strong & weak topics</b></li>
-            <li>Discuss <b>study habits, focus levels, time availability</b></li>
-            <li><b>Teach a small topic live</b> to evaluate real-time understanding</li>
-            <li>Ask <b>conceptual & numerical questions</b> to check:
-              <ul class="sub-bullets">
-                <li>Depth of understanding</li>
-                <li>Application skills</li>
-                <li>Problem-solving approach</li>
-              </ul>
-            </li>
-            <li>Identify learning style & communication patterns</li>
-          </ul>
+        <!-- Details UNDER step 1 -->
+        <div class="how">
+          <!-- Image 1 card -->
+          <div class="how-card">
+            <div class="dot">1</div>
+            <div>
+              <h4>Free Assessment</h4>
+              <p>Skill mapping + diagnostic across <b>Physics</b>, <b>Chemistry</b>, <b>Mathematics</b>.</p>
+            </div>
+          </div>
 
-          <div class="end-receive">
-            <p><b>By the end of the session, you and your child will receive:</b></p>
+          <!-- Image 2 + 3 matter -->
+          <div class="how-panel" id="assessment-details">
+            <h5>Know Exactly Where Your Child Stands</h5>
+            <div class="muted">(Free 1-on-1 IIT Mentorship Assessment) ✅</div>
+
             <ul class="bullets">
-              <li>A <b>clear picture</b> of where they stand today</li>
-              <li>A <b>personalized IIT success roadmap</b> designed by experts</li>
+              <li><b>Talk 1-on-1</b> with your child about their current journey</li>
+              <li>Understand their <b>strong &amp; weak topics</b></li>
+              <li>Discuss <b>study habits, focus levels, time availability</b></li>
+              <li><b>Teach a small topic live</b> to evaluate real-time understanding</li>
+              <li>Ask <b>conceptual &amp; numerical questions</b> to check:
+                <ul class="subb">
+                  <li>Depth of understanding</li>
+                  <li>Application skills</li>
+                  <li>Problem-solving approach</li>
+                </ul>
+              </li>
+              <li>Identify learning style &amp; communication patterns</li>
             </ul>
+
+            <div class="receive">
+              <p><b>By the end of the session, you and your child will receive:</b></p>
+              <ul class="bullets">
+                <li>A <b>clear picture</b> of where they stand today</li>
+                <li>A <b>personalized IIT success roadmap</b> designed by experts</li>
+              </ul>
+            </div>
+
+            <!-- Road map + one scenario -->
+            <div class="roadmap">
+              <span class="badge">Sample Roadmap</span>
+              <h6>Scenario: Strong in Maths, weak in Mechanics &amp; Physical Chemistry</h6>
+              <p>First 15 days after assessment:</p>
+              <ul>
+                <li><b>Days 1–5:</b> Mechanics baseline — Kinematics &amp; NLM micro-drills (40 Q/day), nightly 20-min error-log review.</li>
+                <li><b>Days 6–10:</b> Physical Chemistry — Mole concept &amp; Thermodynamics; 2×45-min concept recordings to revisit.</li>
+                <li><b>Days 11–13:</b> Mixed Sectional Tests (Mechanics + PhyChem) with timed sprints; speed × accuracy chart.</li>
+                <li><b>Days 14–15:</b> Mentor 1:1 review + parent call; adjust next block (Rotation or Chemical Equilibrium).</li>
+              </ul>
+            </div>
+
+            <!-- Image 6: “Is this an exam?” -->
+            <div class="accordion" id="examAcc">
+              <div class="acc-h"><span>❓ “Is this an exam?”</span><span class="toggle">⌄</span></div>
+              <div class="acc-b">
+                <p>Nope 🙂 — this isn’t a memory-based test. Our IIT mentors <b>talk 1-on-1</b> with your child, <b>teach a sample concept</b>, and ask a few <b>conceptual &amp; numerical questions</b> to understand real comprehension and application. It’s <b>stress-free</b> and focused on <b>diagnosis, not scores</b>.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Image-6: Is this an exam? (accordion) -->
-        <div class="accordion" id="examAccordion">
-          <div class="acc-head">
-            <span><span class="qmark">❓</span>“Is this an exam?”</span>
-            <span class="acc-toggle">⌄</span>
+        <!-- Step 2–4 rows continue (Image-5 style) -->
+        <article class="step">
+          <div class="num">2</div>
+          <div>
+            <h3>Personalized Roadmap</h3>
+            <div class="sub">Get a custom IIT Success plan</div>
           </div>
-          <div class="acc-body">
-            <p>Nope 🙂 — this isn’t a memory-based test. Our IIT mentors <b>talk 1-on-1</b> with your child, <b>teach a sample concept</b>, and ask a few <b>conceptual & numerical questions</b> to understand real comprehension and application. It’s <b>stress-free</b> and focused on <b>diagnosis, not scores</b>.</p>
+        </article>
+
+        <article class="step">
+          <div class="num">3</div>
+          <div>
+            <h3>Mentorship Sessions</h3>
+            <div class="sub">1:1 Mentorship From IIT/NIT Alumni</div>
           </div>
-        </div>
+        </article>
+
+        <article class="step">
+          <div class="num">4</div>
+          <div>
+            <h3>Reviews &amp; Results</h3>
+            <div class="sub">Track Progress Every day</div>
+          </div>
+        </article>
       </div>
-      <!-- === /NEW === -->
-
     </div>
   </section>
 
-  <!-- WhatsApp screenshots (trimmed to 2) -->
-  <section class="wa-rail-real" id="lead-proof">
+  <!-- WhatsApp rail -->
+  <section class="wa-rail">
     <div class="container">
       <h2 class="section-title">What Parents Text Us</h2>
-      <p class="section-subtitle">Real messages (shared with permission) + quick stats.</p>
       <div class="rail">
-        <div class="wa-shot">
-          <div class="wa-img">
-            <img src="assets/wa-1.jpg" alt="WhatsApp chat showing Physics improvement" loading="lazy" width="720" height="1280">
-          </div>
-          <div class="wa-cap">Physics 48% → 90% in 8 weeks</div>
+        <div class="shot">
+          <div class="img"></div>
+          <div style="margin-top:8px;font-weight:700;color:#256b3e">Physics 48% → 90% in 8 weeks</div>
         </div>
-        <div class="wa-shot">
-          <div class="wa-img">
-            <img src="assets/wa-2.jpg" alt="Parent confirming weekly review schedule" loading="lazy" width="720" height="1280">
-          </div>
-          <div class="wa-cap">Weekly parent review calls</div>
+        <div class="shot">
+          <div class="img"></div>
+          <div style="margin-top:8px;font-weight:700;color:#256b3e">Weekly parent review calls</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Founder -->
-  <section class="founder-slab" id="founder">
-    <div class="founder-wrap">
-      <div class="founder-photo">
-        <picture>
-          <source srcset="assets/founder.webp" type="image/webp">
-          <img src="assets/founder.jpg" alt="Prudhvi Sir — Founder of IITuitions" loading="lazy" width="900" height="900">
-        </picture>
+  <!-- Founder slab -->
+  <section class="founder" id="founder">
+    <div class="founder-grid">
+      <div class="f-photo">
+        <!-- Replace with your real image -->
+        <img src="https://via.placeholder.com/900x900/0b0b0b/ffffff?text=Founder+Photo" alt="Prudhvi Sir — Founder of IITuitions" style="width:100%;height:auto;display:block">
       </div>
-      <div class="founder-copy">
+      <div class="f-copy">
         <h2>Founded by Prudhvi Sir</h2>
-        <p class="brand-copy" style="color:#dbeafe">“Just as Arjuna achieved greatness through focused concentration and dedication, our students align mind, intellect, and action toward IIT dreams.”</p>
-        <p class="brand-copy" style="color:#cbd5e1">NIT Warangal graduate. Since 2017 we’ve stayed true to <b>individual attention</b>, <b>recorded sessions</b>, and <b>weekly parent reviews</b>.</p>
+        <div class="f-quote">“Just as Arjuna achieved greatness through focused concentration and dedication, our students align mind, intellect, and action toward IIT dreams.”</div>
+        <p class="f-meta">NIT Warangal graduate. Since 2017 we’ve stayed true to <b>individual attention</b>, <b>recorded sessions</b>, and <b>weekly parent reviews</b>.</p>
       </div>
     </div>
   </section>
 
-  <!-- Success stories -->
-  <section class="success-section" id="success-stories">
+  <!-- Short success strip -->
+  <section class="success" id="success">
     <div class="container">
       <h2 class="section-title">JEE Advanced Toppers</h2>
-      <p class="section-subtitle">Real students, measurable jumps, verified ranks <a href="#footnotes" class="logo-pill">See proof ↓</a></p>
-
-      <div class="success-grid">
-        <div class="success-card">
-          <div class="success-rank">AIR 23</div>
-          <div class="student-profile" style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-            <div class="student-avatar" style="width:44px;height:44px;border-radius:50%;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;">R</div>
-            <div class="student-info"><h3 style="font-size:16px;">Sri Charan Reddy</h3><p class="student-college" style="color:#666;font-size:12px;">IIT Bombay CSE • DPS RK Puram</p></div>
-          </div>
-          <div class="success-quote" style="font-size:13px;color:#333">Physics 45% → 96% with targeted mentoring.</div>
+      <div class="s-grid">
+        <div class="s-card">
+          <div class="s-rank">AIR 23</div>
+          <div style="font-weight:800;margin-bottom:6px">Sri Charan Reddy</div>
+          <div style="color:#374151">Physics 45% → 96% with targeted mentoring.</div>
         </div>
-
-        <div class="success-card">
-          <div class="success-rank">AIR 55</div>
-          <div class="student-profile" style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-            <div class="student-avatar" style="width:44px;height:44px;border-radius:50%;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;">Y</div>
-            <div class="student-info"><h3 style="font-size:16px;">Yashwitha</h3><p class="student-college" style="color:#666;font-size:12px;">NIT Warangal</p></div>
-          </div>
-          <div class="success-quote" style="font-size:13px;color:#333">Daily reviews → IIT Delhi admit.</div>
+        <div class="s-card">
+          <div class="s-rank">AIR 55</div>
+          <div style="font-weight:800;margin-bottom:6px">Yashwitha</div>
+          <div style="color:#374151">Daily reviews → IIT Delhi admit.</div>
         </div>
-
-        <div class="success-card">
-          <div class="success-rank">AIR 45</div>
-          <div class="student-profile" style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-            <div class="student-avatar" style="width:44px;height:44px;border-radius:50%;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;">A</div>
-            <div class="student-info"><h3 style="font-size:16px;">Arjun Sharma</h3><p class="student-college" style="color:#666;font-size:12px;">IIT Delhi EE • DPS</p></div>
-          </div>
-          <div class="success-quote" style="font-size:13px;color:#333">Maths 52% → 94% via sprint drills + feedback.</div>
+        <div class="s-card">
+          <div class="s-rank">AIR 45</div>
+          <div style="font-weight:800;margin-bottom:6px">Arjun Sharma</div>
+          <div style="color:#374151">Maths 52% → 94% via sprint drills + feedback.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Compact Comparison -->
-  <section class="comparison-section" id="why-section">
-    <div class="container">
-      <h2 class="section-title">Why Most Coaching Fails vs. What Works</h2>
-      <div class="comparison-container">
-        <div class="table-wrapper">
-          <div class="table-header traditional-header">Traditional Coaching Problems <div class="urgency-badge">Outdated</div></div>
-          <table class="comparison-table">
-            <thead><tr><th>Key Issues</th></tr></thead>
-            <tbody>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div>80+ in class; no individual help</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div>Fast teaching; faster revision</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div>No recordings; missed concepts lost</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div>Generic plans; weak-topic blind spots</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div>Limited tools/resources</div></div></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="table-wrapper">
-          <div class="table-header iituitions-header">IITuitions Solutions <div class="success-badge">Proven</div></div>
-          <table class="comparison-table">
-            <thead><tr><th>Our Advantages</th></tr></thead>
-            <tbody>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div>Max 50/year; true 1:1 attention</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div>Custom roadmap + 15-day reviews</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div>Recorded sessions; revisit anytime</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div>IIT/NIT mentors; targeted drills</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div>Modern tools + high-quality content</div></div></td></tr>
-            </tbody>
-          </table>
-        </div>
+  <!-- Comparison (compact) -->
+  <section class="compare" id="why">
+    <div class="container c-wrap">
+      <div class="tbl">
+        <div class="th th-a">Traditional Coaching Problems</div>
+        <table>
+          <tbody>
+            <tr><td>80+ in class; no individual help</td></tr>
+            <tr><td>Fast teaching; faster revision</td></tr>
+            <tr><td>No recordings; missed concepts lost</td></tr>
+            <tr><td>Generic plans; weak-topic blind spots</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tbl">
+        <div class="th th-b">IITuitions Solutions</div>
+        <table>
+          <tbody>
+            <tr><td>Max 50/year; true 1:1 attention</td></tr>
+            <tr><td>Custom roadmap + 15-day reviews</td></tr>
+            <tr><td>Recorded sessions; revisit anytime</td></tr>
+            <tr><td>IIT/NIT mentors; targeted drills</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <!-- Social Proof / Trust Signals -->
-  <section class="proof">
-    <div class="proof-wrap">
-      <div class="logo-pill">⭐️ 4.9/5 • 200+ Google reviews</div>
-      <div class="logo-pill">IIT Bombay</div>
-      <div class="logo-pill">IIT Delhi</div>
-      <div class="logo-pill">IIT Madras</div>
-      <div class="logo-pill">IIT Kharagpur</div>
-      <a href="#footnotes" class="logo-pill">Media mentions &raquo;</a>
-      <a href="assets/reviews.pdf" class="logo-pill" target="_blank" rel="noopener">Review screenshots</a>
-    </div>
-  </section>
-
-  <!-- (…You can keep your other sections: video, reviews, metrics, guarantees, CTA, FAQ, footnotes, footer…) -->
-
-  <!-- Footer (shortened) -->
-  <footer class="footer-pro">
-    <div class="container footer-top">
-      <div class="col brand-col">
-        <div class="brand-head"><span class="brand-logo">📘</span><span class="brand-name">IITuitions</span></div>
-        <p class="brand-copy">Helping students crack IIT JEE examinations and secure admissions into premier IITs and NITs since 2017.</p>
-      </div>
-      <div class="col">
-        <h4 class="foot-title">Quick Links</h4>
-        <ul class="foot-links">
-          <li><a href="#process">How It Works</a></li>
-          <li><a href="#success-stories">Success Stories</a></li>
-          <li><a href="#why-section">Why Us</a></li>
-          <li><a href="#faculty">Faculty</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <h4 class="foot-title">Programs</h4>
-        <ul class="foot-links">
-          <li><a href="#success-stories">IIT JEE Program</a></li>
-          <li><a href="#success-stories">SAT Elite Program</a></li>
-          <li><a href="#process">Mentorship Sessions</a></li>
-          <li><a href="https://wa.me/919010031000?text=Hi%20IITuitions%2C%20please%20book%20my%20free%20assessment" target="_blank" rel="noopener">Free Assessment</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <h4 class="foot-title">Contact Us</h4>
-        <ul class="foot-contacts">
-          <li><span class="ico">📞</span><a href="tel:+919010031000">+91 9010031000</a></li>
-          <li><span class="ico">✉️</span><a href="mailto:hello@iituitions.com">hello@iituitions.com</a></li>
-          <li class="addr"><span class="ico">📍</span><div>IITuitions Hub LLP,<br/>Nallagandla, Hyderabad 500019,<br/>India</div></li>
-        </ul>
+  <!-- Footer with address -->
+  <footer class="footer" id="contact">
+    <div class="container foot-top">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-title">📘 IITuitions</div>
+          <p class="addr">Helping students crack IIT JEE examinations and secure admissions into premier IITs and NITs since 2017.</p>
+          <p><a class="btn btn-wa" href="https://wa.me/919010031000?text=Hi%20IITuitions%2C%20please%20book%20my%20free%20assessment" target="_blank" rel="noopener">Book on WhatsApp</a></p>
+        </div>
+        <div>
+          <div class="foot-title">Quick Links</div>
+          <ul class="foot-links">
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#success">Success Stories</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#founder">Founder</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="foot-title">Programs</div>
+          <ul class="foot-links">
+            <li><a href="#process">IIT JEE Program</a></li>
+            <li><a href="#process">Mentorship Sessions</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="foot-title">Contact Us</div>
+          <ul class="foot-links">
+            <li>📞 <a href="tel:+919010031000">+91 9010031000</a></li>
+            <li>✉️ <a href="mailto:hello@iituitions.com">hello@iituitions.com</a></li>
+          </ul>
+          <div class="addr">
+            <div>📍 IITuitions Hub LLP,</div>
+            <div>Nallagandla, Hyderabad 500019,</div>
+            <div>India</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="footer-bar">
-      <div class="container bar-grid">
-        <div>© <span id="yr">2025</span> IITuitions. All rights reserved.</div>
-        <nav class="bar-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Policy</a>
-        </nav>
-      </div>
-    </div>
+    <div class="bar">© <span id="yr">2025</span> IITuitions. All rights reserved.</div>
   </footer>
 
-  <!-- Floating buttons -->
-  <a class="wa-float" href="https://wa.me/917207467565?text=Hi%20IITuitions%2C%20I%27d%20like%20course%20details" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488"/>
-    </svg>
-  </a>
-
-  <a id="bookCTA" class="cta-float-right" href="https://wa.me/919010031000?text=Hi%20IITuitions%2C%20book%20my%20free%20assessment" target="_blank" rel="noopener">📋 Free Assessment</a>
-
   <script>
-    // Mobile Menu
-    function toggleMobileMenu(){
-      const menu=document.getElementById('mobileMenu');
-      const hamburger=document.getElementById('hamburgerBtn');
-      if(!menu||!hamburger) return;
-      const isActive=menu.classList.contains('active');
-      if(isActive){ menu.classList.remove('active'); hamburger.classList.remove('active'); document.body.style.overflow=''; }
-      else { menu.classList.add('active'); hamburger.classList.add('active'); document.body.style.overflow='hidden'; }
-    }
-    function closeMenu(){
-      const menu=document.getElementById('mobileMenu');
-      const btn=document.getElementById('hamburgerBtn');
-      if(menu&&btn){ menu.classList.remove('active'); btn.classList.remove('active'); document.body.style.overflow=''; }
-    }
-    function closeMenuAndOpenContact(){ closeMenu(); window.location.href='tel:+919010031000'; }
-
-    document.addEventListener('DOMContentLoaded', function(){
-      const hamburgerBtn=document.getElementById('hamburgerBtn');
-      if(hamburgerBtn){ hamburgerBtn.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); toggleMobileMenu(); }); }
-      document.querySelectorAll('#mobileMenu a').forEach(link=> link.addEventListener('click', closeMenu));
-      document.addEventListener('click', function(e){
-        const menu=document.getElementById('mobileMenu'); const btn=document.getElementById('hamburgerBtn');
-        if(window.innerWidth<768 && menu && btn && !menu.contains(e.target) && !btn.contains(e.target) && menu.classList.contains('active')){ closeMenu(); }
+    // Mobile menu
+    const hamb = document.getElementById('hamb');
+    const menu = document.getElementById('menu');
+    if(hamb){
+      hamb.addEventListener('click', ()=> menu.classList.toggle('open'));
+      document.addEventListener('click', (e)=>{
+        if(menu.classList.contains('open') && !menu.contains(e.target) && !hamb.contains(e.target)){
+          menu.classList.remove('open');
+        }
       });
-      document.getElementById('yr').textContent=new Date().getFullYear();
-
-      // Accordion toggle
-      const acc = document.getElementById('examAccordion');
-      if(acc){
-        acc.querySelector('.acc-head').addEventListener('click', ()=> acc.classList.toggle('acc-open'));
-      }
-    });
-
-    window.addEventListener('resize', function(){
-      const menu=document.getElementById('mobileMenu'); const btn=document.getElementById('hamburgerBtn');
-      if(window.innerWidth>=768 && menu && btn){ menu.classList.remove('active'); btn.classList.remove('active'); document.body.style.overflow=''; }
-    });
+    }
+    // Accordion
+    const exam = document.getElementById('examAcc');
+    if(exam){ exam.querySelector('.acc-h').addEventListener('click', ()=> exam.classList.toggle('open')); }
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
