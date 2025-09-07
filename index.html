@@ -63,11 +63,7 @@
     .step h3{font-size:20px;margin-bottom:4px}
     .step .sub{color:#111;font-size:18px;margin:2px 0 0}
 
-    /* HOW details (Image 1 + 2 + 3 content UNDER step 1) */
-    .how{max-width:1000px;margin:16px auto 0;display:grid;gap:16px}
-    .how-card{background:#fff;border:1px solid var(--ring);border-radius:18px;padding:18px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 8px 22px var(--shadow1)}
-    .how-card .dot{width:44px;height:44px;border-radius:50%;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
-    .how-card h4{font-size:18px;margin-bottom:6px}
+    /* HOW cards / panels */
     .how-panel{background:#fff;border:1px solid var(--ring);border-radius:18px;padding:18px;box-shadow:0 8px 22px var(--shadow1)}
     .how-panel h5{font-size:20px;font-weight:900;margin-bottom:6px}
     .muted{color:#475569;font-size:14px;margin-bottom:8px}
@@ -78,19 +74,16 @@
     .receive li{margin:6px 0}
     .roadmap{margin-top:10px;background:#fafafa;border:1px dashed #cbd5e1;border-radius:14px;padding:14px}
     .roadmap h6{font-size:16px;font-weight:900;margin-bottom:6px}
-    .roadmap p{color:#334155}
-    .roadmap ul{margin:8px 0 0 18px}
-    .badge{display:inline-block;background:#eef2ff;color:#1e1b4b;font-weight:800;border:1px solid #c7d2fe;padding:4px 10px;border-radius:999px;font-size:12px;margin-right:6px}
 
     /* Accordion */
-    .accordion{border:1px solid var(--ring);border-radius:14px;overflow:hidden}
+    .accordion{border:1px solid var(--ring);border-radius:14px;overflow:hidden;margin-top:10px}
     .acc-h{background:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:900}
     .acc-b{display:none;background:#fff;padding:0 16px 16px}
     .accordion.open .acc-b{display:block}
     .accordion.open .toggle{transform:rotate(180deg)}
     .toggle{transition:.2s}
 
-    /* WhatsApp rail (2 examples) */
+    /* WhatsApp rail (examples) */
     .wa-rail{background:#fff;padding:28px 0}
     .rail{display:flex;gap:18px;overflow-x:auto;padding:8px 2px 12px;scroll-snap-type:x mandatory}
     .rail::-webkit-scrollbar{display:none}
@@ -111,7 +104,7 @@
     .s-card{min-width:260px;max-width:300px;background:#fff;border:1px solid var(--ring);border-radius:16px;padding:14px;box-shadow:0 6px 18px var(--shadow1);position:relative}
     .s-rank{position:absolute;top:-10px;right:14px;background:#000;color:#fff;padding:6px 12px;border-radius:12px;font-size:12px;font-weight:800}
 
-    /* Comparison (kept compact) */
+    /* Comparison */
     .compare{background:#f8fafc;padding:32px 0}
     .c-wrap{max-width:1000px;margin:0 auto;display:grid;gap:18px}
     .tbl{background:#fff;border:1px solid var(--ring);border-radius:14px;overflow:hidden;box-shadow:0 8px 24px var(--shadow1)}
@@ -216,48 +209,44 @@
           </div>
         </article>
 
-       
-          <!-- Image 2 + 3 matter -->
-          <div class="how-panel" id="assessment-details">
-            <h5>Know Exactly Where Your Child Stands</h5>
-            <div class="muted">(Free 1-on-1 IIT Mentorship Assessment) ✅</div>
+        <!-- Step 1 details -->
+        <div class="how-panel" id="assessment-details">
+          <h5>Know Exactly Where Your Child Stands</h5>
+          <div class="muted">(Free 1-on-1 IIT Mentorship Assessment) ✅</div>
 
-            <ul class="bullets">
-              <li><b>Talk 1-on-1</b> with your child about their current journey</li>
-              <li>Understand their <b>strong &amp; weak topics</b></li>
-              <li>Discuss <b>study habits, focus levels, time availability</b></li>
-              <li><b>Teach a small topic live</b> to evaluate real-time understanding</li>
-              <li>Ask <b>conceptual &amp; numerical questions</b> to check:
-                <ul class="subb">
-                  <li>Depth of understanding</li>
-                  <li>Application skills</li>
-                  <li>Problem-solving approach</li>
-                </ul>
-              </li>
-              <li>Identify learning style &amp; communication patterns</li>
-            </ul>
-
-            <div class="receive">
-              <p><b>By the end of the session, you and your child will receive:</b></p>
-              <ul class="bullets">
-                <li>A <b>clear picture</b> of where they stand today</li>
-                <li>A <b>personalized IIT success roadmap</b> designed by experts</li>
+          <ul class="bullets">
+            <li><b>Talk 1-on-1</b> with your child about their current journey</li>
+            <li>Understand their <b>strong &amp; weak topics</b></li>
+            <li>Discuss <b>study habits, focus levels, time availability</b></li>
+            <li><b>Teach a small topic live</b> to evaluate real-time understanding</li>
+            <li>Ask <b>conceptual &amp; numerical questions</b> to check:
+              <ul class="subb">
+                <li>Depth of understanding</li>
+                <li>Application skills</li>
+                <li>Problem-solving approach</li>
               </ul>
-            </div>
+            </li>
+            <li>Identify learning style &amp; communication patterns</li>
+          </ul>
 
+          <div class="receive">
+            <p><b>By the end of the session, you and your child will receive:</b></p>
+            <ul class="bullets">
+              <li>A <b>clear picture</b> of where they stand today</li>
+              <li>A <b>personalized IIT success roadmap</b> designed by experts</li>
+            </ul>
+          </div>
 
-            <!-- Image 6: “Is this an exam?” -->
-            <div class="accordion" id="examAcc">
-              <div class="acc-h"><span>❓ “Is this an exam?”</span><span class="toggle">⌄</span></div>
-              <div class="acc-b">
-                <p>Nope 🙂 — this isn’t a memory-based test. Our IIT mentors <b>talk 1-on-1</b> with your child, <b>teach a sample concept</b>, and ask a few <b>conceptual &amp; numerical questions</b> to understand real comprehension and application. It’s <b>stress-free</b> and focused on <b>diagnosis, not scores</b>.</p>
-              </div>
+          <div class="accordion" id="examAcc">
+            <div class="acc-h"><span>❓ “Is this an exam?”</span><span class="toggle">⌄</span></div>
+            <div class="acc-b">
+              <p>Nope 🙂 — this isn’t a memory-based test. Our IIT mentors <b>talk 1-on-1</b> with your child, <b>teach a sample concept</b>, and ask a few <b>conceptual &amp; numerical questions</b> to understand real comprehension and application. It’s <b>stress-free</b> and focused on <b>diagnosis, not scores</b>.</p>
             </div>
           </div>
         </div>
 
-        <!-- Step 2–4 rows continue (Image-5 style) -->
-        <article class="step">
+        <!-- Step 2 header -->
+        <article class="step" id="roadmap-step">
           <div class="num">2</div>
           <div>
             <h3>Personalized Roadmap</h3>
@@ -265,6 +254,44 @@
           </div>
         </article>
 
+        <!-- STEP 2: Image-1/2/3 matter directly under Step 2 -->
+        <div class="how-panel" id="roadmap-details" aria-labelledby="roadmap-step">
+          <h5>Get Your Child’s Personalised IIT Success Roadmap</h5>
+
+          <p style="margin:8px 0">Imagine this. Your child has just stepped into <b>Grade 12</b>. Grade 11 is behind them — but deep down, you know something’s not right.</p>
+          <p>Those <b>big coaching centres</b>… Packed classrooms, <b>fast-paced teaching</b>, endless assignments. Even after <b>revision sessions</b>, your child still feels <b>lost</b> in many topics.</p>
+          <p>Now, there are only <b>6 months left</b> for JEE Mains. Your child wants to give their <b>100%</b> — but where should they start?</p>
+          <ul class="bullets">
+            <li><b>Which topics to focus on?</b></li>
+            <li><b>How to balance Grade 11 and Grade 12?</b></li>
+            <li><b>What’s the smartest way to use these 6 months?</b></li>
+          </ul>
+
+          <p style="margin-top:10px"><b>That’s where we step in.</b></p>
+          <p>After our <b>free 1-on-1 assessment</b> session, our IIT/NIT mentor prepares a <b>personalised roadmap</b> just for your child:</p>
+
+          <ul class="bullets">
+            <li>We pick <b>high-scoring topics</b> from Grade 11 that your child can <b>master quickly</b>.</li>
+            <li>We focus on areas where the <b>concepts are clear</b> but <b>numericals need practice</b>.</li>
+            <li>We <b>skip low-ROI confusion topics</b> to save precious time.</li>
+            <li>We align <b>Grade 12 chapters</b> with the school’s pace, so your child doesn’t fall behind.</li>
+            <li>And most importantly — we design a plan that your child can <b>actually follow</b> without getting overwhelmed.</li>
+          </ul>
+
+          <p style="margin-top:10px">Finally, we sit down with <b>you and your child</b> to explain:</p>
+          <ul class="bullets">
+            <li><b>Where they stand right now</b></li>
+            <li><b>What’s achievable in 6 months</b></li>
+            <li><b>Exactly what to focus on for maximum JEE marks</b></li>
+          </ul>
+
+          <div class="roadmap">
+            <h6>Not just a study plan — a success map.</h6>
+            <p>It’s a <b>success map</b> built around your child’s <b>strengths, weaknesses, and time left</b> — because <b>every child is different</b>.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
         <article class="step">
           <div class="num">3</div>
           <div>
@@ -273,6 +300,7 @@
           </div>
         </article>
 
+        <!-- Step 4 -->
         <article class="step">
           <div class="num">4</div>
           <div>
@@ -422,7 +450,7 @@
         }
       });
     }
-    // Accordion
+    // Accordions
     const exam = document.getElementById('examAcc');
     if(exam){ exam.querySelector('.acc-h').addEventListener('click', ()=> exam.classList.toggle('open')); }
     // Year
