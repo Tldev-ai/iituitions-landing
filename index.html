@@ -285,52 +285,9 @@
             <li><b>Exactly what to focus on for maximum JEE marks</b></li>
           </ul>
 
-          <!-- Success map box -->
           <div class="roadmap">
             <h6>Not just a study plan — a success map.</h6>
             <p>It’s a <b>success map</b> built around your child’s <b>strengths, weaknesses, and time left</b> — because <b>every child is different</b>.</p>
-
-            <!-- NEW: Student scenario dropdown (images 2,3,4,5 content) -->
-            <div class="accordion" id="studentCase">
-              <div class="acc-h">
-                <span>👩‍🎓 Real Student Scenario — “Ananya, Grade 12”</span>
-                <span class="toggle">⌄</span>
-              </div>
-              <div class="acc-b">
-                <p><b>Student (hesitant, during assessment):</b><br>
-                  “Sir… I’m in Grade 12 now… but honestly I don’t feel confident about <b>half of my Grade 11 topics</b>.
-                  In my coaching centre, there are <b>300 students in one batch</b>. They <b>teach so fast</b>… even after revision classes, I still <b>don’t get many concepts</b>.
-                  Sometimes I try solving questions but I <b>blank out</b> or <b>get stuck</b>. And now there are only <b>six months left</b> for JEE Mains.
-                  I <b>want to work hard</b>, but I <b>don’t even know where to start</b>.”</p>
-
-                <p style="margin-top:10px"><b>IIT Mentor (calm, reassuring):</b><br>
-                  “I understand exactly how you feel. You’re <b>not alone</b> — we see this every year. That’s why our process is <b>different</b>.
-                  We don’t just throw a plan. We <b>sit with you 1-on-1</b>, teach a small topic live, ask a few <b>conceptual</b> and <b>numerical</b> questions, and understand:”</p>
-
-                <ul class="bullets">
-                  <li>Which topics you’re <b>confident</b> in</li>
-                  <li>Where you’re <b>losing marks</b></li>
-                  <li>How deep your <b>conceptual understanding</b> goes</li>
-                  <li>How you <b>learn best</b> — visual, practice-driven, or problem-solving</li>
-                </ul>
-
-                <p style="margin-top:10px"><b>After the Assessment</b><br>
-                  “Based on this, we’ll prepare a <b>personalised IIT success roadmap</b> just for you:”</p>
-                <ul class="bullets">
-                  <li><b>Quick wins first</b> → High-scoring Grade 11 topics you can master fast</li>
-                  <li><b>Fix application gaps</b> → Concepts you know but struggle with in numericals</li>
-                  <li><b>Skip low-value chaos</b> → Chapters that waste time but give low marks</li>
-                  <li><b>Smartly align Grade 12</b> → Stay in sync with school and coaching</li>
-                  <li><b>Make it realistic</b> → A plan you can actually follow without overwhelm</li>
-                </ul>
-
-                <p style="margin-top:10px"><b>Student (relieved):</b><br>
-                  “So you’ll actually <b>help me decide</b> what to study, what to skip, and <b>how to use these six months wisely</b>?”</p>
-                <p><b>IIT Mentor (smiling):</b><br>
-                  “Exactly 🙂 Every student is different. This roadmap is <b>built only for you</b>, not for a batch. No stress. No guesswork. Just a <b>clear path</b> to your best JEE rank.”</p>
-              </div>
-            </div>
-            <!-- END new dropdown -->
           </div>
         </div>
 
@@ -339,9 +296,42 @@
           <div class="num">3</div>
           <div>
             <h3>Mentorship Sessions</h3>
-            <div class="sub">1:1 Mentorship From IIT/NIT Alumni</div>
+            <!-- replaced the old subtitle with the full detailed content panel below -->
           </div>
         </article>
+
+        <!-- NEW: Step 3 detailed content (from images 2/3/4/5) -->
+        <div class="how-panel" id="mentorship-details">
+          <h5>100% Personalised 1-on-1 Mentorship — No Batches. No Distractions. ✅</h5>
+
+          <p style="margin:8px 0"><i>"In most coaching centres, your child sits in a <b>batch of 200–300 students</b>. The pace is fixed, doubts pile up, and progress slows down."</i></p>
+
+          <p>At iiTuitions, we do things <b>different</b>ly. Every single session is <b>1-on-1</b> — just your child and an IIT/NIT mentor.</p>
+
+          <ul class="bullets" style="margin-top:8px">
+            <li>🎓 <b>IIT/NIT Mentors Only</b> → No junior faculty. No compromises.</li>
+            <li>🟢 <b>Daily WhatsApp Updates</b> → After every class, we share:
+              <ul class="subb">
+                <li>Topics covered</li>
+                <li>Tests completed</li>
+                <li>Progress reports</li>
+              </ul>
+            </li>
+            <li>💬 <b>Unlimited Doubt Support</b> → Students can ping their WhatsApp group <b>anytime</b>.</li>
+            <li>🔁 <b>Faculty Replacement Guarantee</b> → If your child isn’t comfortable, we <b>instantly assign a new mentor</b>.</li>
+            <li>👀 <b>Live Session Monitoring</b> →
+              <ul class="subb">
+                <li><b>Both mentor and student cameras stay ON</b>.</li>
+                <li>Every minute is tracked to ensure <b>zero time wastage</b>.</li>
+              </ul>
+            </li>
+            <li>📈 <b>Maximum Attention = Maximum Results</b></li>
+          </ul>
+
+          <p style="margin-top:10px"><b>Your Child, Their Mentor, One Goal — Crack JEE.</b><br>
+          <b>Where every session revolves around your child.</b></p>
+        </div>
+        <!-- /NEW Step 3 details -->
 
         <!-- Step 4 -->
         <article class="step">
@@ -492,7 +482,7 @@
         }
       });
     }
-    // Accordions: enable toggle for ALL accordions on the page (exam + studentCase)
+    // Accordions (if any elsewhere)
     document.querySelectorAll('.accordion .acc-h').forEach(h=>{
       h.addEventListener('click',()=> h.parentElement.classList.toggle('open'));
     });
