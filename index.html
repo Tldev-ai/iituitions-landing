@@ -12,7 +12,7 @@
       --text:#000; --text-2:#333; --muted:#64748b;
       --bg:#fff; --bg-2:#f6f7f9; --accent:linear-gradient(135deg,#000, #333);
       --shadow1:rgba(0,0,0,.08); --shadow2:rgba(0,0,0,.18);
-      --wa:#25D366; --danger:#ef4444; --ok:#10b981;
+      --wa:#25D366;
     }
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -56,14 +56,14 @@
     .step .num{width:44px;height:44px;border-radius:50%;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
     .step h3{font-size:20px;margin-bottom:4px}
     .step .sub{color:#111;font-size:18px;margin:2px 0 8px}
-    .step .muted{color:#466; font-size:14px;margin:6px 0 10px;display:block}
+    .muted{color:#466;font-size:14px;margin:6px 0 10px;display:block}
     .detail-card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:14px;margin-top:10px}
     .bullets{margin-left:18px}
     .bullets li{margin:6px 0}
     .sub-b{margin:6px 0 0 18px;list-style:circle}
     .receive{margin-top:10px}
 
-    /* Accordion */
+    /* Accordions */
     .accordion{margin-top:12px;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
     .acc-h{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;font-weight:800;cursor:pointer;background:#fff}
     .acc-b{display:none;padding:0 14px 14px;background:#fff}
@@ -155,17 +155,15 @@
       <h2 class="section-title">How It Works</h2>
 
       <div class="steps">
-        <!-- STEP 1 with ALL the screenshot 2/3/4 matter INSIDE it -->
+        <!-- STEP 1 -->
         <article class="step" id="step1">
           <div class="num">1</div>
           <div class="body">
             <h3>Free Assessment</h3>
             <div class="sub">Know Exactly Where Your Child Stands</div>
 
-            <!-- Screenshot 2/3/4 content lives INSIDE this step -->
             <div class="detail-card">
               <span class="muted">(Free 1-on-1 IIT Mentorship Assessment) ✅</span>
-
               <ul class="bullets">
                 <li><b>Talk 1-on-1</b> with your child about their current journey</li>
                 <li>Understand their <b>strong &amp; weak topics</b></li>
@@ -180,7 +178,6 @@
                 </li>
                 <li>Identify your child’s <b>learning style</b> &amp; <b>communication patterns</b></li>
               </ul>
-
               <div class="receive">
                 <p><b>By the end of the session, you and your child will receive:</b></p>
                 <ul class="bullets">
@@ -190,18 +187,16 @@
               </div>
             </div>
 
-            <!-- “Is this an exam?” accordion (from your image) -->
             <div class="accordion" id="examAcc">
               <div class="acc-h">
                 <span>❓ “Is this an exam?”</span>
                 <span class="ico">⌄</span>
               </div>
               <div class="acc-b">
-                <p>Nope 🙂 — this isn’t a memory-based test. Our IIT mentors <b>talk 1-on-1</b> with your child, <b>teach a sample concept</b>, and ask a few <b>conceptual &amp; numerical questions</b> to understand real comprehension and application. It’s <b>stress-free</b> and focused on <b>diagnosis, not scores</b>.</p>
+                <p>Nope 🙂 — this isn’t a memory-based test. Our IIT mentors <b>talk 1-on-1</b> with your child, <b>teach a sample concept</b>, and ask a few <b>conceptual</b> and <b>numerical</b> questions to understand real comprehension and application. It’s <b>stress-free</b> and focused on <b>diagnosis, not scores</b>.</p>
               </div>
             </div>
 
-            <!-- REAL STUDENT SCENARIO (click to reveal image 4/5/6 content) -->
             <div class="accordion" id="scenarioAcc">
               <div class="acc-h">
                 <span>🎬 See a real student scenario (tap to open)</span>
@@ -209,13 +204,10 @@
               </div>
               <div class="acc-b">
                 <div class="chat">
-                  <!-- Image 4: Student (hesitant) block -->
                   <div class="bubble">
                     <div class="role">Student (hesitant, during assessment):</div>
                     <p><i>“Sir… I’m in Grade 12 now… but honestly, I don’t feel confident about <b>half of my Grade 11 topics</b>. In my coaching centre, there are <b>300 students in one batch</b>… They <b>teach so fast</b>… Even after revision classes, I still <b>don’t get many concepts</b>. Sometimes I try solving questions but I blank out or get stuck. There are only <b>six months left</b> for JEE Mains. I want to work hard, but <b>I don’t even know where to start</b>.”</i></p>
                   </div>
-
-                  <!-- Image 5: IIT Mentor (calm) block -->
                   <div class="bubble">
                     <div class="role">IIT Mentor (calm, reassuring):</div>
                     <p><i>“I understand exactly how you feel. You’re <b>not alone</b> — we see this every year. That’s why our process is <b>different</b>. We don’t throw a plan at you. We <b>sit with you 1-on-1</b>, teach a small topic live, ask a few <b>conceptual</b> and <b>numerical</b> questions, and understand:</i></p>
@@ -226,10 +218,7 @@
                       <li>How you <b>learn best</b> — visual, practice-driven, or problem-solving</li>
                     </ul>
                   </div>
-
                   <div class="sep"></div>
-
-                  <!-- Image 6: After the Assessment -->
                   <div class="bubble">
                     <div class="role">After the Assessment</div>
                     <p>Based on this, we’ll prepare a <b>personalised IIT success roadmap</b> just for you:</p>
@@ -241,8 +230,6 @@
                       <li><b>Make it realistic</b> → A plan you can actually follow without feeling overwhelmed</li>
                     </ul>
                   </div>
-
-                  <!-- closing lines -->
                   <div class="bubble">
                     <div class="role">Student (relieved):</div>
                     <p><i>“So you’ll actually <b>help me decide</b> what to study, what to skip, and <b>how to use these six months wisely</b>?”</i></p>
@@ -254,19 +241,49 @@
                 </div>
               </div>
             </div>
-            <!-- /REAL STUDENT SCENARIO -->
           </div>
         </article>
 
-        <!-- STEP 2, 3, 4 continue (your image 5 layout) -->
+        <!-- STEP 2 — REPLACED SUBLINE WITH FULL IMAGE 2/3/4 CONTENT -->
         <article class="step" id="step2">
           <div class="num">2</div>
-          <div>
+          <div class="body">
             <h3>Personalized Roadmap</h3>
-            <div class="sub">Get a custom IIT Success plan</div>
+
+            <div class="detail-card">
+              <h4 style="font-size:20px;margin-bottom:8px">Get Your Child’s Personalised IIT Success Roadmap</h4>
+
+              <p>Imagine this. Your child has just stepped into <b>Grade 12</b>. Grade 11 is behind them — but deep down, you know something’s not right.</p>
+              <p>Those <b>big coaching centres</b>… Packed classrooms, <b>fast-paced teaching</b>, endless assignments. Even after <b>revision sessions</b>, your child still feels <b>lost</b> in many topics.</p>
+              <p>Now, there are only <b>6 months left</b> for <b>JEE Mains</b>. Your child wants to give their <b>100%</b> — but where should they start?<br/>
+              <b>Which topics to focus on?</b><br/>
+              <b>How to balance Grade 11 and Grade 12?</b><br/>
+              <b>What’s the smartest way to use these 6 months?</b></p>
+
+              <p><b>That’s where we step in.</b></p>
+
+              <p>After our <b>free 1-on-1 assessment session</b>, our IIT/NIT mentor prepares a <b>personalised roadmap</b> just for your child:</p>
+              <ul class="bullets">
+                <li>We <b>pick high-scoring topics</b> from Grade 11 that your child can <b>master quickly</b>.</li>
+                <li>We focus on areas where the <b>concepts are clear</b> but <b>numericals need practice</b>.</li>
+                <li>We <b>skip low-ROI confusion topics</b> to <b>save precious time</b>.</li>
+                <li>We <b>align Grade 12 chapters</b> with the school’s pace, so your child doesn’t fall behind.</li>
+                <li>And most importantly — we design a plan that your <b>child can actually follow</b> without getting overwhelmed.</li>
+              </ul>
+
+              <p>Finally, we sit down with <b>you and your child</b> to explain:</p>
+              <ul class="bullets">
+                <li><b>Where they stand right now</b></li>
+                <li><b>What’s achievable in 6 months</b></li>
+                <li><b>Exactly what to focus on for maximum JEE marks</b></li>
+              </ul>
+
+              <p>This isn’t just a <b>study plan</b>. It’s a <b>success map</b> built around your child’s <b>strengths, weaknesses, and time left</b> — because <b>every child is different</b>.</p>
+            </div>
           </div>
         </article>
 
+        <!-- STEP 3 -->
         <article class="step" id="step3">
           <div class="num">3</div>
           <div>
@@ -275,6 +292,7 @@
           </div>
         </article>
 
+        <!-- STEP 4 -->
         <article class="step" id="step4">
           <div class="num">4</div>
           <div>
