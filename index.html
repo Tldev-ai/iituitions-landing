@@ -63,7 +63,7 @@
     .step h3{font-size:20px;margin-bottom:4px}
     .step .sub{color:#111;font-size:18px;margin:2px 0 0}
 
-    /* HOW cards / panels */
+    /* HOW panels + roadmap */
     .how-panel{background:#fff;border:1px solid var(--ring);border-radius:18px;padding:18px;box-shadow:0 8px 22px var(--shadow1)}
     .how-panel h5{font-size:20px;font-weight:900;margin-bottom:6px}
     .muted{color:#475569;font-size:14px;margin-bottom:8px}
@@ -76,21 +76,21 @@
     .roadmap h6{font-size:16px;font-weight:900;margin-bottom:6px}
 
     /* Accordion */
-    .accordion{border:1px solid var(--ring);border-radius:14px;overflow:hidden;margin-top:10px}
-    .acc-h{background:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:900}
-    .acc-b{display:none;background:#fff;padding:0 16px 16px}
+    .accordion{border:1px solid var(--ring);border-radius:14px;overflow:hidden;margin-top:10px;background:#fff}
+    .acc-h{padding:14px 16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:900}
+    .acc-b{display:none;padding:0 16px 16px}
     .accordion.open .acc-b{display:block}
     .accordion.open .toggle{transform:rotate(180deg)}
     .toggle{transition:.2s}
 
-    /* WhatsApp rail (examples) */
+    /* WhatsApp rail */
     .wa-rail{background:#fff;padding:28px 0}
     .rail{display:flex;gap:18px;overflow-x:auto;padding:8px 2px 12px;scroll-snap-type:x mandatory}
     .rail::-webkit-scrollbar{display:none}
     .shot{width:clamp(260px,70vw,360px);background:#eafff3;border:1px solid #c7f0db;border-radius:18px;padding:12px;scroll-snap-align:start;box-shadow:0 10px 28px rgba(0,0,0,.08)}
     .shot .img{aspect-ratio:4/3;background:#f3f4f6;border-radius:12px}
 
-    /* Founder slab */
+    /* Founder */
     .founder{background:#0b0b0b;color:#fff;padding:48px 0}
     .founder-grid{max-width:1100px;margin:0 auto;display:grid;gap:28px}
     .f-photo{border-radius:22px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.45);justify-self:center;width:min(520px,92vw);height:auto;background:#111}
@@ -98,7 +98,7 @@
     .f-quote{background:#111827;border-left:4px solid #93c5fd;padding:16px;border-radius:14px;color:#dbeafe;font-style:italic;margin:12px 0 14px}
     .f-meta{color:#cbd5e1}
 
-    /* Success strip (short) */
+    /* Success strip */
     .success{padding:28px 0}
     .s-grid{display:flex;gap:16px;overflow-x:auto;padding:8px 0 14px}
     .s-card{min-width:260px;max-width:300px;background:#fff;border:1px solid var(--ring);border-radius:16px;padding:14px;box-shadow:0 6px 18px var(--shadow1);position:relative}
@@ -254,7 +254,7 @@
           </div>
         </article>
 
-        <!-- STEP 2: Image-1/2/3 matter directly under Step 2 -->
+        <!-- STEP 2: main copy -->
         <div class="how-panel" id="roadmap-details" aria-labelledby="roadmap-step">
           <h5>Get Your Child’s Personalised IIT Success Roadmap</h5>
 
@@ -285,9 +285,52 @@
             <li><b>Exactly what to focus on for maximum JEE marks</b></li>
           </ul>
 
+          <!-- Success map box -->
           <div class="roadmap">
             <h6>Not just a study plan — a success map.</h6>
             <p>It’s a <b>success map</b> built around your child’s <b>strengths, weaknesses, and time left</b> — because <b>every child is different</b>.</p>
+
+            <!-- NEW: Student scenario dropdown (images 2,3,4,5 content) -->
+            <div class="accordion" id="studentCase">
+              <div class="acc-h">
+                <span>👩‍🎓 Real Student Scenario — “Ananya, Grade 12”</span>
+                <span class="toggle">⌄</span>
+              </div>
+              <div class="acc-b">
+                <p><b>Student (hesitant, during assessment):</b><br>
+                  “Sir… I’m in Grade 12 now… but honestly I don’t feel confident about <b>half of my Grade 11 topics</b>.
+                  In my coaching centre, there are <b>300 students in one batch</b>. They <b>teach so fast</b>… even after revision classes, I still <b>don’t get many concepts</b>.
+                  Sometimes I try solving questions but I <b>blank out</b> or <b>get stuck</b>. And now there are only <b>six months left</b> for JEE Mains.
+                  I <b>want to work hard</b>, but I <b>don’t even know where to start</b>.”</p>
+
+                <p style="margin-top:10px"><b>IIT Mentor (calm, reassuring):</b><br>
+                  “I understand exactly how you feel. You’re <b>not alone</b> — we see this every year. That’s why our process is <b>different</b>.
+                  We don’t just throw a plan. We <b>sit with you 1-on-1</b>, teach a small topic live, ask a few <b>conceptual</b> and <b>numerical</b> questions, and understand:”</p>
+
+                <ul class="bullets">
+                  <li>Which topics you’re <b>confident</b> in</li>
+                  <li>Where you’re <b>losing marks</b></li>
+                  <li>How deep your <b>conceptual understanding</b> goes</li>
+                  <li>How you <b>learn best</b> — visual, practice-driven, or problem-solving</li>
+                </ul>
+
+                <p style="margin-top:10px"><b>After the Assessment</b><br>
+                  “Based on this, we’ll prepare a <b>personalised IIT success roadmap</b> just for you:”</p>
+                <ul class="bullets">
+                  <li><b>Quick wins first</b> → High-scoring Grade 11 topics you can master fast</li>
+                  <li><b>Fix application gaps</b> → Concepts you know but struggle with in numericals</li>
+                  <li><b>Skip low-value chaos</b> → Chapters that waste time but give low marks</li>
+                  <li><b>Smartly align Grade 12</b> → Stay in sync with school and coaching</li>
+                  <li><b>Make it realistic</b> → A plan you can actually follow without overwhelm</li>
+                </ul>
+
+                <p style="margin-top:10px"><b>Student (relieved):</b><br>
+                  “So you’ll actually <b>help me decide</b> what to study, what to skip, and <b>how to use these six months wisely</b>?”</p>
+                <p><b>IIT Mentor (smiling):</b><br>
+                  “Exactly 🙂 Every student is different. This roadmap is <b>built only for you</b>, not for a batch. No stress. No guesswork. Just a <b>clear path</b> to your best JEE rank.”</p>
+              </div>
+            </div>
+            <!-- END new dropdown -->
           </div>
         </div>
 
@@ -333,7 +376,6 @@
   <section class="founder" id="founder">
     <div class="founder-grid">
       <div class="f-photo">
-        <!-- Replace with your real image -->
         <img src="https://via.placeholder.com/900x900/0b0b0b/ffffff?text=Founder+Photo" alt="Prudhvi Sir — Founder of IITuitions" style="width:100%;height:auto;display:block">
       </div>
       <div class="f-copy">
@@ -368,7 +410,7 @@
     </div>
   </section>
 
-  <!-- Comparison (compact) -->
+  <!-- Comparison -->
   <section class="compare" id="why">
     <div class="container c-wrap">
       <div class="tbl">
@@ -396,7 +438,7 @@
     </div>
   </section>
 
-  <!-- Footer with address -->
+  <!-- Footer -->
   <footer class="footer" id="contact">
     <div class="container foot-top">
       <div class="foot-grid">
@@ -450,9 +492,11 @@
         }
       });
     }
-    // Accordions
-    const exam = document.getElementById('examAcc');
-    if(exam){ exam.querySelector('.acc-h').addEventListener('click', ()=> exam.classList.toggle('open')); }
+    // Accordions: enable toggle for ALL accordions on the page (exam + studentCase)
+    document.querySelectorAll('.accordion .acc-h').forEach(h=>{
+      h.addEventListener('click',()=> h.parentElement.classList.toggle('open'));
+    });
+
     // Year
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
