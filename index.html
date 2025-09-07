@@ -62,7 +62,6 @@
     .bullets li{margin:6px 0}
     .sub-b{margin:6px 0 0 18px;list-style:circle}
     .receive{margin-top:10px}
-
     /* Accordion */
     .accordion{margin-top:12px;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
     .acc-h{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;font-weight:800;cursor:pointer;background:#fff}
@@ -70,12 +69,6 @@
     .accordion.open .acc-b{display:block}
     .accordion.open .ico{transform:rotate(180deg)}
     .ico{transition:.2s}
-
-    /* Scenario chat styling */
-    .chat{display:grid;gap:12px;margin-top:12px}
-    .bubble{border:1px solid #e5e7eb;border-radius:14px;padding:12px}
-    .role{font-weight:800;margin-bottom:6px}
-    .sep{height:1px;background:#f1f5f9;margin:10px 0}
 
     /* Other sections kept minimal to fit page */
     .trust{background:var(--bg-2);padding:24px 0}
@@ -156,15 +149,17 @@
       <h2 class="section-title">How It Works</h2>
 
       <div class="steps">
-        <!-- STEP 1 -->
+        <!-- STEP 1 with ALL the screenshot 2/3/4 matter INSIDE it -->
         <article class="step" id="step1">
           <div class="num">1</div>
           <div class="body">
             <h3>Free Assessment</h3>
             <div class="sub">Know Exactly Where Your Child Stands</div>
 
+            <!-- Screenshot 2/3/4 content lives INSIDE this step -->
             <div class="detail-card">
               <span class="muted">(Free 1-on-1 IIT Mentorship Assessment) ✅</span>
+
               <ul class="bullets">
                 <li><b>Talk 1-on-1</b> with your child about their current journey</li>
                 <li>Understand their <b>strong &amp; weak topics</b></li>
@@ -179,6 +174,7 @@
                 </li>
                 <li>Identify your child’s <b>learning style</b> &amp; <b>communication patterns</b></li>
               </ul>
+
               <div class="receive">
                 <p><b>By the end of the session, you and your child will receive:</b></p>
                 <ul class="bullets">
@@ -188,6 +184,7 @@
               </div>
             </div>
 
+            <!-- “Is this an exam?” accordion (screenshot 6) -->
             <div class="accordion" id="examAcc">
               <div class="acc-h">
                 <span>❓ “Is this an exam?”</span>
@@ -200,98 +197,16 @@
           </div>
         </article>
 
-        <!-- STEP 2 (Personalized Roadmap) -->
-        <article class="step" id="step2">
+        <!-- STEP 2, 3, 4 continue (your image 5 layout) -->
+        <article class="step">
           <div class="num">2</div>
-          <div class="body">
+          <div>
             <h3>Personalized Roadmap</h3>
-
-            <!-- Long copy from images 2/3/4 -->
-            <div class="detail-card">
-              <h4 style="font-size:20px;margin-bottom:8px">Get Your Child’s Personalised IIT Success Roadmap</h4>
-
-              <p>Imagine this. Your child has just stepped into <b>Grade 12</b>. Grade 11 is behind them — but deep down, you know something’s not right.</p>
-              <p>Those <b>big coaching centres</b>… Packed classrooms, <b>fast-paced teaching</b>, endless assignments. Even after <b>revision sessions</b>, your child still feels <b>lost</b> in many topics.</p>
-              <p>Now, there are only <b>6 months left</b> for <b>JEE Mains</b>. Your child wants to give their <b>100%</b> — but where should they start?<br/>
-              <b>Which topics to focus on?</b><br/>
-              <b>How to balance Grade 11 and Grade 12?</b><br/>
-              <b>What’s the smartest way to use these 6 months?</b></p>
-
-              <p><b>That’s where we step in.</b></p>
-
-              <p>After our <b>free 1-on-1 assessment session</b>, our IIT/NIT mentor prepares a <b>personalised roadmap</b> just for your child:</p>
-              <ul class="bullets">
-                <li>We <b>pick high-scoring topics</b> from Grade 11 that your child can <b>master quickly</b>.</li>
-                <li>We focus on areas where the <b>concepts are clear</b> but <b>numericals need practice</b>.</li>
-                <li>We <b>skip low-ROI confusion topics</b> to <b>save precious time</b>.</li>
-                <li>We <b>align Grade 12 chapters</b> with the school’s pace, so your child doesn’t fall behind.</li>
-                <li>And most importantly — we design a plan that your <b>child can actually follow</b> without getting overwhelmed.</li>
-              </ul>
-
-              <p>Finally, we sit down with <b>you and your child</b> to explain:</p>
-              <ul class="bullets">
-                <li><b>Where they stand right now</b></li>
-                <li><b>What’s achievable in 6 months</b></li>
-                <li><b>Exactly what to focus on for maximum JEE marks</b></li>
-              </ul>
-
-              <p>This isn’t just a <b>study plan</b>. It’s a <b>success map</b> built around your child’s <b>strengths, weaknesses, and time left</b> — because <b>every child is different</b>.</p>
-            </div>
-
-            <!-- Scenario accordion from images 4/5/6 -->
-            <div class="accordion" id="scenarioAcc">
-              <div class="acc-h">
-                <span>🎬 See a real student scenario (tap to open)</span>
-                <span class="ico">⌄</span>
-              </div>
-              <div class="acc-b">
-                <div class="chat">
-                  <div class="bubble">
-                    <div class="role">Student (hesitant, during assessment):</div>
-                    <p><i>“Sir… I’m in Grade 12 now… but honestly, I don’t feel confident about <b>half of my Grade 11 topics</b>. In my coaching centre, there are <b>300 students in one batch</b>… They <b>teach so fast</b>… Even after revision classes, I still <b>don’t get many concepts</b>. Sometimes I try solving questions but I blank out or get stuck. There are only <b>six months left</b> for JEE Mains. I want to work hard, but <b>I don’t even know where to start</b>.”</i></p>
-                  </div>
-
-                  <div class="bubble">
-                    <div class="role">IIT Mentor (calm, reassuring):</div>
-                    <p><i>“I understand exactly how you feel. You’re <b>not alone</b> — we see this every year. That’s why our process is <b>different</b>. We don’t throw a plan at you. We <b>sit with you 1-on-1</b>, teach a small topic live, ask a few <b>conceptual</b> and <b>numerical</b> questions, and understand:</i></p>
-                    <ul class="bullets" style="margin-top:6px">
-                      <li>Which topics you’re <b>confident</b> in</li>
-                      <li>Where you’re <b>losing marks</b></li>
-                      <li>How deep your <b>conceptual understanding</b> goes</li>
-                      <li>How you <b>learn best</b> — visual, practice-driven, or problem-solving</li>
-                    </ul>
-                  </div>
-
-                  <div class="sep"></div>
-
-                  <div class="bubble">
-                    <div class="role">After the Assessment</div>
-                    <p>Based on this, we’ll prepare a <b>personalised IIT success roadmap</b> just for you:</p>
-                    <ul class="bullets">
-                      <li><b>Quick wins first</b> → High-scoring Grade 11 topics you can master fast</li>
-                      <li><b>Fix application gaps</b> → Where you know concepts but struggle with numericals</li>
-                      <li><b>Skip low-value chaos</b> → Chapters that waste time but give low marks</li>
-                      <li><b>Smartly align Grade 12 topics</b> → Stay in sync with school and coaching</li>
-                      <li><b>Make it realistic</b> → A plan you can actually follow without feeling overwhelmed</li>
-                    </ul>
-                  </div>
-
-                  <div class="bubble">
-                    <div class="role">Student (relieved):</div>
-                    <p><i>“So you’ll actually <b>help me decide</b> what to study, what to skip, and <b>how to use these six months wisely</b>?”</i></p>
-                  </div>
-                  <div class="bubble">
-                    <div class="role">IIT Mentor (smiling):</div>
-                    <p><i>“Exactly 🙂 Every student is different. This roadmap is <b>built only for you</b>, not for a batch. No stress. No guesswork. Just a <b>clear path</b> to your best JEE rank.”</i></p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="sub">Get a custom IIT Success plan</div>
           </div>
         </article>
 
-        <!-- STEP 3 -->
-        <article class="step" id="step3">
+        <article class="step">
           <div class="num">3</div>
           <div>
             <h3>Mentorship Sessions</h3>
@@ -299,8 +214,7 @@
           </div>
         </article>
 
-        <!-- STEP 4 -->
-        <article class="step" id="step4">
+        <article class="step">
           <div class="num">4</div>
           <div>
             <h3>Reviews &amp; Results</h3>
@@ -332,15 +246,11 @@
       });
     }
 
-    // Accordions
-    function setupAcc(id){
-      const acc = document.getElementById(id);
-      if(!acc) return;
-      const head = acc.querySelector('.acc-h');
-      head.addEventListener('click', ()=> acc.classList.toggle('open'));
+    // Accordion
+    const exam = document.getElementById('examAcc');
+    if(exam){
+      exam.querySelector('.acc-h').addEventListener('click', ()=> exam.classList.toggle('open'));
     }
-    setupAcc('examAcc');
-    setupAcc('scenarioAcc');
 
     // Year
     document.getElementById('yr').textContent = new Date().getFullYear();
