@@ -98,7 +98,47 @@
     .f-quote{background:#111827;border-left:4px solid #93c5fd;padding:16px;border-radius:14px;color:#dbeafe;font-style:italic;margin:12px 0 14px}
     .f-meta{color:#cbd5e1}
     .founder .bullets li { color: #e5e7eb; }
-    .founder .bullets li { color: #e5e7eb; }
+
+
+    /* Image-2: dark founder card */
+.founder { background:#0b0b0b; color:#fff; padding:56px 0; }
+.f-card{
+  background:#0f1115;
+  border:1px solid #1f2937;
+  border-radius:24px;
+  padding:28px;
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:24px;
+  box-shadow:0 24px 60px rgba(0,0,0,.45);
+}
+.f-avatar{
+  width:140px; height:140px; border-radius:999px; object-fit:cover;
+  border:2px solid #334155; box-shadow:0 8px 24px rgba(0,0,0,.5);
+  display:block;
+}
+.f-title{ font-size:34px; line-height:1.2; font-weight:900; color:#fff; }
+.f-title-strong{ display:block; font-size:36px; }
+.f-sub{ color:#9ca3af; font-style:italic; margin:6px 0 12px; }
+.f-body p{ color:#e5e7eb; margin:8px 0; }
+.f-points{ list-style:none; margin:14px 0 0; padding:0; }
+.f-points li{
+  display:flex; align-items:flex-start; gap:10px;
+  color:#e5e7eb; margin:8px 0;
+}
+.f-points .icon{ width:22px; text-align:center; flex:0 0 22px; }
+
+/* ensure bullets in this dark block stay readable */
+.founder .bullets li, .f-points li { color:#e5e7eb; }
+
+/* responsive */
+@media (max-width:768px){
+  .f-card{ grid-template-columns:1fr; text-align:left; }
+  .f-title{ font-size:28px; }
+  .f-title-strong{ font-size:30px; }
+  .f-left{ order:0; }
+}
+
 
 
 
