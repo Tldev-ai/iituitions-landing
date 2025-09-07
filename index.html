@@ -25,6 +25,7 @@
       --whatsapp-color: #25D366;
       --negative-color: #ef4444;
       --positive-color: #10b981;
+      --gold: #f59e0b;
     }
 
     /* Reset and base styles - Mobile First */
@@ -88,6 +89,11 @@
     .btn:active{ transform: translateY(0); transition: transform .1s ease; }
     .btn-outline{ background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); }
     .btn-outline:hover,.btn-outline:focus{ background: var(--primary-color); color:#fff; }
+    .btn-light{ background:#fff; color: var(--primary-color); border:2px solid #fff; }
+
+    /* Badges */
+    .badge{ display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700; }
+    .badge-gold{ background:#fff7ed; border:1px solid #fed7aa; color:#92400e; }
 
     /* Hero */
     .hero-section{ background: var(--bg-accent); color:#fff; padding:40px 12px 50px; text-align:center; position:relative; overflow:hidden; }
@@ -107,47 +113,29 @@
     .hero-guarantee{ background: rgba(0,0,0,.1); color:#333; padding:12px 16px; border-radius:20px; display:inline-block; font-size:13px; font-weight:600; border:1px solid rgba(0,0,0,.2); max-width:90%; line-height:1.3; }
 
     /* Trust */
-    .trust-section{ background: var(--bg-secondary); padding:40px 12px; text-align:center; }
-    .trust-stats{ display:grid; grid-template-columns: repeat(2,1fr); gap:16px; max-width:600px; margin:0 auto; }
-    .trust-stat{ background:#fff; padding:24px 16px; border-radius:16px; box-shadow:0 4px 20px var(--shadow-light); border:1px solid var(--shadow-light); transition: transform .3s ease; }
-    .trust-stat:hover{ transform: translateY(-2px); box-shadow:0 6px 25px var(--shadow-medium); }
-    .trust-number{ font-size:32px; font-weight:800; color: var(--primary-color); line-height:1; margin-bottom:6px; }
-    .trust-label{ font-size:14px; color: var(--text-secondary); font-weight:600; }
+    .trust-section{ background: var(--bg-secondary); padding:30px 12px; text-align:center; }
+    .trust-stats{ display:grid; grid-template-columns: repeat(4,1fr); gap:8px; max-width:900px; margin:0 auto; }
+    .trust-stat{ background:#fff; padding:16px 12px; border-radius:16px; box-shadow:0 4px 20px var(--shadow-light); border:1px solid var(--shadow-light); }
+    .trust-number{ font-size:22px; font-weight:800; color: var(--primary-color); line-height:1; margin-bottom:4px; }
+    .trust-label{ font-size:12px; color: var(--text-secondary); font-weight:600; }
 
-    /* WhatsApp screenshots rail (side-scroll, cropped like mock) */
-    .wa-rail-real{ background:#fff; padding:60px 12px; }
-    .wa-rail-real .rail{
-      display:flex; gap:18px; overflow-x:auto; overflow-y:hidden;
-      padding:16px 2px 8px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
-    }
+    /* Process (new, concise) */
+    .process{ padding:40px 12px; background:#fff; }
+    .process-wrap{ max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:16px; }
+    .step{ display:flex; gap:14px; align-items:flex-start; background:#fff; border:1px solid var(--shadow-light); border-radius:14px; padding:14px; box-shadow:0 6px 20px var(--shadow-light); }
+    .step-num{ width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--primary-color); color:#fff; font-weight:800; flex-shrink:0; }
+    .step h3{ font-size:16px; margin-bottom:4px; }
+
+    /* WhatsApp rail (trimmed to 2 items) */
+    .wa-rail-real{ background:#fff; padding:50px 12px; }
+    .wa-rail-real .rail{ display:flex; gap:18px; overflow-x:auto; overflow-y:hidden; padding:16px 2px 8px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
     .wa-rail-real .rail::-webkit-scrollbar{ display:none; }
-    .wa-shot{
-      width:clamp(260px, 70vw, 360px);
-      background:#eafff3; border:1px solid #c7f0db; border-radius:18px;
-      padding:12px; scroll-snap-align:start; box-shadow:0 10px 28px rgba(0,0,0,.08);
-      flex-shrink:0;
-    }
-    .wa-img{
-      aspect-ratio: 4 / 3;
-      width:100%;
-      border-radius:12px;
-      overflow:hidden;
-      background:#f6f6f6;
-    }
-    .wa-img img{
-      width:100%; height:100%;
-      object-fit:cover;
-      object-position: top center;
-      display:block;
-    }
-    .wa-cap{
-      margin-top:10px;
-      font-size:13px; font-weight:600; color:#256b3e;
-      background:#f1fff6; border:1px solid #c7f0db;
-      padding:10px 12px; border-radius:10px;
-    }
+    .wa-shot{ width:clamp(260px, 70vw, 360px); background:#eafff3; border:1px solid #c7f0db; border-radius:18px; padding:12px; scroll-snap-align:start; box-shadow:0 10px 28px rgba(0,0,0,.08); flex-shrink:0; }
+    .wa-img{ aspect-ratio: 4 / 3; width:100%; border-radius:12px; overflow:hidden; background:#f6f6f6; }
+    .wa-img img{ width:100%; height:100%; object-fit:cover; object-position: top center; display:block; }
+    .wa-cap{ margin-top:10px; font-size:13px; font-weight:600; color:#256b3e; background:#f1fff6; border:1px solid #c7f0db; padding:10px 12px; border-radius:10px; }
 
-    /* Founder slab (dark two-column) */
+    /* Founder slab */
     .founder-slab{ background:#0b0b0b; color:#fff; padding:60px 12px; }
     .founder-wrap{ max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:28px; align-items:center; }
     .founder-photo{ position:relative; width:min(520px,92vw); border-radius:24px; overflow:hidden; box-shadow:0 18px 60px rgba(0,0,0,.45); justify-self:center; }
@@ -156,115 +144,112 @@
     .founder-quote-xl{ background:#1c1c1c; border-left:4px solid #bcd7ff; padding:18px; border-radius:14px; color:#dbeafe; font-style:italic; margin:14px 0 16px; }
     .founder-meta{ color:#cbd5e1; line-height:1.65; }
 
-    /* Success cards */
+    /* Success cards (quotes shortened) */
     .success-section{ padding:50px 12px; background: var(--bg-primary); }
-    .section-title{ font-size:28px; font-weight:700; text-align:center; margin-bottom:20px; color: var(--text-primary); }
-    .section-subtitle{ text-align:center; font-size:16px; color: var(--text-muted); margin-bottom:30px; line-height:1.5; }
-    .success-grid{ display:flex; gap:20px; overflow-x:auto; overflow-y:hidden; padding:20px 0 30px 0; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scroll-behavior:smooth; scrollbar-width:none; -ms-overflow-style:none; margin-bottom:20px; }
+    .section-title{ font-size:28px; font-weight:700; text-align:center; margin-bottom:14px; color: var(--text-primary); }
+    .section-subtitle{ text-align:center; font-size:16px; color: var(--text-muted); margin-bottom:24px; line-height:1.5; }
+    .success-grid{ display:flex; gap:20px; overflow-x:auto; overflow-y:hidden; padding:12px 0 20px 0; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; -ms-overflow-style:none; margin-bottom:4px; }
     .success-grid::-webkit-scrollbar{ display:none; }
-    .success-card{ background:#fff; border-radius:16px; padding:20px; box-shadow:0 6px 25px var(--shadow-light); border:1px solid var(--shadow-light); position:relative; transition: all .3s ease; min-width:280px; max-width:320px; scroll-snap-align:start; flex-shrink:0; }
-    .success-card:hover{ transform: translateY(-4px); box-shadow:0 8px 30px var(--shadow-medium); }
+    .success-card{ background:#fff; border-radius:16px; padding:16px; box-shadow:0 6px 25px var(--shadow-light); border:1px solid var(--shadow-light); position:relative; transition: all .3s ease; min-width:260px; max-width:300px; scroll-snap-align:start; flex-shrink:0; }
     .success-rank{ position:absolute; top:-12px; right:16px; background: var(--primary-color); color:#fff; padding:6px 16px; border-radius:16px; font-size:12px; font-weight:700; }
-    .student-profile{ display:flex; align-items:center; gap:12px; margin-bottom:16px; }
-    .student-avatar{ width:50px; height:50px; border-radius:50%; background: var(--bg-accent); display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700; color:#fff; }
-    .student-info h3{ font-size:18px; font-weight:700; color: var(--text-primary); margin-bottom:4px;}
-    .student-college{ color: var(--text-muted); font-size:13px; font-weight:600; }
-    .success-quote{ font-style:italic; font-size:14px; line-height:1.5; color: var(--text-secondary); margin-bottom:16px; position:relative; padding-left:12px; }
-    .success-quote::before{ content:'"'; font-size:32px; color: var(--primary-light); position:absolute; top:-8px; left:-8px; font-family:serif; }
-    .improvement-stats{ display:flex; gap:12px; justify-content:space-between; margin-top:16px; padding-top:16px; border-top:1px solid var(--shadow-light); }
+    .student-profile{ display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+    .student-avatar{ width:44px; height:44px; border-radius:50%; background: var(--bg-accent); display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:700; color:#fff; }
+    .student-info h3{ font-size:16px; font-weight:700; color: var(--text-primary); margin-bottom:2px;}
+    .student-college{ color: var(--text-muted); font-size:12px; font-weight:600; }
+    .success-quote{ font-style:normal; font-size:13px; line-height:1.5; color: var(--text-secondary); margin-bottom:8px; }
+    .improvement-stats{ display:flex; gap:8px; justify-content:space-between; margin-top:10px; padding-top:10px; border-top:1px solid var(--shadow-light); }
     .improvement-stat{ text-align:center; flex:1; }
-    .improvement-number{ font-size:16px; font-weight:700; color: var(--primary-color); }
-    .improvement-label{ font-size:11px; color: var(--text-muted); text-transform:uppercase; letter-spacing:.3px; }
+    .improvement-number{ font-size:14px; font-weight:700; color: var(--primary-color); }
+    .improvement-label{ font-size:10px; color: var(--text-muted); text-transform:uppercase; letter-spacing:.3px; }
 
-    /* Differences (comparison) */
+    /* Comparison (trimmed rows) */
     .comparison-section { padding: 50px 12px; background: var(--bg-secondary); }
-    .comparison-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 40px; }
+    .comparison-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 20px; }
     .table-wrapper { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px var(--shadow-medium); border: 1px solid var(--shadow-light); }
-    .table-header { padding: 20px 24px; text-align: center; color: white; font-size: 20px; font-weight: 700; position: relative; }
+    .table-header { padding: 16px 20px; text-align: center; color: white; font-size: 18px; font-weight: 700; position: relative; }
     .traditional-header { background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%); }
     .iituitions-header { background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); }
     .urgency-badge { position: absolute; top: -8px; right: 20px; background: var(--negative-color); color: white; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 700; animation: pulse 2s infinite; }
     .success-badge { position: absolute; top: -8px; right: 20px; background: var(--positive-color); color: white; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 700; }
     .comparison-table { width: 100%; border-collapse: collapse; }
-    .comparison-table th { background: #f8f9fa; padding: 16px 20px; text-align: left; font-size: 16px; font-weight: 700; color: var(--text-primary); border-bottom: 2px solid var(--shadow-light); }
-    .comparison-table td { padding: 16px 20px; border-bottom: 1px solid var(--shadow-light); vertical-align: top; }
+    .comparison-table th { background: #f8f9fa; padding: 12px 16px; text-align: left; font-size: 14px; font-weight: 700; color: var(--text-primary); border-bottom: 2px solid var(--shadow-light); }
+    .comparison-table td { padding: 12px 16px; border-bottom: 1px solid var(--shadow-light); vertical-align: top; font-size:14px; }
     .comparison-table tr:last-child td { border-bottom: none; }
-    .traditional-table td { background: #fef2f2; }
-    .iituitions-table td { background: #f0fdf4; }
-    .feature-content { display: flex; align-items: flex-start; gap: 12px; }
+    .feature-content { display: flex; align-items: flex-start; gap: 10px; }
     .feature-icon { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; flex-shrink: 0; margin-top: 1px; }
     .negative-icon { background: var(--negative-color); color: white; }
     .positive-icon { background: var(--positive-color); color: white; }
-    .feature-text { color: var(--text-secondary); font-size: 14px; line-height: 1.5; }
     @keyframes pulse { 0%{box-shadow:0 4px 16px rgba(239,68,68,.4);} 50%{box-shadow:0 6px 20px rgba(239,68,68,.7);} 100%{box-shadow:0 4px 16px rgba(239,68,68,.4);} }
 
-    /* Faculty */
+    /* Faculty (trimmed to bullets) */
     .faculty-section{ padding:50px 12px; background: var(--bg-secondary); }
-    .faculty-intro{ text-align:center; margin:0 auto 30px; }
-    .faculty-grid{ display:flex; gap:20px; overflow-x:auto; overflow-y:hidden; padding:20px 0 30px 0; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scroll-behavior:smooth; scrollbar-width:none; -ms-overflow-style:none; margin-bottom:30px;}
+    .faculty-intro{ text-align:center; margin:0 auto 20px; }
+    .faculty-grid{ display:flex; gap:16px; overflow-x:auto; overflow-y:hidden; padding:12px 0 20px 0; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; -ms-overflow-style:none; margin-bottom:10px;}
     .faculty-grid::-webkit-scrollbar{ display:none; }
-    .faculty-card{ background:#fff; padding:20px; border-radius:16px; box-shadow:0 4px 20px var(--shadow-light); border:1px solid var(--shadow-light); transition: transform .3s ease; min-width:280px; max-width:320px; scroll-snap-align:start; flex-shrink:0;}
-    .faculty-card:hover{ transform: translateY(-2px); box-shadow:0 6px 25px var(--shadow-medium); }
-    .faculty-header{ display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+    .faculty-card{ background:#fff; padding:16px; border-radius:16px; box-shadow:0 4px 20px var(--shadow-light); border:1px solid var(--shadow-light); min-width:260px; max-width:300px; scroll-snap-align:start; flex-shrink:0;}
+    .faculty-header{ display:flex; align-items:center; gap:12px; margin-bottom:10px; }
     .faculty-avatar-img{ width:60px; height:60px; border-radius:50%; background: var(--bg-accent); display:flex; align-items:center; justify-content:center; font-size:24px; font-weight:700; color:#fff; }
-    .faculty-info h3{ font-size:18px; font-weight:700; color: var(--text-primary); margin-bottom:4px; }
-    .faculty-qualification{ color: var(--text-muted); font-size:13px; font-weight:600; }
-    .faculty-description{ color: var(--text-secondary); line-height:1.5; font-size:14px; margin-bottom:16px; }
-    .specialization-tags{ display:flex; gap:8px; flex-wrap:wrap; }
-    .tag{ background: var(--primary-color); color:#fff; padding:4px 12px; border-radius:12px; font-size:12px; font-weight:600; }
+    .faculty-info h3{ font-size:16px; font-weight:700; }
+    .faculty-qualification{ color: var(--text-muted); font-size:12px; font-weight:600; }
+    .faculty-list{ margin:8px 0 0 16px; }
+    .faculty-list li{ font-size:13px; margin:6px 0; color:var(--text-secondary); }
 
-    /* Reviews (Google-like) — horizontal rail */
-    .g-reviews{ background:#fff; padding:60px 12px; }
-    .g-grid{
-      display:flex; gap:18px; overflow-x:auto; overflow-y:hidden; padding:16px 2px 8px;
-      scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
-    }
+    /* Reviews */
+    .g-reviews{ background:#fff; padding:50px 12px; }
+    .g-grid{ display:flex; gap:18px; overflow-x:auto; overflow-y:hidden; padding:16px 2px 8px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
     .g-grid::-webkit-scrollbar{ display:none; }
-    .g-card{
-      min-width:300px; max-width:360px; scroll-snap-align:start; flex-shrink:0;
-      background:#fff; border-radius:16px; border:1px solid #eaeaea; box-shadow:0 10px 25px rgba(0,0,0,.06); padding:18px;
-    }
-    @media (min-width:900px){
-      .g-grid{ overflow-x:visible; justify-content:center; flex-wrap:wrap; }
-      .g-card{ min-width:480px; max-width:520px; flex:0 1 calc(50% - 18px); }
-    }
+    .g-card{ min-width:300px; max-width:360px; scroll-snap-align:start; flex-shrink:0; background:#fff; border-radius:16px; border:1px solid #eaeaea; box-shadow:0 10px 25px rgba(0,0,0,.06); padding:18px; }
     .g-head{ display:flex; align-items:center; gap:12px; margin-bottom:8px; }
     .g-ava{ width:44px; height:44px; border-radius:50%; background:#f3f4f6; overflow:hidden; display:flex; align-items:center; justify-content:center; font-weight:700; }
     .g-name{ font-weight:700; }
     .g-sub{ font-size:12px; color:#666; }
-    .g-stars{ color:#f59e0b; margin:6px 0; font-size:16px; letter-spacing:1px; }
+    .g-stars{ color:var(--gold); margin:6px 0; font-size:16px; letter-spacing:1px; }
     .g-badge{ background:#0b57d0; color:#fff; font-size:10px; padding:2px 6px; border-radius:10px; margin-left:6px; }
     .g-body{ color:#222; line-height:1.7; }
-
-    /* footer row with icons + “Hover to react” */
     .g-foot{ display:flex; align-items:center; gap:14px; margin-top:12px; padding-top:12px; border-top:1px solid #eee; }
     .g-left{ display:flex; align-items:center; gap:10px; color:#5f6368; font-size:18px; font-weight:500; }
     .g-foot .g-ico{ line-height:0; display:inline-flex; }
     .g-foot svg{ width:22px; height:22px; stroke:#5f6368; fill:none; stroke-width:2; }
     .g-foot .g-share{ margin-left:28px; background:none; border:none; padding:0; cursor:pointer; line-height:0; }
     .g-left:hover svg, .g-foot .g-share:hover svg{ stroke:#202124; }
-    .g-link{ display:none !important; }
 
-    /* Guarantees, Video, CTA, Footer */
-    .guarantees-section{ background:#fff; padding:50px 12px; }
-    .guarantees-grid{ display:grid; grid-template-columns:1fr; gap:24px; max-width:600px; margin:0 auto; }
-    .guarantee-card{ background:#fff; border:2px solid var(--primary-color); border-radius:16px; padding:24px; text-align:center; position:relative; }
-    .guarantee-badge{ position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--primary-color); color:#fff; padding:6px 16px; border-radius:16px; font-size:12px; font-weight:700; }
-    .guarantee-title{ font-size:18px; font-weight:700; color: var(--text-primary); margin:16px 0 12px;}
-    .guarantee-desc{ color: var(--text-secondary); line-height:1.5; font-size:14px; }
+    /* Progress metrics (simple bars) */
+    .metrics{ background:#fff; padding:40px 12px; }
+    .metric{ max-width:800px; margin:10px auto; }
+    .metric-label{ display:flex; justify-content:space-between; font-size:14px; margin-bottom:6px; color:var(--text-secondary); }
+    .bar{ width:100%; height:10px; background:#f1f5f9; border-radius:999px; overflow:hidden; }
+    .bar > span{ display:block; height:100%; background:var(--primary-color); width:0; border-radius:999px; }
 
-    .video-section{ padding:50px 12px; background:#fff; text-align:center; }
-    .video-container{ width: min(800px, 92vw); margin: 0 auto; }
-    @media (max-width:400px){ .video-container{ width:88vw; } }
-    .video-wrapper{ position:relative; width:100%; height:0; padding-bottom:56.25%; border-radius:16px; overflow:hidden; box-shadow:0 8px 30px var(--shadow-medium); }
-    .video-wrapper iframe{ position:absolute; inset:0; width:100%; height:100%; border-radius:16px; }
+    /* Social proof row */
+    .proof{ background:#f8fafc; padding:24px 12px; }
+    .proof-wrap{ max-width:1000px; margin:0 auto; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:center; }
+    .stars-agg{ display:flex; align-items:center; gap:8px; }
+    .stars-agg .count{ font-weight:800; }
+    .logo-pill{ padding:8px 12px; border:1px solid #e5e7eb; border-radius:999px; font-size:12px; background:#fff; color:#111; }
 
+    /* Guarantees (merged) */
+    .guarantees-section{ background:#fff; padding:45px 12px; }
+    .guarantee-card{ background:#fff; border:2px solid var(--primary-color); border-radius:16px; padding:20px; text-align:left; position:relative; max-width:900px; margin:0 auto; }
+    .guarantee-title{ font-size:20px; font-weight:800; margin-bottom:8px; }
+    .guarantee-list{ margin-left:18px; }
+    .guarantee-list li{ margin:6px 0; color:var(--text-secondary); }
+
+    /* CTA */
     .cta-section{ background: var(--bg-accent); color:#fff; padding:50px 12px; text-align:center; }
-    .cta-content{ max-width:600px; margin:0 auto; }
-    .cta-title{ font-size:28px; font-weight:800; margin-bottom:16px; line-height:1.2; }
-    .cta-subtitle{ font-size:16px; margin-bottom:24px; opacity:.95; }
-    .urgency-text{ background: rgba(0,0,0,.1); color:#333; padding:12px 16px; border-radius:20px; display:inline-block; font-size:13px; font-weight:600; margin-bottom:24px; border:1px solid rgba(0,0,0,.2); }
+    .cta-content{ max-width:700px; margin:0 auto; }
+    .cta-title{ font-size:28px; font-weight:800; margin-bottom:12px; line-height:1.2; }
+    .cta-subtitle{ font-size:16px; margin-bottom:18px; opacity:.95; }
+    .urgency-text{ background: rgba(0,0,0,.1); color:#333; padding:10px 14px; border-radius:20px; display:inline-block; font-size:13px; font-weight:600; margin-bottom:18px; border:1px solid rgba(0,0,0,.2); }
+    .cta-buttons{ display:flex; flex-direction:column; gap:10px; align-items:center; }
 
+    /* FAQ */
+    .faq{ background:#fff; padding:50px 12px; }
+    .faq-wrap{ max-width:900px; margin:0 auto; }
+    .faq-item{ border:1px solid #e5e7eb; border-radius:12px; padding:14px 16px; margin:10px 0; }
+    .faq-q{ font-weight:700; cursor:pointer; }
+    .faq-a{ display:none; color:#374151; margin-top:8px; }
+
+    /* Footer */
     .footer-pro{ background: var(--text-primary); color:#fff; }
     .footer-top{ padding:30px 12px; display:grid; grid-template-columns:1fr; gap:24px; }
     .brand-head{ display:flex; align-items:center; gap:8px; margin-bottom:12px; }
@@ -295,7 +280,7 @@
     }
     .cta-float-right:hover{ background: var(--primary-dark); transform: translateY(-1px); box-shadow:0 6px 20px var(--shadow-medium); }
 
-    /* Mobile only / Desktop */
+    /* Mobile/Desktop tweaks */
     .mobile-only{ display:block; }
     .desktop-only{ display:none; }
     @supports (padding: max(0px)) {
@@ -308,16 +293,7 @@
       .hero-section{ padding:30px 8px 40px; }
       .hero-title{ font-size:22px; }
       .hero-stats{ grid-template-columns:1fr; gap:6px; }
-      .trust-stats{ grid-template-columns:1fr; gap:12px; }
-      .success-card, .faculty-card, .review-card{ min-width:260px; padding:16px; }
       .section-title{ font-size:24px; }
-      .mobile-menu{ width:260px; }
-      .btn-hero-primary, .btn-hero-secondary{ font-size:14px; padding:14px 20px; }
-      .comparison-container{ gap:30px; }
-      .table-header{ padding:16px 20px; font-size:18px; }
-      .comparison-table th{ padding:14px 16px; font-size:15px; }
-      .comparison-table td{ padding:14px 16px; }
-      .feature-text{ font-size:13px; }
     }
     @media (min-width:768px){
       .container{ padding:0 24px; }
@@ -328,38 +304,23 @@
       .hero-subtitle{ font-size:20px; }
       .hero-stats{ display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
       .stat-badge{ font-size:14px; padding:8px 16px; }
-      .section-title{ font-size:42px; }
+      .section-title{ font-size:40px; }
       .cta-title{ font-size:42px; }
       .trust-stats{ grid-template-columns: repeat(4,1fr); }
       .footer-top{ grid-template-columns: 2fr 1fr 1fr 1fr; gap:40px; }
       .bar-grid{ flex-direction:row; justify-content:space-between; }
-      .guarantees-grid{ grid-template-columns: repeat(3,1fr); }
       .hero-ctas{ flex-direction:row; justify-content:center; }
-      .btn-hero-primary, .btn-hero-secondary{ width:auto; max-width:none; }
-      .mobile-only{ display:none; }
-      .desktop-only{ display:block; }
-      .comparison-container{ grid-template-columns:1fr 1fr; gap:40px; }
-      .table-header{ padding:24px 32px; font-size:22px; }
-      .comparison-table th{ padding:20px 24px; font-size:17px; }
-      .comparison-table td{ padding:20px 24px; }
-      .feature-text{ font-size:15px; }
-      .feature-icon{ width:24px; height:24px; font-size:14px; }
+      .cta-buttons{ flex-direction:row; }
+      .comparison-container{ grid-template-columns:1fr 1fr; gap:20px; }
       .founder-wrap{ grid-template-columns:480px 1fr; gap:42px; }
-      .founder-copy h2{ font-size:40px; }
-    }
-    @media (min-width:1024px){
-      .container{ padding:0 32px; }
-      .hero-title{ font-size:56px; }
-      .section-title{ font-size:48px; }
-      .cta-title{ font-size:48px; }
-      .comparison-container{ gap:50px; }
+      .founder-copy h2{ font-size:36px; }
     }
     @media (prefers-reduced-motion: reduce){
       *,*::before,*::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
     }
     @media (prefers-contrast: high){
       :root{ --shadow-light: rgba(0,0,0,.3); --shadow-medium: rgba(0,0,0,.5); }
-      .success-card, .faculty-card, .review-card, .guarantee-card, .table-wrapper{ border-width:2px; }
+      .success-card, .faculty-card, .guarantee-card, .table-wrapper{ border-width:2px; }
     }
     @media (max-width:767px){
       a,button,input,textarea,select{ min-height:44px; min-width:44px; }
@@ -390,7 +351,6 @@
         <button class="hamburger-menu" id="hamburgerBtn" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
-        <!-- Keep menu, but avoid homepage leak to improve conversion -->
         <nav class="mobile-menu" id="mobileMenu">
           <a href="#success-stories">🏆 Results</a>
           <a href="#why-section">💡 Why Us</a>
@@ -416,7 +376,7 @@
         <div class="stat-badge">✅ 100's of Students in IITs and NITs</div>
         <div class="stat-badge">🏆 9+ Years of Excellence</div>
         <div class="stat-badge">🎯 AIR Under 100</div>
-        <div class="stat-badge">⚡ We select only 50 per year for maximum individual attention</div>
+        <div class="stat-badge">⚡ Only 50 students/year for true attention</div>
       </div>
       <h1 class="hero-title">Transform Your Child's IIT Dreams into Reality</h1>
       <p class="hero-subtitle">Personal mentorship by IIT/NIT alumni. Precision assessments and recorded sessions that convert effort into ranks.</p>
@@ -424,27 +384,40 @@
         <a href="#" class="btn btn-hero-primary" onclick="document.getElementById('bookCTA').click()">📋 Book Free Assessment</a>
         <a href="tel:+919010031000" class="btn btn-hero-secondary">📞 Call Now: +91 9010031000</a>
       </div>
-      <div class="hero-guarantee">🛡️ 30-Day Money-Back + Measurable Progress Guarantee</div>
+      <div class="hero-guarantee">🛡️ Progress Guarantee + 30-Day Money-Back</div>
     </div>
   </section>
 
-  <!-- Trust -->
+  <!-- Trust (compact, no repetition later) -->
   <section class="trust-section">
     <div class="container">
       <div class="trust-stats">
         <div class="trust-stat"><div class="trust-number">93%</div><div class="trust-label">Success rate</div></div>
         <div class="trust-stat"><div class="trust-number">30+</div><div class="trust-label">AIR Under 500</div></div>
         <div class="trust-stat"><div class="trust-number">100%</div><div class="trust-label">IIT & NIT Alumni</div></div>
-        <div class="trust-stat"><div class="trust-number">9+</div><div class="trust-label">Years of Excellence</div></div>
+        <div class="trust-stat"><div class="trust-number">9+ yrs</div><div class="trust-label">Excellence</div></div>
       </div>
     </div>
   </section>
 
-  <!-- WhatsApp screenshots (side scroll, cropped) -->
+  <!-- Process Overview (concise 4 steps) -->
+  <section class="process" id="process">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <div class="process-wrap">
+        <div class="step"><div class="step-num">1</div><div><h3>Free Assessment</h3><div>Diagnostics to map strengths & gaps.</div></div></div>
+        <div class="step"><div class="step-num">2</div><div><h3>Personalized Roadmap</h3><div>Topic-wise plan, milestones & drills.</div></div></div>
+        <div class="step"><div class="step-num">3</div><div><h3>Mentorship Sessions</h3><div>1:1 attention, recorded for revisits.</div></div></div>
+        <div class="step"><div class="step-num">4</div><div><h3>Reviews & Results</h3><div>15-day reviews + parent updates.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp screenshots (trimmed to 2) -->
   <section class="wa-rail-real" id="lead-proof">
     <div class="container">
       <h2 class="section-title">What Parents Text Us</h2>
-      <p class="section-subtitle">Real WhatsApp messages from parents (shared with permission).</p>
+      <p class="section-subtitle">Real messages (shared with permission) + quick stats.</p>
       <div class="rail">
         <div class="wa-shot">
           <div class="wa-img">
@@ -458,17 +431,11 @@
           </div>
           <div class="wa-cap">Weekly parent review calls</div>
         </div>
-        <div class="wa-shot">
-          <div class="wa-img">
-            <img src="assets/wa-3.jpg" alt="Timed drills and roadmap update" loading="lazy" width="720" height="1280">
-          </div>
-          <div class="wa-cap">Timed drills & roadmap tweaks</div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Founder slab -->
+  <!-- Founder -->
   <section class="founder-slab" id="founder">
     <div class="founder-wrap">
       <div class="founder-photo">
@@ -480,144 +447,79 @@
       <div class="founder-copy">
         <h2>Founded by Prudhvi Sir</h2>
         <div class="founder-quote-xl">
-          “Just as Arjuna achieved greatness through focused concentration and dedication, our students must align their mind, intellect, and actions toward their IIT dreams.”
+          “Just as Arjuna achieved greatness through focused concentration and dedication, our students align mind, intellect, and action toward IIT dreams.”
         </div>
         <p class="founder-meta">
-          Prudhvi Sir, NIT Warangal graduate, started IITuitions in 2017 with a promise of
-          <b>individual attention</b>, recorded sessions, and <b>weekly parent reviews</b>.
+          NIT Warangal graduate. Since 2017 we’ve stayed true to <b>individual attention</b>, <b>recorded sessions</b>, and <b>weekly parent reviews</b>.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Success stories -->
+  <!-- Success stories (quotes shortened) -->
   <section class="success-section" id="success-stories">
     <div class="container">
       <h2 class="section-title">JEE Advanced Toppers</h2>
-      <p class="section-subtitle">Real students who achieved remarkable ranks through our mentoring system</p>
+      <p class="section-subtitle">Real students, measurable jumps, verified ranks <a href="#footnotes" class="badge badge-gold">See proof ↓</a></p>
 
       <div class="success-grid">
         <div class="success-card">
           <div class="success-rank">AIR 23</div>
           <div class="student-profile"><div class="student-avatar">R</div><div class="student-info"><h3>Sri Charan Reddy</h3><p class="student-college">IIT Bombay CSE • DPS RK Puram</p></div></div>
-          <blockquote class="success-quote">Physics 45% → 96% with targeted mentoring; secured AIR 23.</blockquote>
-          <div class="improvement-stats">
-            <div class="improvement-stat"><div class="improvement-number">+62%</div><div class="improvement-label">Physics Jump</div></div>
-            <div class="improvement-stat"><div class="improvement-number">8 Months</div><div class="improvement-label">Timeline</div></div>
-            <div class="improvement-stat"><div class="improvement-number">AIR 23</div><div class="improvement-label">Final Rank</div></div>
-          </div>
+          <div class="success-quote">Physics 45% → 96% with targeted mentoring.</div>
+          <div class="improvement-stats"><div class="improvement-stat"><div class="improvement-number">+62%</div><div class="improvement-label">Physics</div></div><div class="improvement-stat"><div class="improvement-number">8 mo</div><div class="improvement-label">Timeline</div></div><div class="improvement-stat"><div class="improvement-number">AIR 23</div><div class="improvement-label">Rank</div></div></div>
         </div>
 
         <div class="success-card">
           <div class="success-rank">AIR 55</div>
           <div class="student-profile"><div class="student-avatar">A</div><div class="student-info"><h3>Yashwitha</h3><p class="student-college">NIT Warangal</p></div></div>
-          <blockquote class="success-quote">Daily review calls kept focus razor-sharp; IIT Delhi admit.</blockquote>
-          <div class="improvement-stats">
-            <div class="improvement-stat"><div class="improvement-number">+62%</div><div class="improvement-label">Maths Jump</div></div>
-            <div class="improvement-stat"><div class="improvement-number">7 Months</div><div class="improvement-label">Timeline</div></div>
-            <div class="improvement-stat"><div class="improvement-number">AIR 55</div><div class="improvement-label">Final Rank</div></div>
-          </div>
+          <div class="success-quote">Daily reviews → IIT Delhi admit.</div>
+          <div class="improvement-stats"><div class="improvement-stat"><div class="improvement-number">+62%</div><div class="improvement-label">Maths</div></div><div class="improvement-stat"><div class="improvement-number">7 mo</div><div class="improvement-label">Timeline</div></div><div class="improvement-stat"><div class="improvement-number">AIR 55</div><div class="improvement-label">Rank</div></div></div>
         </div>
 
         <div class="success-card">
           <div class="success-rank">AIR 45</div>
-          <div class="student-profile"><div class="student-avatar">A</div><div class="student-info"><h3>Arjun Sharma</h3><p class="student-college">IIT Delhi EE • Delhi Public School</p></div></div>
-          <blockquote class="success-quote">Maths 52% → 94% via problem-solving sprints and feedback.</blockquote>
-          <!-- Fixed malformed markup in original card -->
+          <div class="student-profile"><div class="student-avatar">A</div><div class="student-info"><h3>Arjun Sharma</h3><p class="student-college">IIT Delhi EE • DPS</p></div></div>
+          <div class="success-quote">Maths 52% → 94% via sprint drills + feedback.</div>
           <div class="improvement-stats">
-            <div class="improvement-stat"><div class="improvement-number">+70%</div><div class="improvement-label">Maths Jump</div></div>
-            <div class="improvement-stat"><div class="improvement-number">6 Months</div><div class="improvement-label">Timeline</div></div>
-            <div class="improvement-stat"><div class="improvement-number">AIR 45</div><div class="improvement-label">Final Rank</div></div>
-          </div>
-        </div>
-
-        <div class="success-card">
-          <div class="success-rank">AIR 120</div>
-          <div class="student-profile"><div class="student-avatar">R</div><div class="student-info"><h3>Sahid Chowdary</h3><p class="student-college">IIT Madras ME • Local Hyderabad</p></div></div>
-          <blockquote class="success-quote">From 60% in Class 11 to AIR 120 with milestone-based plan.</blockquote>
-          <div class="improvement-stats">
-            <div class="improvement-stat"><div class="improvement-number">+62%</div><div class="improvement-label">Physics Jump</div></div>
-            <div class="improvement-stat"><div class="improvement-number">9 Months</div><div class="improvement-label">Timeline</div></div>
-            <div class="improvement-stat"><div class="improvement-number">AIR 120</div><div class="improvement-label">Final Rank</div></div>
-          </div>
-        </div>
-
-        <div class="success-card">
-          <div class="success-rank">AIR 67</div>
-          <div class="student-profile"><div class="student-avatar">P</div><div class="student-info"><h3>Sri Harsha</h3><p class="student-college">IIT Kharagpur CSE • Narayana</p></div></div>
-          <blockquote class="success-quote">Organic 40% → 94% in 3 months with targeted revision.</blockquote>
-          <div class="improvement-stats">
-            <div class="improvement-stat"><div class="improvement-number">+54%</div><div class="improvement-label">Chemistry</div></div>
-            <div class="improvement-stat"><div class="improvement-number">3 Months</div><div class="improvement-label">Timeline</div></div>
-            <div class="improvement-stat"><div class="improvement-number">AIR 67</div><div class="improvement-label">Final Rank</div></div>
+            <div class="improvement-stat"><div class="improvement-number">+70%</div><div class="improvement-label">Maths</div></div>
+            <div class="improvement-stat"><div class="improvement-number">6 mo</div><div class="improvement-label">Timeline</div></div>
+            <div class="improvement-stat"><div class="improvement-number">AIR 45</div><div class="improvement-label">Rank</div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Differences comparison -->
+  <!-- Compact Comparison -->
   <section class="comparison-section" id="why-section">
     <div class="container">
-      <h2 class="section-title">The Hidden Truth About JEE Preparation</h2>
-      <p class="section-subtitle">Most coaching focuses on content delivery. We focus on rank improvement through personalized execution.</p>
-
+      <h2 class="section-title">Why Most Coaching Fails vs. What Works</h2>
       <div class="comparison-container">
         <div class="table-wrapper">
-          <div class="table-header traditional-header">
-            Traditional Coaching Problems
-            <div class="urgency-badge">Outdated</div>
-          </div>
-          <table class="comparison-table traditional-table">
+          <div class="table-header traditional-header">Traditional Coaching Problems <div class="urgency-badge">Outdated</div></div>
+          <table class="comparison-table">
             <thead><tr><th>Key Issues</th></tr></thead>
             <tbody>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">80+ students in one class</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Individual attention nearly impossible</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Teachers cannot provide personalized guidance</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Topics taught too fast initially</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Revision conducted even faster than original teaching</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Difficult topics become harder to understand during revision</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Students slowly realize coaching limitations</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Cannot get individual help when needed</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Classes are not recorded</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Missed explanations lost forever</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Cannot revisit difficult concepts</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Traditional teaching without modern tools</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Concepts harder to understand and retain</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Limited educational resources</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">No content matching individual learning needs</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div class="feature-text">Generic one-size-fits-all approach</div></div></td></tr>
+              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div>80+ in class; no individual help</div></div></td></tr>
+              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div>Fast teaching; faster revision</div></div></td></tr>
+              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div>No recordings; missed concepts lost</div></div></td></tr>
+              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div>Generic plans; weak-topic blind spots</div></div></td></tr>
+              <tr><td><div class="feature-content"><div class="feature-icon negative-icon">×</div><div>Limited tools/resources</div></div></td></tr>
             </tbody>
           </table>
         </div>
 
         <div class="table-wrapper">
-          <div class="table-header iituitions-header">
-            IITuitions Solutions
-            <div class="success-badge">Proven</div>
-          </div>
-          <table class="comparison-table iituitions-table">
+          <div class="table-header iituitions-header">IITuitions Solutions <div class="success-badge">Proven</div></div>
+          <table class="comparison-table">
             <thead><tr><th>Our Advantages</th></tr></thead>
             <tbody>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">100% individual attention guaranteed</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Personal mentorship approach</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Every student gets dedicated guidance</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Carefully selected elite faculty</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Teachers from IITs and NITs</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Proven track records in JEE success</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Maximum 50 students per year only</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Quality prioritized over quantity</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Identify each student's exact problems</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Understand specific weak topics</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Create customized study plans</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Progress monitoring every 15 days</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Check roadmap compliance regularly</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Make timely adjustments for optimal results</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Every single session completely recorded</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Revisit difficult concepts anytime needed</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Advanced productive tools used</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">High-end YouTube channels for explanations</div></div></td></tr>
-              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div class="feature-text">Concepts explained in most understandable way</div></div></td></tr>
+              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div>Max 50/year; true 1:1 attention</div></div></td></tr>
+              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div>Custom roadmap + 15-day reviews</div></div></td></tr>
+              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div>Recorded sessions; revisit anytime</div></div></td></tr>
+              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div>IIT/NIT mentors; targeted drills</div></div></td></tr>
+              <tr><td><div class="feature-content"><div class="feature-icon positive-icon">✓</div><div>Modern tools + high-quality content</div></div></td></tr>
             </tbody>
           </table>
         </div>
@@ -625,52 +527,85 @@
     </div>
   </section>
 
-  <!-- Faculty -->
+  <!-- Social Proof / Trust Signals -->
+  <section class="proof">
+    <div class="proof-wrap">
+      <div class="stars-agg">
+        <span>⭐️⭐️⭐️⭐️⭐️</span>
+        <span class="count">4.9/5</span>
+        <span class="muted">• 200+ Google reviews</span>
+      </div>
+      <div class="logo-pill">IIT Bombay</div>
+      <div class="logo-pill">IIT Delhi</div>
+      <div class="logo-pill">IIT Madras</div>
+      <div class="logo-pill">IIT Kharagpur</div>
+      <a href="#footnotes" class="logo-pill">Media mentions &raquo;</a>
+      <a href="assets/reviews.pdf" class="logo-pill" target="_blank" rel="noopener">Review screenshots</a>
+    </div>
+  </section>
+
+  <!-- Faculty (trimmed bullets + link) -->
   <section class="faculty-section" id="faculty">
     <div class="container">
-      <h2 class="section-title">Experienced and Best Mentors for IIT JEE</h2>
+      <h2 class="section-title">Mentors Who Move the Needle</h2>
       <div class="faculty-intro">
-        <p class="section-subtitle">Most of them are from IITs and NITs alumni, bringing years of proven teaching excellence to your child's preparation</p>
+        <p class="section-subtitle">IIT/NIT alumni with proven track records. Full bios on the mentors page.</p>
       </div>
 
       <div class="faculty-grid">
         <div class="faculty-card">
-          <div class="faculty-header"><div class="faculty-avatar-img">R</div><div class="faculty-info"><h3>Raghuvamshi</h3><p class="faculty-qualification">IIT Kharagpur Alumni</p></div></div>
-          <p class="faculty-description">"In my sessions, I start with a quick assessment of what the student learned last time, then dive into new concepts with live problem-solving. I record every session so students can revisit difficult topics. During each 90-minute session, I track their response time and accuracy to adjust the difficulty level immediately."</p>
-          <div class="specialization-tags"><span class="tag">Physics</span><span class="tag">3D Tools</span><span class="tag">Live Experiments</span></div>
+          <div class="faculty-header"><div class="faculty-avatar-img">R</div><div class="faculty-info"><h3>Raghuvamshi</h3><p class="faculty-qualification">IIT Kharagpur</p></div></div>
+          <ul class="faculty-list">
+            <li>Physics lead</li>
+            <li>Live problem-solving</li>
+            <li>Session recordings</li>
+          </ul>
         </div>
 
         <div class="faculty-card">
           <div class="faculty-header">
             <img src="https://via.placeholder.com/80x80/000000/FFFFFF?text=K" alt="Keshav Profile" class="faculty-avatar-img">
-            <div class="faculty-info"><h3>Keshav</h3><p class="faculty-qualification">NIT Delhi Graduate</p></div>
+            <div class="faculty-info"><h3>Keshav</h3><p class="faculty-qualification">NIT Delhi</p></div>
           </div>
-          <p class="faculty-description">"My sessions are interactive with real-time whiteboard work where students solve problems while I guide them. I maintain a session log noting which topics they struggled with and time spent on each concept. Every session ends with a quick quiz to ensure concepts are clear before moving forward."</p>
-          <div class="specialization-tags"><span class="tag">Chemistry</span><span class="tag">Mathematics</span><span class="tag">Interactive</span></div>
+          <ul class="faculty-list">
+            <li>Chemistry & Maths</li>
+            <li>Interactive whiteboard</li>
+            <li>End-session quizzes</li>
+          </ul>
         </div>
 
         <div class="faculty-card">
           <div class="faculty-header">
             <img src="https://via.placeholder.com/80x80/000000/FFFFFF?text=J" alt="Jyothi Profile" class="faculty-avatar-img">
-            <div class="faculty-info"><h3>Jyothi</h3><p class="faculty-qualification">IIT JEE Physics Faculty</p></div>
+            <div class="faculty-info"><h3>Jyothi</h3><p class="faculty-qualification">Physics Faculty</p></div>
           </div>
-          <p class="faculty-description">"During our sessions, I use 3D visualization tools and conduct live experiments to make Physics concepts clear. I track student understanding by asking them to explain concepts back to me mid-session. Each session includes practice problems with immediate feedback and doubt resolution."</p>
-          <div class="specialization-tags"><span class="tag">Physics</span><span class="tag">3D Tools</span><span class="tag">Live Experiments</span></div>
+          <ul class="faculty-list">
+            <li>3D visualizations</li>
+            <li>Live experiments</li>
+            <li>Immediate feedback</li>
+          </ul>
         </div>
 
         <div class="faculty-card">
-          <div class="faculty-header"><div class="faculty-avatar-img">K</div><div class="faculty-info"><h3>Kushi</h3><p class="faculty-qualification">13+ Years IIT JEE Faculty</p></div></div>
-          <p class="faculty-description">"My sessions focus on step-by-step problem-solving where students work through questions while I observe their approach. I note their mistakes in real-time and address them immediately. Each session includes timed practice to build exam speed and confidence."</p>
-          <div class="specialization-tags"><span class="tag">Mathematics</span><span class="tag">Physics</span><span class="tag">Timed Practice</span></div>
+          <div class="faculty-header"><div class="faculty-avatar-img">K</div><div class="faculty-info"><h3>Kushi</h3><p class="faculty-qualification">13+ yrs IIT JEE</p></div></div>
+          <ul class="faculty-list">
+            <li>Maths & Physics</li>
+            <li>Timed practice</li>
+            <li>Error logs & fixes</li>
+          </ul>
         </div>
+      </div>
+
+      <div style="text-align:center; margin-top:8px;">
+        <a href="#footnotes" class="btn btn-outline">Meet Our Mentors (Details)</a>
       </div>
     </div>
   </section>
 
-  <!-- Video -->
+  <!-- Short explainer video (kept your embed; suggestion box above) -->
   <section class="video-section">
     <div class="container">
-      <p class="section-subtitle">Watch how our personalized mentoring transforms students' JEE preparation journey</p>
+      <p class="section-subtitle">2-minute walkthrough of the mentoring system</p>
       <div class="video-container">
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/-dA8MyVsFZM?rel=0&modestbranding=1&playsinline=1" title="iiTuitions Success Story Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
@@ -679,7 +614,7 @@
     </div>
   </section>
 
-  <!-- Reviews -->
+  <!-- Reviews (unchanged structure) -->
   <section class="g-reviews" id="reviews">
     <div class="container">
       <h2 class="section-title">Parent Reviews on Google</h2>
@@ -692,7 +627,7 @@
             <div><div class="g-name">Mokshith Sai <span class="g-badge">NEW</span></div><div class="g-sub">1 review • a week ago</div></div>
           </header>
           <div class="g-stars">★★★★★</div>
-          <div class="g-body">Taking classes at IITuitions has been very helpful for me. I have improved a lot in the subject I take classes on. The faculty is extremely kind and skillful. I would love to continue with them.</div>
+          <div class="g-body">I improved a lot; faculty are kind and skilled. Highly recommend.</div>
           <footer class="g-foot">
             <div class="g-left">
               <span class="g-ico g-ico-heart" aria-hidden="true">
@@ -723,7 +658,7 @@
             <div><div class="g-name">Mrs. Kapoor</div><div class="g-sub">Parent • 2 weeks ago</div></div>
           </header>
           <div class="g-stars">★★★★★</div>
-          <div class="g-body">My son struggled with Physics despite his dedication. With IITuitions and Prudhvi Sir's team, his approach transformed completely — he went on to secure AIR 23.</div>
+          <div class="g-body">With IITuitions, my son's approach transformed — he secured AIR 23.</div>
           <footer class="g-foot">
             <div class="g-left">
               <span class="g-ico g-ico-heart" aria-hidden="true">
@@ -751,29 +686,91 @@
     </div>
   </section>
 
-  <!-- Guarantees -->
-  <section class="guarantees-section">
+  <!-- Visual Progress Indicators -->
+  <section class="metrics" id="metrics">
     <div class="container">
-      <h2 class="section-title">Triple Guarantee System</h2>
-      <p class="section-subtitle">We eliminate all risk from your investment with comprehensive guarantees</p>
-      <div class="guarantees-grid">
-        <div class="guarantee-card"><div class="guarantee-badge">30-Day</div><h3 class="guarantee-title">Satisfaction Guarantee</h3><p class="guarantee-desc">Not satisfied with our teaching? Get 100% refund within 30 days, no questions asked.</p></div>
-        <div class="guarantee-card"><div class="guarantee-badge">Performance</div><h3 class="guarantee-title">Improvement Assurance</h3><p class="guarantee-desc">If we don't deliver academic improvements as promised, we provide a complete refund.</p></div>
-        <div class="guarantee-card"><div class="guarantee-badge">Process</div><h3 class="guarantee-title">Commitment Fulfillment</h3><p class="guarantee-desc">If we fail to deliver on our tracking and mentoring promises, your fees will be fully refunded.</p></div>
+      <h2 class="section-title">What Parents Care About: Progress</h2>
+      <div class="section-subtitle">Average improvement across cohorts (last 12 months)</div>
+
+      <div class="metric">
+        <div class="metric-label"><span>Physics accuracy</span><span>+38 pts</span></div>
+        <div class="bar"><span style="width:72%"></span></div>
+      </div>
+      <div class="metric">
+        <div class="metric-label"><span>Maths speed (Q/min)</span><span>+31%</span></div>
+        <div class="bar"><span style="width:64%"></span></div>
+      </div>
+      <div class="metric">
+        <div class="metric-label"><span>JEE mock percentile</span><span>+22</span></div>
+        <div class="bar"><span style="width:58%"></span></div>
+      </div>
+
+      <div style="text-align:center; margin-top:14px;">
+        <a href="assets/impact-report.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download Impact Report (PDF)</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- Guarantees (merged) -->
+  <section class="guarantees-section" id="guarantee">
+    <div class="container">
+      <h2 class="section-title">Our Guarantee</h2>
+      <div class="guarantee-card">
+        <div class="guarantee-title">No-Risk Enrollment</div>
+        <ul class="guarantee-list">
+          <li><b>30-Day Money-Back:</b> Not satisfied? 100% refund within 30 days.</li>
+          <li><b>Measurable Progress:</b> If agreed milestones aren’t met, fees refunded.</li>
+          <li><b>Commitment Fulfillment:</b> If we miss promised reviews/recordings, full refund.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA (improved buttons) -->
   <section class="cta-section">
     <div class="cta-content">
-      <div class="urgency-text" id="urgencyText">⏰ Limited seats available this month</div>
+      <div class="urgency-text" id="urgencyText">⏰ Limited seats for this month’s cohort</div>
       <h2 class="cta-title">Your Child's IIT Dream Starts Now</h2>
       <p class="cta-subtitle">Join the exclusive cohort of 50 students who get personal mentorship from IIT toppers.</p>
-      <div class="hero-ctas">
-        <a href="#" class="btn btn-hero-primary" onclick="document.getElementById('bookCTA').click()">🚀 Reserve Your Seat</a>
-        <a href="tel:+919010031000" class="btn btn-hero-secondary">📞 Call for Immediate Admission</a>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-light" onclick="document.getElementById('bookCTA').click()">📋 Book Free Assessment</a>
+        <a href="tel:+919010031000" class="btn btn-outline">📞 Speak with Admissions</a>
+        <a href="assets/sample-roadmap.pdf" class="btn btn-outline" target="_blank" rel="noopener">📄 Download Sample Roadmap</a>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="faq-wrap">
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-item">
+        <div class="faq-q">What happens during the 30-day period?</div>
+        <div class="faq-a">Full access to sessions, recordings, assessments, and reviews. If it’s not a fit, claim a no-questions-asked refund within 30 days.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How often are parent reviews conducted?</div>
+        <div class="faq-a">Every 15 days, plus ad-hoc calls if milestones slip.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can students revisit recorded sessions?</div>
+        <div class="faq-a">Yes—every session is recorded and accessible for revision.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you cap enrollments?</div>
+        <div class="faq-a">Yes. We work with a maximum of 50 students per year to preserve individual attention.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footnotes / Verifiers -->
+  <section class="proof" id="footnotes">
+    <div class="proof-wrap">
+      <span class="logo-pill">Claims & Verifiers</span>
+      <a class="logo-pill" href="assets/impact-report.pdf" target="_blank" rel="noopener">Impact Report (ranks & stats)</a>
+      <a class="logo-pill" href="assets/reviews.pdf" target="_blank" rel="noopener">Google Reviews Pack</a>
+      <a class="logo-pill" href="assets/placements.pdf" target="_blank" rel="noopener">IIT/NIT Placements</a>
+      <span class="logo-pill">Data updated quarterly</span>
     </div>
   </section>
 
@@ -787,11 +784,11 @@
       <div class="col">
         <h4 class="foot-title">Quick Links</h4>
         <ul class="foot-links">
+          <li><a href="#process">How It Works</a></li>
           <li><a href="#success-stories">Success Stories</a></li>
           <li><a href="#why-section">Why Us</a></li>
           <li><a href="#faculty">Faculty</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact" onclick="document.getElementById('bookCTA').click();return false;">Register</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div class="col">
@@ -799,8 +796,8 @@
         <ul class="foot-links">
           <li><a href="#success-stories">IIT JEE Program</a></li>
           <li><a href="#success-stories">SAT Elite Program</a></li>
-          <li><a href="#why-section">Mentorship Sessions</a></li>
-          <li><a href="#success-stories">Free Assessment</a></li>
+          <li><a href="#process">Mentorship Sessions</a></li>
+          <li><a href="#" onclick="document.getElementById('bookCTA').click();return false;">Free Assessment</a></li>
         </ul>
       </div>
       <div class="col">
@@ -860,7 +857,7 @@
       });
       document.getElementById('yr').textContent=new Date().getFullYear();
 
-      // Evergreen urgency text (kept CTA block, just auto month to avoid staleness)
+      // Evergreen urgency text
       const u = document.getElementById('urgencyText');
       try{
         const now = new Date();
@@ -882,6 +879,15 @@
       if(navigator.share){ navigator.share({title,text,url}).catch(()=>{}); }
       else { navigator.clipboard.writeText(url).then(()=>alert('Link copied to clipboard.')); }
     });
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-q').forEach(q=>{
+      q.addEventListener('click', ()=>{
+        const a = q.nextElementSibling;
+        a.style.display = a.style.display === 'block' ? 'none' : 'block';
+      });
+    });
   </script>
 </body>
 </html>
+s
