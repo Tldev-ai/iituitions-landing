@@ -10,9 +10,9 @@
     :root{
       --primary:#000; --primary-2:#1a1a1a;
       --text:#000; --text-2:#333; --muted:#64748b;
-      --bg:#fff; --bg-2:#f6f7f9; --accent:linear-gradient(135deg,#000,#333);
+      --bg:#fff; --bg-2:#f6f7f9; --accent:linear-gradient(135deg,#000, #333);
       --shadow1:rgba(0,0,0,.08); --shadow2:rgba(0,0,0,.18);
-      --wa:#25D366;
+      --wa:#25D366; --danger:#ef4444; --ok:#10b981;
     }
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -56,7 +56,7 @@
     .step .num{width:44px;height:44px;border-radius:50%;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
     .step h3{font-size:20px;margin-bottom:4px}
     .step .sub{color:#111;font-size:18px;margin:2px 0 8px}
-    .muted{color:#466;font-size:14px;margin:6px 0 10px;display:block}
+    .step .muted{color:#466; font-size:14px;margin:6px 0 10px;display:block}
     .detail-card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:14px;margin-top:10px}
     .bullets{margin-left:18px}
     .bullets li{margin:6px 0}
@@ -77,11 +77,12 @@
     .role{font-weight:800;margin-bottom:6px}
     .sep{height:1px;background:#f1f5f9;margin:10px 0}
 
-    /* Trust + footer */
+    /* Other sections kept minimal to fit page */
     .trust{background:var(--bg-2);padding:24px 0}
     .trustgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:900px;margin:0 auto}
     .trustcard{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;text-align:center}
     .big{font-size:22px;font-weight:900}
+
     .footer{background:#000;color:#fff;margin-top:30px}
     .footer .bar{padding:14px 12px;text-align:center;font-size:13px}
 
@@ -155,7 +156,7 @@
       <h2 class="section-title">How It Works</h2>
 
       <div class="steps">
-        <!-- STEP 1 (no scenario here now) -->
+        <!-- STEP 1 -->
         <article class="step" id="step1">
           <div class="num">1</div>
           <div class="body">
@@ -193,18 +194,19 @@
                 <span class="ico">⌄</span>
               </div>
               <div class="acc-b">
-                <p>Nope 🙂 — this isn’t a memory-based test. Our IIT mentors <b>talk 1-on-1</b> with your child, <b>teach a sample concept</b>, and ask a few <b>conceptual</b> and <b>numerical</b> questions to understand real comprehension and application. It’s <b>stress-free</b> and focused on <b>diagnosis, not scores</b>.</p>
+                <p>Nope 🙂 — this isn’t a memory-based test. Our IIT mentors <b>talk 1-on-1</b> with your child, <b>teach a sample concept</b>, and ask a few <b>conceptual &amp; numerical questions</b> to understand real comprehension and application. It’s <b>stress-free</b> and focused on <b>diagnosis, not scores</b>.</p>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- STEP 2 (now contains the long copy + scenario accordion) -->
+        <!-- STEP 2 (Personalized Roadmap) -->
         <article class="step" id="step2">
           <div class="num">2</div>
           <div class="body">
             <h3>Personalized Roadmap</h3>
 
+            <!-- Long copy from images 2/3/4 -->
             <div class="detail-card">
               <h4 style="font-size:20px;margin-bottom:8px">Get Your Child’s Personalised IIT Success Roadmap</h4>
 
@@ -236,10 +238,10 @@
               <p>This isn’t just a <b>study plan</b>. It’s a <b>success map</b> built around your child’s <b>strengths, weaknesses, and time left</b> — because <b>every child is different</b>.</p>
             </div>
 
-            <!-- Scenario accordion moved here -->
+            <!-- Scenario accordion from images 4/5/6 -->
             <div class="accordion" id="scenarioAcc">
               <div class="acc-h">
-                <span>🎬 See a real student scenario</span>
+                <span>🎬 See a real student scenario (tap to open)</span>
                 <span class="ico">⌄</span>
               </div>
               <div class="acc-b">
@@ -285,7 +287,6 @@
                 </div>
               </div>
             </div>
-            <!-- /Scenario under Step 2 -->
           </div>
         </article>
 
@@ -322,7 +323,7 @@
     // Mobile menu
     const hamb = document.getElementById('hamb');
     const menu = document.getElementById('menu');
-    if (hamb){
+    if(hamb){
       hamb.addEventListener('click', ()=> menu.classList.toggle('open'));
       document.addEventListener('click', (e)=>{
         if(menu.classList.contains('open') && !menu.contains(e.target) && !hamb.contains(e.target)){
