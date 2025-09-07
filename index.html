@@ -90,38 +90,13 @@
     .shot{width:clamp(260px,70vw,360px);background:#eafff3;border:1px solid #c7f0db;border-radius:18px;padding:12px;scroll-snap-align:start;box-shadow:0 10px 28px rgba(0,0,0,.08)}
     .shot .img{aspect-ratio:4/3;background:#f3f4f6;border-radius:12px}
 
-    /* ===== FOUNDER (new look like image 3) ===== */
+    /* Founder */
     .founder{background:#0b0b0b;color:#fff;padding:48px 0}
-    .founder-card{
-      background:radial-gradient(1200px 600px at -10% -20%, #111 0%, #0b0b0b 55%) no-repeat;
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:24px;
-      box-shadow:0 24px 80px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.02);
-      padding:26px;
-      display:grid;
-      grid-template-columns:220px 1fr;
-      gap:24px;
-      align-items:center;
-      max-width:1100px;
-      margin:0 auto;
-    }
-    .f-headshot{
-      width:210px;height:210px;border-radius:9999px;overflow:hidden;
-      border:4px solid rgba(255,255,255,.08);box-shadow:0 12px 40px rgba(0,0,0,.6);
-      justify-self:center;background:#111
-    }
-    .f-headshot img{width:100%;height:100%;object-fit:cover;display:block}
-    .f-title{font-size:36px;line-height:1.1;font-weight:900;letter-spacing:.2px}
-    .f-sub{color:#cbd5e1;margin-top:6px}
-    .f-copy{color:#e5e7eb}
-    .f-copy p{margin:10px 0}
-    .f-highlight{color:#fff;font-weight:800}
-    .f-list{margin:14px 0 0 0;padding-left:22px}
-    .f-list li{margin:8px 0;color:#e7e9ee}
-    .quote{
-      margin-top:14px;color:#cfe1ff;background:#0f172a;border-left:4px solid #93c5fd;
-      padding:12px;border-radius:12px;font-style:italic
-    }
+    .founder-grid{max-width:1100px;margin:0 auto;display:grid;gap:28px}
+    .f-photo{border-radius:22px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.45);justify-self:center;width:min(520px,92vw);height:auto;background:#111}
+    .f-copy h2{font-size:30px;font-weight:900;margin-bottom:10px}
+    .f-quote{background:#111827;border-left:4px solid #93c5fd;padding:16px;border-radius:14px;color:#dbeafe;font-style:italic;margin:12px 0 14px}
+    .f-meta{color:#cbd5e1}
 
     /* Success strip */
     .success{padding:28px 0}
@@ -153,11 +128,6 @@
     .bar{border-top:1px solid rgba(255,255,255,.15);text-align:center;padding:12px 0;font-size:13px}
 
     /* Responsive */
-    @media (max-width:860px){
-      .founder-card{grid-template-columns:1fr;text-align:left;padding:22px}
-      .f-headshot{width:160px;height:160px}
-      .f-title{font-size:28px}
-    }
     @media (max-width:420px){
       .stats{grid-template-columns:1fr}
       .hero h1{font-size:24px}
@@ -168,6 +138,7 @@
       .hero h1{font-size:44px}
       .stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
       .section-title{font-size:36px}
+      .founder-grid{grid-template-columns:480px 1fr;gap:40px}
     }
   </style>
 </head>
@@ -223,41 +194,184 @@
     </div>
   </section>
 
-  <!-- PROCESS (unchanged) -->
+  <!-- PROCESS -->
   <section class="process" id="process">
     <div class="container">
       <h2 class="section-title">How It Works</h2>
-      <!-- … your existing Step 1 / Step 2 / Step 3 / Step 4 markup stays here … -->
+
+      <div class="steps">
+        <!-- Step 1 header -->
+        <article class="step">
+          <div class="num">1</div>
+          <div>
+            <h3>Free Assessment</h3>
+            <div class="sub">Know Exactly Where Your Child Stands</div>
+          </div>
+        </article>
+
+        <!-- Step 1 details -->
+        <div class="how-panel" id="assessment-details">
+          <h5>Know Exactly Where Your Child Stands</h5>
+          <div class="muted">(Free 1-on-1 IIT Mentorship Assessment) ✅</div>
+
+          <ul class="bullets">
+            <li><b>Talk 1-on-1</b> with your child about their current journey</li>
+            <li>Understand their <b>strong &amp; weak topics</b></li>
+            <li>Discuss <b>study habits, focus levels, time availability</b></li>
+            <li><b>Teach a small topic live</b> to evaluate real-time understanding</li>
+            <li>Ask <b>conceptual &amp; numerical questions</b> to check:
+              <ul class="subb">
+                <li>Depth of understanding</li>
+                <li>Application skills</li>
+                <li>Problem-solving approach</li>
+              </ul>
+            </li>
+            <li>Identify learning style &amp; communication patterns</li>
+          </ul>
+
+          <div class="receive">
+            <p><b>By the end of the session, you and your child will receive:</b></p>
+            <ul class="bullets">
+              <li>A <b>clear picture</b> of where they stand today</li>
+              <li>A <b>personalized IIT success roadmap</b> designed by experts</li>
+            </ul>
+          </div>
+
+          <div class="accordion" id="examAcc">
+            <div class="acc-h"><span>❓ “Is this an exam?”</span><span class="toggle">⌄</span></div>
+            <div class="acc-b">
+              <p>Nope 🙂 — this isn’t a memory-based test. Our IIT mentors <b>talk 1-on-1</b> with your child, <b>teach a sample concept</b>, and ask a few <b>conceptual &amp; numerical questions</b> to understand real comprehension and application. It’s <b>stress-free</b> and focused on <b>diagnosis, not scores</b>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 header -->
+        <article class="step" id="roadmap-step">
+          <div class="num">2</div>
+          <div>
+            <h3>Personalized Roadmap</h3>
+            <div class="sub">Get a custom IIT Success plan</div>
+          </div>
+        </article>
+
+        <!-- STEP 2: main copy -->
+        <div class="how-panel" id="roadmap-details" aria-labelledby="roadmap-step">
+          <h5>Get Your Child’s Personalised IIT Success Roadmap</h5>
+
+          <p style="margin:8px 0">Imagine this. Your child has just stepped into <b>Grade 12</b>. Grade 11 is behind them — but deep down, you know something’s not right.</p>
+          <p>Those <b>big coaching centres</b>… Packed classrooms, <b>fast-paced teaching</b>, endless assignments. Even after <b>revision sessions</b>, your child still feels <b>lost</b> in many topics.</p>
+          <p>Now, there are only <b>6 months left</b> for JEE Mains. Your child wants to give their <b>100%</b> — but where should they start?</p>
+          <ul class="bullets">
+            <li><b>Which topics to focus on?</b></li>
+            <li><b>How to balance Grade 11 and Grade 12?</b></li>
+            <li><b>What’s the smartest way to use these 6 months?</b></li>
+          </ul>
+
+          <p style="margin-top:10px"><b>That’s where we step in.</b></p>
+          <p>After our <b>free 1-on-1 assessment</b> session, our IIT/NIT mentor prepares a <b>personalised roadmap</b> just for your child:</p>
+
+          <ul class="bullets">
+            <li>We pick <b>high-scoring topics</b> from Grade 11 that your child can <b>master quickly</b>.</li>
+            <li>We focus on areas where the <b>concepts are clear</b> but <b>numericals need practice</b>.</li>
+            <li>We <b>skip low-ROI confusion topics</b> to save precious time.</li>
+            <li>We align <b>Grade 12 chapters</b> with the school’s pace, so your child doesn’t fall behind.</li>
+            <li>And most importantly — we design a plan that your child can <b>actually follow</b> without getting overwhelmed.</li>
+          </ul>
+
+          <p style="margin-top:10px">Finally, we sit down with <b>you and your child</b> to explain:</p>
+          <ul class="bullets">
+            <li><b>Where they stand right now</b></li>
+            <li><b>What’s achievable in 6 months</b></li>
+            <li><b>Exactly what to focus on for maximum JEE marks</b></li>
+          </ul>
+
+          <div class="roadmap">
+            <h6>Not just a study plan — a success map.</h6>
+            <p>It’s a <b>success map</b> built around your child’s <b>strengths, weaknesses, and time left</b> — because <b>every child is different</b>.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <article class="step">
+          <div class="num">3</div>
+          <div>
+            <h3>Mentorship Sessions</h3>
+            <!-- replaced the old subtitle with the full detailed content panel below -->
+          </div>
+        </article>
+
+        <!-- NEW: Step 3 detailed content (from images 2/3/4/5) -->
+        <div class="how-panel" id="mentorship-details">
+          <h5>100% Personalised 1-on-1 Mentorship — No Batches. No Distractions. ✅</h5>
+
+          <p style="margin:8px 0"><i>"In most coaching centres, your child sits in a <b>batch of 200–300 students</b>. The pace is fixed, doubts pile up, and progress slows down."</i></p>
+
+          <p>At iiTuitions, we do things <b>different</b>ly. Every single session is <b>1-on-1</b> — just your child and an IIT/NIT mentor.</p>
+
+          <ul class="bullets" style="margin-top:8px">
+            <li>🎓 <b>IIT/NIT Mentors Only</b> → No junior faculty. No compromises.</li>
+            <li>🟢 <b>Daily WhatsApp Updates</b> → After every class, we share:
+              <ul class="subb">
+                <li>Topics covered</li>
+                <li>Tests completed</li>
+                <li>Progress reports</li>
+              </ul>
+            </li>
+            <li>💬 <b>Unlimited Doubt Support</b> → Students can ping their WhatsApp group <b>anytime</b>.</li>
+            <li>🔁 <b>Faculty Replacement Guarantee</b> → If your child isn’t comfortable, we <b>instantly assign a new mentor</b>.</li>
+            <li>👀 <b>Live Session Monitoring</b> →
+              <ul class="subb">
+                <li><b>Both mentor and student cameras stay ON</b>.</li>
+                <li>Every minute is tracked to ensure <b>zero time wastage</b>.</li>
+              </ul>
+            </li>
+            <li>📈 <b>Maximum Attention = Maximum Results</b></li>
+          </ul>
+
+          <p style="margin-top:10px"><b>Your Child, Their Mentor, One Goal — Crack JEE.</b><br>
+          <b>Where every session revolves around your child.</b></p>
+        </div>
+        <!-- /NEW Step 3 details -->
+
+        <!-- Step 4 -->
+        <article class="step">
+          <div class="num">4</div>
+          <div>
+            <h3>Reviews &amp; Results</h3>
+            <div class="sub">Track Progress Every day</div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Founder slab (updated to match image-3, with content from images 1 & 2) ===== -->
+  <!-- WhatsApp rail -->
+  <section class="wa-rail">
+    <div class="container">
+      <h2 class="section-title">What Parents Text Us</h2>
+      <div class="rail">
+        <div class="shot">
+          <div class="img"></div>
+          <div style="margin-top:8px;font-weight:700;color:#256b3e">Physics 48% → 90% in 8 weeks</div>
+        </div>
+        <div class="shot">
+          <div class="img"></div>
+          <div style="margin-top:8px;font-weight:700;color:#256b3e">Weekly parent review calls</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder slab -->
   <section class="founder" id="founder">
-    <div class="founder-card">
-      <div class="f-headshot">
-        <!-- Replace with real image -->
-        <img src="https://via.placeholder.com/900x900/0b0b0b/ffffff?text=Founder+Photo" alt="Prudhvi — Founder">
+    <div class="founder-grid">
+      <div class="f-photo">
+        <img src="https://via.placeholder.com/900x900/0b0b0b/ffffff?text=Founder+Photo" alt="Prudhvi Sir — Founder of IITuitions" style="width:100%;height:auto;display:block">
       </div>
       <div class="f-copy">
-        <div class="f-title">Founded by Prudhvi — <span class="f-highlight">NIT Warangal</span></div>
-        <div class="f-sub">(Former Physics HOD, Hyderabad)</div>
-
-        <!-- Why I started (Image 1) -->
-        <p class="mt"><span class="f-highlight">Why I started iiTuitions</span></p>
-        <p>I’m Prudhvi from <b>NIT Warangal</b>, based in <b>Hyderabad</b>. I worked as a <b>Physics HOD</b> in a large coaching centre. Every day I watched a class of <b>80</b> race through the syllabus; <b>7–8</b> kept pace, many more slipped behind. Not because they were weak — but because the <b>batch was too big</b> and the <b>curriculum too fast</b>. Even when teachers wanted to help, there wasn’t time.</p>
-        <p>In <b>2017</b>, I decided to build the opposite of that system.</p>
-        <p>At <b>iiTuitions</b>, we teach <b>one child at a time</b>. We keep the intake to <b>only 50 students a year</b> so every child gets a plan, a mentor, and attention that’s impossible in big batches. We focus on <b>interest first</b>, learning next, and ranks as the outcome. With this approach, we’ve helped <b>hundreds of students</b> crack the JEE — without burning them out.</p>
-
-        <!-- What I stand for (Image 2) -->
-        <p class="mt"><span class="f-highlight">What I stand for</span></p>
-        <ul class="f-list">
-          <li>✅ <b>Quality over quantity</b> — always</li>
-          <li>🎓 <b>1-on-1 mentorship</b> by sharp, caring IIT/NIT faculty</li>
-          <li>📞 <b>Weekly parent reviews</b> and <b>course-corrections now</b>, not after results</li>
-          <li>❤️ If a mentor’s style doesn’t fit your child, <b>we switch — no ego</b></li>
-        </ul>
-
-        <div class="quote">“Even if it’s one student, give 100% and teach them how to learn. Motivation first. Mastery next.” — <b>Prudhvi</b>, Founder, iiTuitions</div>
+        <h2>Founded by Prudhvi Sir</h2>
+        <div class="f-quote">“Just as Arjuna achieved greatness through focused concentration and dedication, our students align mind, intellect, and action toward IIT dreams.”</div>
+        <p class="f-meta">NIT Warangal graduate. Since 2017 we’ve stayed true to <b>individual attention</b>, <b>recorded sessions</b>, and <b>weekly parent reviews</b>.</p>
       </div>
     </div>
   </section>
