@@ -113,6 +113,27 @@
       gap:24px;
       box-shadow:0 24px 60px rgba(0,0,0,.45);
     }
+    /* Bigger founder profile photo (desktop/tablet) */
+@media (min-width: 768px){
+  .f-card{
+    grid-template-columns: 220px 1fr; /* was 140px 1fr */
+    gap: 28px;
+  }
+  .f-avatar{
+    width: 220px;            /* was 140px */
+    height: 220px;           /* keep it square */
+    border-width: 3px;       /* slightly thicker ring */
+  }
+  .f-title{ font-size: 40px; }
+  .f-title-strong{ font-size: 44px; }
+}
+
+/* Even larger on wide screens (optional, matches your reference) */
+@media (min-width: 1100px){
+  .f-card{ grid-template-columns: 260px 1fr; }
+  .f-avatar{ width: 260px; height: 260px; }
+}
+
     .f-avatar{
       width:140px; height:140px; border-radius:999px; object-fit:cover;
       border:2px solid #334155; box-shadow:0 8px 24px rgba(0,0,0,.5);
